@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jeopardy Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Player Setup Modal -->
+    <div id="player-setup-modal" class="modal" style="display: block;">
+        <div class="modal-content">
+            <h2>Select Board and Enter Player Names</h2>
+
+            <!-- Board Selection -->
+            <div id="board-selection">
+                <label for="board-select">Select Board:</label>
+                <select id="board-select">
+                    <!-- Options will be populated dynamically -->
+                </select>
+            </div>
+
+            <!-- Player Inputs -->
+            <div id="player-inputs">
+                <input type="text" class="player-name-input" placeholder="Player 1">
+            </div>
+            <button id="add-player-btn">Add Another Player</button>
+            <button id="start-game-btn">Start Game</button>
+        </div>
+    </div>
+
+    <div id="game-board"></div>
+
+    <!-- Player Scores Display -->
+    <div id="player-scores"></div>
+
+    <!-- Soundboard -->
+    <div id="soundboard">
+        <button id="jeopardy-theme-btn">Jeopardy Theme</button>
+    </div>
+
+    <!-- Clue Modal -->
+    <div id="clue-modal" class="modal">
+        <div class="modal-content" id="modal-content">
+            <!-- Daily Double Caption -->
+            <div id="daily-double-caption" style="display: none;">!! Daily Double !!</div>
+            <!-- Clue Image -->
+            <img id="clue-image" src="" alt="Clue Image" style="display: none;">
+            <div id="clue-text"></div>
+            <div id="solution-text" style="display: none;"></div>
+            <!-- Score Adjustment Buttons -->
+            <div id="score-buttons" style="display: none;"></div>
+            <button id="next-round-btn" style="display: none;">Proceed to Next Round</button>
+            <div id="player-answers" class="player-answers"></div>
+        </div>
+        <button id="get-answers-btn" class="get-answers-btn">Get Player Answers</button>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="jeopardy-theme-audio" src="jeopardy_theme.mp3"></audio>
+    <audio id="daily-double-audio" src="daily_double.mp3"></audio>
+    <audio id="correct-answer-audio" src="correct_answer.mp3"></audio>
+    <audio id="wrong-answer-audio" src="wrong_answer.mp3"></audio>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
