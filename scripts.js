@@ -3256,6 +3256,139 @@ const gameData = {
       "solution": "20. A. Randy knows that viruses spread through user interaction with files on thumb drives. A worm would spread itself, a Trojan would look like a useful or desirable file, and there is no indication of spyware in the question."
     }
   },
+    {
+    "chapter 3 - Categorized": {
+        "single": [
+            {
+                "category": "Malware Basics",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "Ryan wants to prevent logic bombs created by insider threats from impacting his organization. What technique will most effectively limit the likelihood of logic bombs being put in place?",
+                        "solution": "B. Using a code review process."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "Mike discovers that attackers have left software that allows them to have remote access to systems on a computer in his company's network. How should he describe or classify this malware?",
+                        "solution": "D. A backdoor."
+                    },
+                    {
+                        "value": 600,
+                        "clue": "Nathan works at a school and notices that one of his staff appears to have logged in and changed grades for a single student to higher grades, even in classes that staff member is not responsible for. When asked, the staff member says they did not perform the action. Which of the following is the most likely way that a student could have gotten access to the staff member's password?",
+                        "solution": "A. A keylogger."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "Nancy is concerned that there is a software keylogger on the system she's investigating. What best describes data that may have been stolen?",
+                        "solution": "D. Keyboard and other input from the user."
+                    },
+                    {
+                        "value": 1000,
+                        "clue": "What type of malware connects to a command and control system, allowing attackers to manage, control, and update it remotely?",
+                        "solution": "A. A bot."
+                    }
+                ]
+            },
+            {
+                "category": "Malware Removal and Defense",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "Selah wants to ensure that malware is completely removed from a system. What should she do to ensure this?",
+                        "solution": "B. Wipe the drive and reinstall from known good media."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "Rick believes that a system he is responsible for has been compromised with malware that uses a rootkit to obtain and retain access to the system. When he runs an antimalware tool's scanner, the system doesn't show any malware. What should his next step be?",
+                        "solution": "B. Mount the drive on another system and scan it that way."
+                    },
+                    {
+                        "value": 600,
+                        "clue": "Amanda notices traffic between her systems and a known malicious host on TCP port 6667. What type of traffic is she most likely detecting?",
+                        "solution": "A. Command and control."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "Yasmine believes that her organization may be dealing with an advanced rootkit and wants to write IoC definitions for it. Which of the following is not likely to be a useful IoC?",
+                        "solution": "C. Pop-ups demanding a ransom."
+                    },
+                    {
+                        "value": 1000,
+                        "clue": "Jason's security team reports that a recent WordPress vulnerability seems to have been exploited by malware and that their organization's entire WordPress service cluster has been infected. What type of malware is most likely involved if a vulnerability in the software was exploited over the network?",
+                        "solution": "C. A worm."
+                    }
+                ]
+            }
+        ],
+        "double": [
+            {
+                "category": "Advanced Malware Identification",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "Matt uploads a malware sample to a third-party malware scanning site that uses multiple antimalware and antivirus engines to scan the sample. He receives multiple different answers for what the malware package is. What has occurred?",
+                        "solution": "D. Different vendors use different names for malware packages."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "A system in Elaine's company has suddenly displayed a message demanding payment in Bitcoin and claiming that the data from the system has been encrypted. What type of malware has Elaine likely encountered?",
+                        "solution": "C. Ransomware."
+                    },
+                    {
+                        "value": 1200,
+                        "clue": "A recently terminated developer from Jaya's organization has contacted the organization claiming that they left code in an application that they wrote that will delete files and bring the application down if they are not employed by the company. What type of malware is this?",
+                        "solution": "C. A logic bomb."
+                    },
+                    {
+                        "value": 1600,
+                        "clue": "What is the key difference between a worm and a virus?",
+                        "solution": "B. How they spread."
+                    },
+                    {
+                        "value": 2000,
+                        "clue": "Hui's organization recently purchased new Windows computers from an office supply store. The systems have a number of unwanted programs on them that load at startup that were installed by the manufacturer. What type of software is this?",
+                        "solution": "D. Bloatware."
+                    }
+                ]
+            },
+            {
+                "category": "Preventive Techniques",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "What type of malware is used to gather information about a user's browsing habits and system?",
+                        "solution": "C. Spyware."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "Which of the following defenses is most likely to prevent Trojan installation?",
+                        "solution": "B. Preventing downloads from application stores."
+                    },
+                    {
+                        "value": 1200,
+                        "clue": "Ben wants to analyze Python code that he believes may be malicious code written by an employee of his organization. What can he do to determine if the code is malicious?",
+                        "solution": "B. Open the file using a text editor to review the code."
+                    },
+                    {
+                        "value": 1600,
+                        "clue": "What is the primary impact of bloatware?",
+                        "solution": "A. Consuming resources."
+                    },
+                    {
+                        "value": 2000,
+                        "clue": "Randy believes that a system that he is responsible for was infected after a user picked up a USB drive and plugged it in. The user claims that they only opened one file on the drive to see who might own it. What type of malware is most likely involved?",
+                        "solution": "A. A virus."
+                    }
+                ]
+            }
+        ],
+        "final_jeopardy": {
+            "category": "Malware Propagation",
+            "clue": "What type of malware exploits vulnerabilities over a network to spread itself autonomously without user interaction?",
+            "solution": "C. A worm."
+        }
+    }
+},
   "chapter 4": {
     "single": [
       {
