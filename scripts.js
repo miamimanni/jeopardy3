@@ -3256,7 +3256,6 @@ const gameData = {
       "solution": "20. A. Randy knows that viruses spread through user interaction with files on thumb drives. A worm would spread itself, a Trojan would look like a useful or desirable file, and there is no indication of spyware in the question."
     }
   },
-    {
     "chapter 3 - Categorized": {
         "single": [
             {
@@ -3387,8 +3386,7 @@ const gameData = {
             "clue": "What type of malware exploits vulnerabilities over a network to spread itself autonomously without user interaction?",
             "solution": "C. A worm."
         }
-    }
-},
+    },
   "chapter 4": {
     "single": [
       {
