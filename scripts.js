@@ -3387,6 +3387,1262 @@ const gameData = {
             "solution": "C. A worm."
         }
     },
+    "Chapter 3 - Test Q's": {
+    "single": [
+      {
+        "category": "Category 1",
+        "clues": [
+          {
+            "value": 200,
+            "clue": "1. Nancy wants to adopt a backup strategy that will meet her organization's desires about the amount of data that could be lost in a scenario where a restoration from backup was required and also wants to establish guidelines for how long a restoration should take. What two key objectives should she set?\nA. An RPO and an RTO\nB. An RFBT and an RPO\nC. An RPO and an MTBF\nD. An MTBF and an RFBT",
+            "solution": "1. A. Organizations set recovery point objectives (RPOs) which describe how much data is acceptable to lose in a data loss event, and recovery time objectives (RTOs), which describe the maximum amount of time that it should take to recover data. Together these two objectives help guide backup strategy and infrastructure design and implementation. MTBF (mean time before failure) describes the mean time before a device like a hard drive, power supply, or network switch will fail, typically described in hours of powered-on operation. RFBT was made up for this question."
+          },
+          {
+            "value": 400,
+            "clue": "25. Nathaniel has deployed the control infrastructure for his manufacturing plant without a network connection to his other networks. What term describes this type of configuration?\nA. Screened subnet\nB. Air gap\nC. Vaulting\nD. A hot aisle",
+            "solution": "25. B. Nathaniel has created an air gap, a physical separation that will require manual transport of files, patches, and other data between the two environments. This helps to ensure that attackers cannot access critical systems and that insiders cannot export data from the environment easily. A screened subnet, also known as a demilitarized zone (DMZ), is a separate network segment or zone that is exposed to the outside world or other lower trust area. A vault is a secured space or room. Hot and cold isles are equipment arrangements used in server rooms or datacenters to efficiently circulate air and keep server racks and other equipment cool."
+          },
+          {
+            "value": 600,
+            "clue": "49. Fred sets up his authentication and authorization system to apply the following rules to authenticated users: Users who are not logging in from inside the trusted network must use multifactor authentication. Users who have logged in from geographic locations that are more than 100 miles apart within 15 minutes will be denied. What type of access control is Fred using?\nA. Geographic restrictions\nB. Time-based logins\nC. Supervisory control\nD. Role-based access",
+            "solution": "49. A. This is an example of using geographic restrictions to protect data. Fred has rules that require additional authentication for those who are off-site and also those who may be performing impossible travel. Time is not part of both rules, there's no role description, and supervisory control is not a term used for this."
+          },
+          {
+            "value": 800,
+            "clue": "73. What key network technology is the core of an SASE implementation?\nA. TLS\nB. VLANS\nC. IPSec\nD. SD- WAN",
+            "solution": "73. D. Software-defined wide area networks (SD-WANs) are the core component of secure access, secure edge technology. Additional tools like zero trust functionality, cloud access security brokers, and firewalls are all combined to build a complete SASE implementation."
+          },
+          {
+            "value": 1000,
+            "clue": "97. Which of the following is not a commonly used business data classification?\nA. Sensitive\nB. Confidential\nC. Top Secret\nD. Public",
+            "solution": "97. C. Top Secret and Secret are examples of government classifications. Businesses typically use classifications like sensitive, confidential, and public."
+          },
+          {
+            "value": 1200,
+            "clue": "121. Which of the following best describes replication as a resilience strategy?\nA. It makes a complete backup copy of live data that can be restored from media if needed, then journaled changes can be replayed to catch up to the moment of failure.\nB. It creates a continuous copy of live data either asynchronously or synchronously.\nC. It uses a series of snapshots to provide disaster recovery for virtual machines.\nD. It requires high-speed media to keep up with live data.",
+            "solution": "121. B. Replication can be synchronous or asynchronous but focuses on keeping an up-do-date copy of live data. It does not require high-speed media but does require storage media that is fast enough to keep up with the speed of change from the production environment. Replication does not rely on journaling or snapshots."
+          },
+          {
+            "value": 1400,
+            "clue": "145. Which of the following is not commonly part of a tabletop exercise?\nA. A discussion of roles\nB. A discussion of likely actions\nC. Simulated calls to resources\nD. A guided conversation",
+            "solution": "145. C. Tabletop exercises are not simulations and typically do not involve simulated calls to resources. Simulations are a different type of exercise and have the potential for disruptions if staff are not aware of the exercise being conducted."
+          },
+          {
+            "value": 1600,
+            "clue": "169. Yarif wants to create security zones in his network. Which of the following technologies is best suited to doing this based on roles and user identities?\nA. NAC and VLANs\nB. 802.1X and containerization\nC. SDN and MAC address filtering\nD. SD-WAN and VLANs",
+            "solution": "169. A. Network access control (NAC) tools that can allow for authentication and authorization based on user groups or roles and VLANs that separate groups based on those roles once they're on the network exactly fit the needs Yarif has. 802.1X can also be helpful with this, but containerization is used to allow applications to be deployed without worrying about the application environment. SDN and MAC address filtering doesn't account for user authentication and identities, just machine hardware addresses. SD-WAN is for external connectivity, not internal networks."
+          },
+          {
+            "value": 1800,
+            "clue": "193. Valerie wants to provide remote access to her organization's applications to users who are traveling or working remotely. She wants to ensure that users have a secure way to work with organizational data, but also wants to provide the simplest and easiest secure means of access. What should Valerie implement?\nA. An IPSec VPN\nB. A jump server\nC. A TLS VPN\nD. An SD-WAN controller",
+            "solution": "193. C. TLS VPNs provide an easier user experience from the browser without installing additional software or additional configuration like an IPSec VPN typically requires. A jump server is used for access to secure zones but isn't ideal for traveling and remote employees-often a VPN is used to access a jump server in scenarios like that. SD-WAN is useful to manage connectivity options, not for individual users."
+          },
+          {
+            "value": 2000,
+            "clue": "217. Marco wants to build a set of services for financial transactions for his company. The services need to be capable of scaling quickly to very large numbers of transactions, and need to be able to operate without major dependencies on other components of the architecture. What architecture should he select to best meet these needs?\nA. Containerization\nB. Virtualization\nC. Microservices\nD. SCADA",
+            "solution": "217. C. A microservices design will allow for each component or service to be separate and lightweight, allowing them to be developed independently and thus easier to fix without complex dependencies. Containerization would allow for easy deployment of applications to different service environments, but the focus for containerization is on portability, not on the design requirements listed. Virtualization requires even more resources because operating systems are virtualized, but it suffers from the same lack of a direct means of addressing the needs explained in the question. SCADA stands for supervisory control and data acquisition and is used to manage complex industrial or controls' environments, not service environments like the question describes."
+          }
+        ]
+      },
+      {
+        "category": "Category 2",
+        "clues": [
+          {
+            "value": 200,
+            "clue": "3. Enrique is concerned about backup data being infected by malware. The company backs up key servers to digital storage on a backup server. Which of the following would be most effective in preventing the backup data being infected by malware?\nA. Place the backup server on a separate VLAN.\nB. Air gap the backup server.\nC. Place the backup server on a different network segment.\nD. Use a honeynet.",
+            "solution": "3. B. Air gapping refers to the server not being on a network. This means literally that there is \"air\" between the server and the network. This prevents malware from infecting the backup server. A separate virtual local area network (VLAN) or physical network segment can enhance security but is not as effective as air gapping. A honeynet is used to detect attacks against a network, but it doesn't provide effective defense against malware in this scenario."
+          },
+          {
+            "value": 400,
+            "clue": "27. Olivia is implementing a load-balanced web application cluster. Her organization already has a redundant pair of load balancers, but each unit is not rated to handle the maximum designed throughput of the cluster by itself. Olivia has recommended that the load balancers be implemented in an active/active design. What concern should she raise as part of this recommendation?\nA. The load balancer cluster cannot be patched without a service outage.\nB. The load balancer cluster is vulnerable to a denial-of-service attack.\nC. If one of the load balancers fails, it could lead to service degradation.\nD. The load balancer cannot handle the throughput due to having two active nodes.",
+            "solution": "27. C. Olivia should make her organization aware that a failure in one of the active nodes would result in less maximum throughput and a potential for service degradation. Since services are rarely run at maximum capacity, and many can have maintenance windows scheduled, this does not mean that the load balancers cannot be patched. There is nothing in this design that makes the load balancers more vulnerable to denial-of-service than they would be under any other design. Having two active nodes will typically increase throughput over a single node."
+          },
+          {
+            "value": 600,
+            "clue": "51. Jason is considering deploying a network intrusion prevention system (IPS) and wants to be able to detect advanced persistent threats (APTs). What type of IPS detection method is most likely to detect the behaviors of an APT after it has gathered baseline information about normal operations?\nA. Signature-based IPS detections\nB. Heuristic-based IPS detections\nC. Malicious tool hash IPS detections\nD. Anomaly-based IPS detections",
+            "solution": "51. D. Anomaly-based detection systems build a behavioral baseline for networks and then assess differences from those baselines. They may use heuristic capabilities on top of those, but the question specifically asks about baselined operations pointing to an anomaly-based system. Heuristic-based detections look for behaviors that are typically malicious, and signature-based or hash-based detections look for known malicious tools or files."
+          },
+          {
+            "value": 800,
+            "clue": "75. Mark's organization is preparing to move to an infrastructure as code model. He's worried about what to do if a change in code causes issues. What common laC practice will help the most with this?\nA. Threat modeling\nB. Least privilege\nC. Version control\nD. Artifact signing",
+            "solution": "75. C. Version control will allow staff from Mark's organization to identify a bad version and revert to a previous known-good version if needed. Threat modeling, least privilege, and artifact signing are all common best practices for laC, but don't directly impact version changes."
+          },
+          {
+            "value": 1000,
+            "clue": "99. What layer is Layer 7 in the OSI model?\nA. The physical layer\nB. The application layer\nC. The transport layer\nD. The session layer",
+            "solution": "99. B. Layer 7 is the application layer. In order the layers are: 1 - physical, 2 - data link, 3 - network, 4 - transport, 5 - session, 6 - presentation, and 7 - application. The Security+ exam outline only focuses on Layer 4 and Layer 7 in the context of network security devices that can operate at those layers."
+          },
+          {
+            "value": 1200,
+            "clue": "123. Barb's organization has a recovery point objective of 6 hours. At least how often should Barb conduct incremental backups to meet this RO?\nA. Once every hour\nB. Once every 6 hours\nC. Once every 12 hours\nD. Once a day",
+            "solution": "123. B. Barb needs to back up her data at least once every 6 hours to meet a 6-hour RPO, and Barb might even choose to run her backups slightly more often to ensure the RPO can be met. Running backups every hour significantly exceeds that target, and may have other implications on performance time to recover, so a more aggressive timeframe would need to be carefully reviewed. Every 12 or 24 hours would not meet the RPO set by Barb's company."
+          },
+          {
+            "value": 1400,
+            "clue": "147. Kaito has deployed a system that accepts traffic from web browsers and distributes it to systems based on the number of conet ons that each server has. He has assigned each server a rating based on how powerful it is. Each time a new request comes in, requests are sent to the system with the lowest number of connections after taking into account the relative rating of each server. What type of load balancing is Kaito using?\nA. Source IP hashing\nB. Resource-based\nC. Weighted least connection\nD. Round-robin",
+            "solution": "147. C. Kaito is using a weighted least connection load balancing approach, which distributes traffic based on both a server weight and connection number count. Source IP hashing uses a hash of the source and destination IP addresses to determine which server receives the connection. This also allows for interrupted sessions to go to the same server. Resource-based load balancing takes into account the availability of resources like CPU, memory, and network bandwidth for a server. Round-robin load balancing simply distributes connections as they come in by moving through a list of servers."
+          },
+          {
+            "value": 1600,
+            "clue": "171. What security advantage does a serverless model provide?\nA. Cost savings\nB. No need to patch infrastructure\nC. No vulnerable functions\nD. No need to log events",
+            "solution": "171. B. Serverless deployments remove the need to patch underlying infrastructure. They may still have vulnerable functions and should be logged. Cost savings is not a direct security advantage."
+          },
+          {
+            "value": 1800,
+            "clue": "195. What role does geolocation play in considerations related to data?\nA. It determines if data is at rest.\nB. It impacts data sovereignty concerns.\nC. It determines if data is in use.\nD. It determines the data's criticality.",
+            "solution": "195. B. Data sovereignty concerns are driven by where the data resides, and geolocation can help understand the applicable law or regulations. Data can be at rest, in use, or in transit in any given location. Data criticality is determined by an organization, not by its location."
+          },
+          {
+            "value": 2000,
+            "clue": "219. Which of the following is not typically true of embedded systems?\nA. They provide the ability to install additional software.\nB. They have a long lifespan.\nC. They have memory and CPU constraints.\nD. They are not designed for end-user configuration and control.",
+            "solution": "219. A. Embedded systems are often used for long periods of time, use relatively low-power CPUs and have limited memory and storage, and are typically not user configurable or manageable in meaningful ways. They typically don't have the ability to install additional software as they are purpose-built to serve a specific need."
+          }
+        ]
+      },
+      {
+        "category": "Category 3",
+        "clues": [
+          {
+            "value": 200,
+            "clue": "5. Geoff wants to establish a contract with a company to have datacenter space that is equipped and ready to go so that he can bring his data to the location in the event of a disaster. What type of disaster recovery site is he looking for?\nA. A hot site\nB. A cold site\nC. A warm site\nD. An RTO site",
+            "solution": "5. C. Geoff is looking for a warm site, which has some or all of the infrastructure and systems he needs but does not have data. If a disaster occurs, Geoff can bring any equipment that he needs or wants to the site along with his organization's data to resume operations. A hot site is a fully functional environment with all the hardware, software, and data needed to operate an organization. They are expensive to maintain and run but are used by organizations that cannot take the risk of downtime. A cold site is a location that can be brought online but does not have systems; cold sites typically have access to power and bandwidth but need to be fully equipped to operate after a disaster since they are just rented space. An RTO is a recovery time objective, and it measures how long it should take to resume operations; it is not a type of disaster recovery site."
+          },
+          {
+            "value": 400,
+            "clue": "29. Ramon is building a new web service and is considering which parts of the service should use Transport Layer Security (TLS). Components of the application include: 1- Authentication 2- A payment form 3- User data, including address and shopping cart 4- A user comments and reviews section Where should he implement TLS?\nA. At points 1 and 2, and 4\nB. At points 2 and 3, and 4\nC. At points 1, 2, and 3\nD. At all points in the infrastructure",
+            "solution": "29. D. The safest and most secure answer is that Ramon should simply implement TLS for the entire site. Although TLS does introduce some overhead, modern systems can handle large numbers of simultaneous TLS connections, making a secure website an easy answer in almost all cases."
+          },
+          {
+            "value": 600,
+            "clue": "53. Mila gives her team a scenario, and then asks them questions about how they would respond, what isues they expect they might encounter, and how they would handle those issues. What type of exercise has she conducted?\nA. A tabletop exercise\nB. A walk-through\nC. A simulation\nD. A drill",
+            "solution": "53. A. Tabletop exercises are used to talk through a process. Unlike walk-throughs, which focus on a step-by-step review of an incident, Mila will focus more on how her team responds and on learning from those answers. A tabletop exercise can involve gaming out a situation. A simulation actually emulates an event or incident, either on a small or a large scale. Drills are not defined as part of the Security+ exam outline."
+          },
+          {
+            "value": 800,
+            "clue": "77. Nick's organization houses tape-based backups for their critical data in their primary data-center. What resilience issue could result in the event of a major disaster?\nA. The tapes may not have been validated and might not be able to be restored.\nB. A single disaster could destroy both the facility and the tapes.\nC. The tapes may not last for the expected lifetime of the backups.\nD. Tapes are relatively slow and may not allow for timely restoration.",
+            "solution": "77. B. The biggest issue for resilience is that placing backups in the same facility as the devices or systems they are backing up means that a single disaster could destroy both. Nick should consider off-site backup storage. Tape recovery can be slow, but this is a restoration timeframe issue, not a resilience issue. Tape lifetime is typically quite long, and backups are usually rolled over in time periods shorter than a year for most organizations. Finally, validation of backups can be a concern, but there is no description in the question that would lead to conclusions about testing."
+          },
+          {
+            "value": 1000,
+            "clue": "101. What term best describes a set of loosely coupled, fine-grained services that communicate via lightweight protocols, allowing organizations to easily build new services without adi-tional dependencies or infrastructure?\nA. Containerization\nB. loT\nC. Software-defined infrastructure\nD. Microservices",
+            "solution": "101. D. Microservices are loosely coupled and fine-grained, and they are intended to be easy to deploy without significant overhead or dependencies. They rely on lightweight protocols like HTTP to make them easier to deploy in common infrastructures. Containers are used to allow applications to be easily deployed without moving a complete operating system but with the required libraries and components to function. The Internet of Things (loT) describes Internet-enabled devices of all sorts, including embedded systems. Software-defined infrastructure is commonly used for cloud services."
+          },
+          {
+            "value": 1200,
+            "clue": "125. Tara's web development team has written code that allows sensitive customer information to be hidden from users who do not have the right permissions. When individuals who do displayed as a series of asterisks: not have the proper rights to view sensitive information use the application, the data is Account number: ****-****-*** What data obfuscation technique has Tara's team employed to help protect her organization's data?\nA. Encryption\nB. Data classification\nC. Hashing\nD. Masking",
+            "solution": "125. D. Masking replaces some characters with an alternate character, allowing tasks like validating credit card numbers without exposing all of a data field. Encryption and hashing would transform the data, not replace it with an alternate character. Data classification is involved, but it's not a data obfuscation technique."
+          },
+          {
+            "value": 1400,
+            "clue": "149. Geoff is considering whether to deploy on-premises infrastructure or cloud-hosted infrastructure. His most important requirements in order are: Ease of scalability Management overhead Cost If Geoff wants to run a containerized service that can handle very large loads, what model should he select?\nA. SaaS\nB. PaaS\nC. laaS\nD. On-premises",
+            "solution": "149. C. An infrastructure-as-a-service (laaS) cloud-hosted model where a third-party provider focuses on scalability and administration of a containerization service will meet Geoff's needs. When scaling from low to very large load is a common event, the ability to grow or shrink in a cloud environment can also provide significant cost savings over paying for an on-premises option that can handle the full scaling event. Software as a service (SaaS) and platform as a service (PaaS) provide full applications or platforms, not containerization environments."
+          },
+          {
+            "value": 1600,
+            "clue": "173. Which of the following is not a common means of enforcing segmentation on a network?\nA. ACLS\nB. VLANS\nC. Firewalls\nD. Air gaps",
+            "solution": "173. D, ACLs, VLANs, and firewalls are all commonly used to implement network segmentation. Due to the operational challenges that air gaps create, they are far less commonly implemented and are only used when absolutely necessary,"
+          },
+          {
+            "value": 1800,
+            "clue": "197. Jorge wants to assess his organization's Internet-accessible attack surface. Which of the following methods is most likely to provide a complete understanding?\nA. Open source intelligence (OSINT) review\nB. Threat feeds\nC. Vulnerability scanning\nD. Penetration testing",
+            "solution": "197. D. Penetration tests will typically include vulnerability scanning as well as other activities that can provide a more complete view of an organization's Internet-facing attack surface. OSINT alone will not provide technical testing. Threat feeds do not provide information about a specific organization's attack surface, and vulnerability scanning may not reveal other issues like application issues."
+          },
+          {
+            "value": 2000,
+            "clue": "221. What term describes the right of countries to pass laws that control the use of data within their borders?\nA. Data classification\nB. Treaty obligations\nC. Treaty rights\nD. Data sovereignty",
+            "solution": "221. D. Data sovereignty is the right of nations to pass laws that control the use of data within their borders. This means that organizations must follow each country's laws when they store, process, or otherwise handle data in the country they operate in. Data classification is a process of classifying data to set handling or other processes and practices around it. Treaties are not covered by the Security+ exam."
+          }
+        ]
+      },
+      {
+        "category": "Category 4",
+        "clues": [
+          {
+            "value": 200,
+            "clue": "7. Maria is a securiy engineer with a manufacturing company. During a recent investigation, she discovered that an engineer's compromised workstation was being used to connect to SCAdis systens while the engineer was not logged in. The engineer is responsible for administering the SCAD systems and cannot be blocked from connecting to them. What should Maria do to mitigate this threat?\nA. Install host-based antivirus/antimalware software on the engineer's system.\nB. Implement account usage auditing on the SCADA system.\nC. Implement an NIPS on the SCADA system.\nD. Use FDE on the engineer's system.",
+            "solution": "7. B. Maria should implement ongoing auditing of the account usage on the SCADA system. This will provide a warning that someone's account is being used when they are not actually using it. Host-based antivirus/antimalware is almost never a bad idea, but this scenario did not indicate that the compromise was due to malware, so antimalware may not address the threat. Since the engineer has access to the SCADA system, a network intrusion prevention system (NIPS) is unlikely to block them from accessing the system, and full-disk encryption (FDE) will not mitigate this threat because the system is live and running, meaning that the disk will be decrypted in use."
+          },
+          {
+            "value": 400,
+            "clue": "31. Charles wants to use IPSec and needs to be able to determine the IPSec policy for traffic based on the port it is being sent to on the remote system. Which IPSec mode should he use?\nA. IPSec tunnel mode\nB. IPSec PSK mode\nC. IPSec IKE mode\nD. IPSec transport mode",
+            "solution": "31. D. Unlike IPSec's tunnel mode, IPSec transport mode allows different policies per port. The IP addresses in the outer header for transport mode packets are used to determine the policy applied to the packet. IPSec doesn't have a PSK mode, but WPA2 does. IKE is used to set up security associations in IPSec but doesn't allow this type of mode setting."
+          },
+          {
+            "value": 600,
+            "clue": "55. What element of the CIA triad is geographic dispersion intended to help with?\nA. Confidentiality\nB. Integrity\nC. Assurance\nD. Availability",
+            "solution": "55. D. Geographic dispersion is intended to help with availability by ensuring that a single disaster does not take multiple datacenters or other facilities offline. It does not directly impact confidentiality or integrity, and assurance is not part of the CIA triad."
+          },
+          {
+            "value": 800,
+            "clue": "79. Which of the following is not a common security concern with real-time operating systems?\nA. Inability to install security tools\nB. Lack of updates or patches\nC. Likelihood of malware infection\nD. Vulnerability concerns",
+            "solution": "79. C. While RTOS issues with vulnerabilities, the inability to install security tools. and a lack of patches for RTOS-based devices are all common security concerns, they are not as frequently targeted by malware infections."
+          },
+          {
+            "value": 1000,
+            "clue": "103. As part of an exercise for her organization, Sharon calls a team member and asks them to check the status of critical systems. The team member, who is aware of the exercise, does not actually validate the systems but responds that specific systems are down based on the scenario. What type of exercise is Sharon most likely part of?\nA. A tabletop exercise\nB. A fail over exercise\nC. A simulation exercise\nD. A parallel processing test",
+            "solution": "103. C. Sharon is most likely part of a simulation exercise, where organizations test how they would respond to a scenario without taking actual actions. This is safer than a fail over or parallel processing test but is closer to a real event than a tabletop exercise."
+          },
+          {
+            "value": 1200,
+            "clue": "127. Which of the following properly describes a SPAN port configured on a switch or router for monitoring?\nA. Active and inline\nB. Passive and inline\nC. Active and a monitor\nD. Passive and a monitor",
+            "solution": "127. C. Switch Port Analyzer (SPAN) ports, also known as mirrored ports, configured on a network switch or router are active because the device is powered and are a monitor because they simply copy traffic rather than being inline."
+          },
+          {
+            "value": 1400,
+            "clue": "151. John has deployed three servers that all respond as though they're the same device to provide service he runs. What term best describes this configuration?\nA. Load balancing\nB. Clustering\nC. Fail-open\nD. Fail-closed",
+            "solution": "151. B. Clustering involves using two or more systems to provide a service as though they're a single server. Load balancing spreads workloads across multiple independent systems while front-ending them with a load balancer device or service to distribute load. Fail-open means that if a network device fails, traffic continues to pass through it. Fail-closed devices stop traffic if they fail. Decisions about fail-open and fail-closed are made based on security in most cases, with fail-closed being more secure if the organization relies on the device for security."
+          },
+          {
+            "value": 1600,
+            "clue": "175. restore tani her backups, If her organization uses a daily back lp scheme that runs at mit-night, and the issue occurred at 2 a.m., how much data is Erin likely to lose?\nA. Two hours of data\nB. One day and two hours of data\nC. One week of data\nD. Little or no data",
+            "solution": "175. D. Journaling tracks transactions as they occur. Unless the journal itself was lost, Melissa should be able to restore the backup, then replay the journal to ensure the organization loses very little data."
+          },
+          {
+            "value": 1800,
+            "clue": "199. Mark wants to prorect data in use. Which of the following options should he select to pro- tect data in use?\nA. Hashing\nB. A secure enclave\nC. Containerization\nD. Tunneling data",
+            "solution": "199. B. A secure enclave is one way of protecting data in use. This relies on secured hardware that stores data that is in use and that only allows processes that run in the enclave from accessing data. Hashing, containerization, and using tunneling do not provide security for data in use."
+          },
+          {
+            "value": 2000,
+            "clue": "223. The company that Jayne works for has moved their web application infrastructure to a serverless model. Jayne's security team has informed her that they believe the application is undergoing a large-scale resource exhaustion-based distributed denial-of-service attack. If the application is running in Microsoft's serverless Azure environment, what is the most critical concern Jayne should have about the attack?\nA. Loss of data\nB. Cost of the resource usage\nC. Inability to review logs\nD. Vulnerabilities in the application",
+            "solution": "223. B. A large-scale denial-of-service attack that is using resources can be costly. Microsoft's cloud will be able to scale to meet the demand, but Jayne's organization may spend large amounts of money without benefiting any legitimate customers. Loss of data is unlikely because the application is being heavily used without any underlying issue for the application's data. Log files will still be created, but the size and scale of the logs may drive cost. There is nothing in the scenario that demonstrates a vulnerability, and resource exhaustion attacks do not require a vulnerability to be successful."
+          }
+        ]
+      },
+      {
+        "category": "Category 5",
+        "clues": [
+          {
+            "value": 200,
+            "clue": "9. Which of the following is not an advantage of a serverless architecture?\nA. It does not require a system administrator.\nB. It can scale as function call frequency increases.\nC. It can scale as function call frequency decreases.\nD. It is ideal for complex applications.",
+            "solution": "9. D. Serverless architectures do not require a system administrator because the provider manages the underlying function-as-a-service (FaaS) capability. It can also scale up or scale down as needed, allowing it to be very flexible. Serverless architectures are typically not ideal for complex applications and instead tend to work better for microservices."
+          },
+          {
+            "value": 400,
+            "clue": "33. Jason wants to implement a remote access virtual private network (VPN) for users in his organization who primarily rely on hosted web applications. What common VPN type is best suited to this if he wants to avoid deploying client software to his end-user systems?\nA. A TLS VPN\nB. An RDP (Remote Desktop Protocol) VPN\nC. An Internet Control Message Protocol (ICMP) VPN\nD. An IPScc VPN",
+            "solution": "33. A. A Transport Layer Security (TLS) VPN is frequently chosen when ease of use is important, and web applications are the primary usage mode. RDP is a remote access tool, not a VPN tool, and ICMP is used for things like ping, not for VPN. IPSec VPNs are used for site-to-site VPNs and for purposes where other protocols may be needed, because they make the endpoint system appear to be on the remote network."
+          },
+          {
+            "value": 600,
+            "clue": "57. Mateo wants to conduct a fail over test for his datacenter. What will he need to do to accomplish this?\nA. Turn off all systems in his datacenter.\nB. Simulate what would occur during a datacenter outage.\nC. Force a fail over using his network or other systems.\nD. Cause an outage of a critical system.",
+            "solution": "57. C. Datacenters should have a fail over process that can be manually executed in case of emergency. Mateo should use that process to fail over to his organization's fail over site. Turning off every system in a datacenter is not recommended as this may lead to other unexpected failures. Simulation is not a fail over test, and creating an outage of a critical system typically will not cause an entire datacenter to fail over."
+          },
+          {
+            "value": 800,
+            "clue": "81. Pete's organization has had a system fail and Pete wants to recover from backup. Which of the following backup methods will typically result in the fastest restoration timeframe?\nA. Snapshots\nB. Replication\nC. Journaling\nD. Tape backup",
+            "solution": "81. B. Replication is typically the fastest means to recovery since the replica system is running and ready to take over. Snapshot recovery is normally the next fastest, followed by restoration from other storage. Journaling can introduce additional slowdowns depending on how long it has been since the last backup, as the journal is replayed from the time that occurred to the time of failure."
+          },
+          {
+            "value": 1000,
+            "clue": "105. Cesar wants to ensure that his organization's SCADA and ICS devices remain secure. What is the most effective way to ensure that network attacks cannot impact his operation's critical infrastructure?\nA. Separate VLANs\nB. TLS\nC. Physical isolation\nD. SDN",
+            "solution": "105. C. Physically isolating the network for the SCADA and ICS systems can prevent attacks from outside of the network. In critical infrastructure like power generation stations, this is a common technique to ensure that external attacks cannot cause outages to critical physical infrastructure. Separate VLANs is a common logical control, but attacks against the network or using VLAN hopping techniques can allow attackers to bypass the sep-aration. TLS is useful for protecting traffic but does not meet the security requirement described, and SDN is useful for managing networks but again does not meet the enhanced security requirements in the question."
+          },
+          {
+            "value": 1200,
+            "clue": "129. Maria wants to deploy a web application firewall that will stop new attacks against her organization. What should she do to make sure that her web application firewall rules are as current as possible?\nA. Manually add new rules based on email updates.\nB. Deploy rules based on the OWASP Top 10.\nC. Subscribe to a threat feed and deploy rules based on the feed.\nD. Subscribe to the vendor's managed WAF rule service.",
+            "solution": "129. D. Many vendors offer a managed service that provides rules that stop trending and new attacks. Maria can subscribe to the service, but needs to be aware that sometimes rules may cause outages or issues if they block legitimate traffic accidentally. Manually deploying rules is slow and requires careful crafting. The Open Worldwide Application Security Project (OWASP) Top 10 is a short list and it is not updated quickly. Threat feeds are useful as a way to write rules but will be less effective than a managed service in most cases due to the variety of attacks and new threats."
+          },
+          {
+            "value": 1400,
+            "clue": "153. Theresa wants to back up her virtualization environment. What backup scheme is most frequently used for virtual machines?\nA. Journaling\nB. Snapshots\nC. Replication\nD. Grandfather/Father/Son",
+            "solution": "153. B. Snapshots are used to copy both the data and machine state for virtual machines. Journaling is used for databases and similar uses where replaying actions can be useful to recover if an issue occurs. Replication copies the data synchronously or asynchronously, allowing for a separate copy to be available at all times. Grandfather/Father/Son is a backup cycle commonly used for tape backup."
+          },
+          {
+            "value": 1600,
+            "clue": "177. Maria's organization uses a cloud backup provider and performs encrypted backups for their laas infrastructure and data. If the data needs to be restored, what will Maria need to do?\nA. Ask the vendor for the recovery key.\nB. Provide the recovery key.\nC. Restore the recovery key from backup and use it.\nD. Generate a new recovery key and restore from backup.",
+            "solution": "177. B. Encrypted backups require the encryption key, so Maria's organization will need to preserve and protect the recovery key in a secure manner that does not rely on the backups. This is often done via multiple physical copies of the key stored in secured locations with geographic diversity or using both physical and cloud secure storage like a key management system (KMS)."
+          },
+          {
+            "value": 1800,
+            "clue": "201. Masking, encryption, and tokenization are all examples of what?\nA. Data encryption methods\nB. Data classification methods\nC. Data obfuscation methods\nD. Data tagging methods",
+            "solution": "201. C. Masking, encryption, and tokenization are all examples of data obfuscation methods that protect against data exposure. None of these are encryption or classification methods, and none of them are tagging methods, although classification often involves tagging data if it will be managed or monitored using automated methods."
+          },
+          {
+            "value": 2000,
+            "clue": "225. Tristan deploys the network device shown in the following figure. The organization's web browsing traffic is directed through it and the traffic is filtered as described in the image. What type of network appliance is shown? Conceals internal IP addresses for web traffic, blocks website ads, applies content control for websites\nA. A web application firewall\nB. A proxy server\nC. A jump server\nD. A load balancer",
+            "solution": "225. B. The functions shown are typical of a proxy server. The proxy can be used to apply content controls and to conceal the IP addresses of internal users. A web application firewall filters web traffic but is specifically targeting attacks and malicious behavior. A jump server is used between a low-trust and a higher-trust area to provide access, and this is not shown or described in the image or question. A load balancer is used to distribute traffic load between servers, and this is not shown in the image or reflected in the question."
+          }
+        ]
+      },
+      {
+        "category": "Category 6",
+        "clues": [
+          {
+            "value": 200,
+            "clue": "11. Derek has been asked to implement his organization's service-oriented architecture as a set of microservices. What does he need to implement?\nA. A set of loosely coupled services with specific purposes\nB. A set of services that run on very small systems\nC. A set of tightly coupled services with custom-designed protocols to ensure continuous operation\nD. A set of services using third-party applications in a connected network enabled with industry standard protocols",
+            "solution": "11. A. A microservice architecture builds applications as a set of loosely coupled services that provide specific functions using lightweight protocols. It doesn't specifically define the size of the systems, but it is not a tightly coupled environment. Protocol choice is often open standards-based, but the emphasis is on lightweight protocols. There is not a requirement that services be in-house or third party exclusively."
+          },
+          {
+            "value": 400,
+            "clue": "35. What IP address does a load balancer provide for external connections to connect to web servers in a load-balanced group?\nA. The IP address for each server, in a prioritized order\nB. The load balancer's IP address\nC. The IP address for each server in a round-robin order\nD. A virtual IP address",
+            "solution": "35. D. Load balancers provide a virtual IP, or VIP. Traffic sent to the VIP is directed to servers in the pool based on the load-balancing scheme that that pool is using-often a round-robin scheme, but other versions that include priority order and capacity tracking or ratings are also common. The load balancer's IP address is normally used to administer the system, and individual IP addresses for the clustered hosts are shielded by the load balancer to prevent traffic from consistently going to those hosts, thus creating a failure or load point."
+          },
+          {
+            "value": 600,
+            "clue": "59. Nicole wants to protect her SMTP email exchanges from being read by others while on the wire. What can she implement to protect SMTP?\nA. SPF\nB. TLS\nC. DKIM\nD. ExIl",
+            "solution": "59. B. Implementing Transport Layer Security (TLS) to encapsulate Simple Mail Transfer Protocol (SMTP) would allow the traffic to be encrypted in transit, protecting it from being read. Sender Policy Framework (SPF) and DomainKeys Identified Mail (DKIM) are both used to prevent spoofing, and Exchangeable Image File Format (EXIF) is information found in an image file."
+          },
+          {
+            "value": 800,
+            "clue": "83. Theresa's organization operates in multiple countries. She knows that there are different laws that apply to her organization's use of data in each country they operate in. What concept describes this?\nA. Obfuscation\nB. Legal hold\nC. Data sovereignty\nD. Geographic restrictions",
+            "solution": "83. C. Data sovereignty means that governments have the ability to control data within their borders via law and regulations. Theresa's organization will need to comply with the laws of each country they operate in. Obfuscation refers to making something difficult to understand or read. Legal holds are used to require preservation of data when legal action is occurring or pending. Geographic restriction is used to limit where data can be accessed from and is a technical control used by organizations as part of data security efforts."
+          },
+          {
+            "value": 1000,
+            "clue": "107. Which of the following is not a common concern for extended power outages where generators are providing power to a datacenter they were designed to support during outages?\nA. Fuel availability\nB. Generator maintenance\nC. Generator capacity\nD. Physical redundancy",
+            "solution": "107. C. Generators are typically sized to the datacenter they support, so capacity is rarely a primary concern. Fuel availability, maintenance and maintenance cycles for extended runs, and ensuring physical redundancy so that a secondary generator can take over during maintenance cycles for long outages are all common concerns."
+          },
+          {
+            "value": 1200,
+            "clue": "131. Kendra is designing a web application in infrastructure and wants to use a load balanced cluster. WHich of the following considerations is not directly addressed by using a load balancer?\nA. Availability\nB. Responsiveness\nC. Scalability\nD. Risk transference",
+            "solution": "131. D. Load balancers can help with availability by automatically removing failed notes from a load balanced group. They can help with responsiveness by distributing load to the least loaded systems in a load balanced pool, and they can help with scalability by allowing systems to transparently be added or removed from the pool. They don't directly help with risk transference since risk transference usually requires a contract or insurance."
+          },
+          {
+            "value": 1400,
+            "clue": "155. Brent wants to monitor traffic using an IPS. He needs to prevent attack traffic from impacting his datacenter and wants to minimize the amount of traffic that the IPS device has to following figure? filter. Where should he place the device to best match these requirements based on the C Internet Border firewall Core router Datacenter firewall Datacenter router\nA. Position A\nB. Position B\nC. Position C\nD. Position D",
+            "solution": "155. D. Placing the IPS inline at position D will reduce the amount of traffic it has to filter while still allowing it to filter traffic bound for the datacenter. Points A, B, and C will all have more traffic, although point A will have the most, with reductions likely at points C and D."
+          },
+          {
+            "value": 1600,
+            "clue": "179. Brin's organization uses a backup schedule that creates a full backup once a week, then cre-\nA. One B, Two\nC. Three\nD. Four",
+            "solution": "179. D. Erin will need to restore the full backup, then apply the differential backups from each of the remaining three days for a total of four backups."
+          },
+          {
+            "value": 1800,
+            "clue": "203. Kyle wants to authenticate users who plug into his network, then assign them to a VLAN based on their role. What technology could he use to do this?\nA. 802.1X\nB. Port security\nC. VLAN tagging\nD. EAP",
+            "solution": "203. A. 802.1X allows for authentication via EAP, then assignment to a VLAN based on a role or other attributes. EAP alone does not perform this function, port security leverages MAC addresses to determine if a system is allowed to connect, and VLAN tagging is part of how traffic is labeled for a specific VLAN but does not support authentication or role-based labels directly."
+          }
+        ]
+      },
+      {
+        "category": "Category 7",
+        "clues": [
+          {
+            "value": 200,
+            "clue": "13. Naomi wants to secure a real-time operating system (RTOS). Which of the following techniques is best suited to providing RTOS security?\nA. Disable the web browser.\nB. Install a host firewall.\nC. Use secure firmware.\nD. Install antimalware software.",
+            "solution": "13. C. Using secure firmware, as well as using an RTOS with time and space partitioning, are both common methods to help ensure RTOS security. Unlike traditional operating systems, real-time operating systems are used in applications where they need to deal with inputs immediately. That means that adding additional load like firewalls and antimalware is not a typical component in RTOS applications. For similar reasons, you're unlikely to find a web browser on most devices running an RTOS."
+          },
+          {
+            "value": 400,
+            "clue": "37. Tom is responsible for VPN connections in his company. His company uses IPSec for VPNs. What is the primary purpose of AH in IPSec?\nA. Encrypt the entire packet.\nB. Encrypt just the header.\nC. Authenticate the entire packet.\nD. Authenticate just the header.",
+            "solution": "37. C. Authentication headers (AHs) provide complete packet integrity, authenticating the packet and the header. Authentication headers do not provide any encryption at all, and authentication headers authenticate the entire packet, not just the header."
+          },
+          {
+            "value": 600,
+            "clue": "61. What protocol is commonly used to allow for secured tunnels between corporate networks through untrusted networks?\nA. RTOS\nB. SHA-1\nC. IPSec\nD. RSA",
+            "solution": "61. C. IPSec virtual private networks are commonly established to tunnel through public or untrusted networks. A RTOS, or real-time operating system, is used for embedded systems. SHA-1 is a hashing algorithm, and RSA is an encryption algorithm that is used for IPSec as part of its authentication process. IPSec tunnels themselves commonly use AES, but may use other algorithms as well."
+          },
+          {
+            "value": 800,
+            "clue": "85. Troy wants to physically isolate a device. What does he need to do to accomplish this?\nA. Move it to a secure VLAN.\nB. Implement 802.1X.\nC. Create a physical air gap.\nD. Unplug the device from power and the network.",
+            "solution": "85. C. Physical isolation requires the creation of an air gap. This means unplugging the device from the network. A secure VLAN won't accomplish this, nor will 802.1X. Unplugging the device from power isn't required for physical isolation."
+          },
+          {
+            "value": 1000,
+            "clue": "109. Malia wants to prorect data in use. Which technique is not a good solution to ensuring that data in use is protected?\nA. Encryption\nB. Control access to the data\nC. Hashing data\nD. Limiting where data is processed",
+            "solution": "109. C. Use of encryption through secure enclaves and restricted processing environments, controlling access to the data, and limiting where data is processed are all useful controls. Hashing the data does not leave it in a usable form since hashes transform the data, and thus is not a useful solution."
+          },
+          {
+            "value": 1200,
+            "clue": "133. Patrick wants to deploy a virtual private networking (VPN) technology that is as easy for end users to use as possible. What type of VPN should he deploy?\nA. An IPSec VPN\nB. An SSL/TLS VPN\nC. An HTMLS L2TP VPN\nD. An SAML VPN",
+            "solution": "133. B. A TLS-based VPN (often called an SSL-based VPN, despite SSL being outmoded) provides the easiest way for users to use VPN since it does not require a client. SSL VPNs also work only for specific applications rather than making a system appear as though it is fully on a remote network. HTML5 is not a VPN technology, but some VPN portals may be built using HTML5. Security Assertion Markup Language (SAML) is not a VPN tech-nology. IPSec VPNs require a client or configuration and are thus harder for end users to use in most cases."
+          },
+          {
+            "value": 1400,
+            "clue": "157. Julia is designing her organization's external connectivity as part of infrastructure capacity planning. She knows that the organization typically uses approximately 7 gigabits per second of connectivity from their primary site. Julia has the following connectivity options, what should she select?\nA. A 10 Gbps primary and a S Gbps secondary connection\nB. A S Gbps primary and a S Gbps secondary connection\nC. A 100 Gbps primary and a 10 Gbps secondary connection\nD. A 10 Gbps primary and a 10 Gbps secondary connection",
+            "solution": "157. D. In general, fail over connections should be able to handle an organization's full throughput. Overprovisioning for 100 Gbps will typically create significantly more cost not only for connectivity but also for network devices that can handle high speeds, and underprovisioning at 5 Gbps will mean that traffic would need to be reduced in a fail over scenario."
+          },
+          {
+            "value": 1600,
+            "clue": "181. Vera wants to manage multiple commercial Internet services for her organization to ensure connectivity. What technology should she select to manage and maintain this?\nA. SASE\nB. SN\nC. IPSec\nD. SD- WAN",
+            "solution": "181. D. Vera can use a SD-WAN, or software-defined wide area network, to manage multiple connections dynamically, ensuring connectivity and performance for her organization. SASE is used to secure networks and device connectivity in modern organizations with complex and mobile boundaries. SDN is software-defined networking and manages networks as code. IPSec is a suite of protocols used to secure network traffic."
+          },
+          {
+            "value": 1800,
+            "clue": "205. Lucca has deployed an SD-WAN controller. Which of the following types of connectivity will not typically be managed with an SD-WAN solution?\nA. Wi-Fi\nB. MPLS\nC. Broadband\nD. LTE",
+            "solution": "205. A. Wi-Fi and other on premises network solutions are not typically part of an SD-WAN implementation. SD-WAN focuses on wide area networks, which are outside the on-premises network borders of organizations, and thus technologies like MPLS, broadband, and LTE are used with SD-WAN controllers."
+          }
+        ]
+      },
+      {
+        "category": "Category 8",
+        "clues": [
+          {
+            "value": 200,
+            "clue": "15. Madhuri has configured a backup that will back up all of the changes to a system since the last time that a full backup occurred. What type of backup has she set up?\nA. A snapshot\nB. A full backup\nC. An incremental backup\nD. A differential",
+            "solution": "15. D. Differential backups back up all of the changes since the last full backup. An incremental backup backs up all changes since the last incremental backup. A snapshot captures machine state and the full drive at a bitwise level, and full backups are a complete copy of a system but typically do not include the memory state."
+          },
+          {
+            "value": 400,
+            "clue": "39. Janice is explaining how IPSec works to a new netona technierator She is trying to explain the role of IKE. Which of the following most closely matches the\nA. It encrypts the packet.\nB. It establishes the SAs.\nC. It authenticates the packet.\nD. It establishes the tunnel.",
+            "solution": "39. B. Internet key exchange (IKE) is used to set up security associations (SAs) on each end of the tunnel. The security associations have all the settings (i.c., cryptographic algorithms, hashes) for the tunnel. IKE is not directly involved in encrypting or authenticating. IKE itself does not establish the tunnel—it establishes the SAs."
+          },
+          {
+            "value": 600,
+            "clue": "63. Eva wants to deploy a network security device that will provide firewall services as well as IPS and email filtering. Which device should she deploy?\nA. A UTM\nB. An FWSM\nC. A WAF\nD. An ELB",
+            "solution": "63. A. A unified threat management (UTM) device combines multiple security services including firewall, IDS or IPS, antivirus/antimalware, email filtering, WAF, and similar services into a single solution. An FWSM, or firewall service module, is an older Cisco chassis-based firewall; a WAF is a web application firewall; and an ELB is Elastic Load Balancer, a load-balancing service available via AWS."
+          },
+          {
+            "value": 800,
+            "clue": "87. Carlos uses a remote desktop tool to connect to a server through a firewall that protects his organization's database servers. He then uses software on the server to manage the database servers. What type of solution is Carlos using?\nA. A network tap\nB. SASE\nC. SD-WAN\nD. A jump server",
+            "solution": "87. D. Carlos is using a jump server that is used to connect from an untrusted or lower trust zone from outside of a firewall. A network tap is used to provide copies of network traffic for analysis. SASE combines SD-WAN and other security technologies to provide network security services regardless of where systems are for enterprises. SD-WAN (software-defined wide area networking) is used to manage network connectivity through commodity Internet providers and other services."
+          },
+          {
+            "value": 1000,
+            "clue": "111. Valentine has containerized her applications. What will not be part of the container?\nA. The operating system\nB. The application\nC. Needed libraries\nD. Configuration files",
+            "solution": "111. A. Containers do not include an operating system, but do contain applications, libraries, and configuration files."
+          },
+          {
+            "value": 1200,
+            "clue": "135. Akio is considering a decentralized model to manage her organization's multiple datacen-ters. What key advantage could this provide for her organization?\nA. Reductions in cost\nB. Increased resilience\nC. Reductions in complexity\nD. Increased complexity",
+            "solution": "135. B. Decentralized approaches can provide increased resilience since a failure or compromise of the management plane or services in a single location will not disrupt other locations. Unfortunately, this normally comes with increased cost and complexity. Increased complexity is not an advantage."
+          },
+          {
+            "value": 1400,
+            "clue": "159. Cathy wants to build a high-availability infrastructure for her midsize company's headquarters building network. Which of the following is not a common element for a high-availability network core?\nA. Redundant routers\nB. Generators\nC. Geographic dispersion\nD. Multiple connectivity providers",
+            "solution": "159. C. Geographic dispersion is unlikely for a single building's network core. Redundancy, power backups, and multiple connectivity options are commonly part of designing a highly available network."
+          },
+          {
+            "value": 1600,
+            "clue": "183. What term best describes intangible assets created by staff members of a company like designs and concepts?\nA. Trade secrets\nB. Sensitive data\nC. Intellectual property\nD. Trademarks",
+            "solution": "183. C. Intellectual property is intangible creations by the human mind. Patents, copyrights, trademarks, and trade secrets are all examples of intellectual property. Intellectual property is not necessarily sensitive data, but it could be."
+          },
+          {
+            "value": 1800,
+            "clue": "207. Jim wants to design his network for high availability (HA). What first step is commonly taken in HA designs for networks?\nA. Configure a hot site.\nB. Purchase redundant hardware.\nC. Identify single points of failure.\nD. Implement clustering.",
+            "solution": "207. C. Identifying single points of failure is a common first step in network high availability designs. This allows network designers to plan for failures and how to avoid them. Configuring a hot site, implementing clustering, and purchasing redundant hardware all occur much further into the design process when needs are identified and prioritized."
+          }
+        ]
+      },
+      {
+        "category": "Category 9",
+        "clues": [
+          {
+            "value": 200,
+            "clue": "17. Nathaniel wants to improve the fault tolerance of a server in his datacenter. If he wants to ensure that a power outage does not cause the server to lose power, what is the first control he should deploy from the following list?\nA. A UPS\nB. A generator\nC. Dual power supplies\nD. Managed power units (PDUs)",
+            "solution": "17. A. An uninterruptable power supply (UPS) should be Nathaniel's first priority. Ensuring that power is not disrupted during an outage and can be maintained for a short period until alternate power like a generator can come online is critical, and a UPS can provide that capa-bility. A generator alone will take longer to come online, resulting in an outage. Dual power supplies can help to build resilience by allowing multiple power sources and avoiding issues if a power supply does fail, but that is not the focus of the question. A managed power distribution unit (PDU) provides remote management and power monitoring but will not prevent power loss in an outage."
+          },
+          {
+            "value": 400,
+            "clue": "41. You are responsible for an e-commerce site. The site is hosted in a cluster. Which of the following techniques would be best in assuring availability?\nA. A VPN concentrator\nB. Aggregate switching\nC. An SSL accelerator\nD. Load balancing",
+            "solution": "41. D. Load-balancing the cluster will prevent any single server from being overloaded. And if a given server is offline, other servers can take on its workload. A VPN concentrator, as the name suggests, is used to initiate virtual private networks (VPNs). Aggregate switching can shunt more bandwidth to the servers but won't mitigate the threat of one or more servers being offline. SSL accelerators are a method of offloading processor-intensive public key encryption for Transport Layer Security (TLS) and Secure Sockets Layer (SSL) to a hardware accelerator."
+          },
+          {
+            "value": 600,
+            "clue": "65. Cassandra is considering transitioning from an on-premises to a hybrid cloud environment. in hish of the following concerns will she need to consider that would not have been required in a single on-premises datacenter previously?\nA. RPOs\nB. Data sovereignty\nC. RTOs\nD. Power resilience",
+            "solution": "65. B. Data sovereignty is a new concern for organizations that host services and data outside of their local area, including across state or national boundaries. Recovery point objectives (RPOs), recovery time objectives (RTOs), and power resilience are all common concerns for on-premises datacenters."
+          },
+          {
+            "value": 800,
+            "clue": "89. Which of the following is not a common type of incident response exercise?\nA. Drills\nB. Simulations\nC. Tabletop\nD. Walk-throughs",
+            "solution": "89. A. Typical exercise types for most organizations include simulations that emulate an actual incident response process, walk-throughs that guide staff through an event, and tabletop exercises that are gamed out without taking actual action. Drills are classified as more focused on specific actions or functions, and they are less common because they can result in inadvertent action or mistakes and do not cover the breadth of an incident."
+          },
+          {
+            "value": 1000,
+            "clue": "113. Cassandra wants to deploy a network security device that can detect and stop attacks. behaviors and threat feeds? What rype of network security device should she use if she wants to stop attacks based on\nA. An IDS\nB. A proxy server\nC. An IPS\nD. A jump server",
+            "solution": "113. C. An IPS, or intrusion prevention system, can stop attacks based on behaviors and threat feed data. An IDS can detect attacks using the same information but cannot stop them. Proxy servers are used to filter content but do not meet this requirement, and jump servers are used for secure access into higher trust environments."
+          },
+          {
+            "value": 1200,
+            "clue": "137. Jason's organization wants to classify data that the organization regularly uses. The data is customer data, and could cause harm to the company if it was released. Which of the following data classifications best fits this type of data?\nA. Confidential\nB. Restricted\nC. Critical\nD. Public",
+            "solution": "137. A. The data should not be released or exposed and could cause harm. This means that confidential best describes this data from the list of available terms. Restricted data is typically limited to a subset of staff, but that is not reflected in the question. The data is also not described as being critical to the operations of the organization; instead the emphasis is on confidentiality. Since this data must remain confidential, it is not public data."
+          },
+          {
+            "value": 1400,
+            "clue": "161. Jacob is concerned about attacks against his virtual machines that would target the hypervisor. What term describes this type of attack?\nA. VM escape\nB. Hypervisor escalation\nC. VM shell attacks\nD. Container breaches",
+            "solution": "161. A. Virtual machine (VM) escape attacks attempt to access or gain control of the underlying hypervisor through virtual machines. While uncommon, if this occurred it could result in serious issues due to the number of systems run on a single hypervisor host particularly in cloud or shared environments. The other options were made up for the question."
+          },
+          {
+            "value": 1600,
+            "clue": "185. Henry's organization relies on remote workers in multiple regions. Each region has an office where workers work part-time, and the organization's core services rely on a variety of SaaS providers. What network model best describes this type of usage model?\nA. Centralized\nB. Decentralized\nC. On-premises\nD. Logically segmented",
+            "solution": "185. B. This organization is using a decentralized model where there is no datacenter or primary hosting or operational facility. With remote workers making up much of the company, as well as flexible working locations, this design makes sense for the company but introduces additional complexity because endpoints will need to be secured wherever they are, regardless of what network they are on. A centralized design can somewhat simplify that, but modern application stacks and working conditions often make that less likely. This is not an on-premises design since workers and cloud tools are remote. There is no description of segmentation in the question."
+          },
+          {
+            "value": 1800,
+            "clue": "209. Angela is considering using encryption as part of the security controls applied to her backups In the event of a major disaster, what concern should she address about having encrypted backups?\nA. Time to decrypt the backups\nB. Cost of encrypting the backups\nC. Ensuring the key is recoverable in a disaster\nD. The amount of space that the encryption adds to the backups",
+            "solution": "209. C. A primary concern for organizations that encrypt their backups is whether the keys are available in a disaster. Ensuring that the keys are stored in a manner that ensures that they are recoverable if the backups are recoverable is critical. Modern backup encryption typically does not add a meaningful amount of time to backups, nor does it increase cost or space to such a significant degree that it is a primary concern."
+          }
+        ]
+      },
+      {
+        "category": "Category 10",
+        "clues": [
+          {
+            "value": 200,
+            "clue": "19. Mia is a network administrator for a bank. She is responsible for secure communications with her company's customer website. Which of the following would be the best for her to implement?\nA. SSL\nB. PPTP\nC. IPSec\nD. TLS",
+            "solution": "19. D. Transport Layer Security (TLS) provides a reliable method of encrypting web traffic. It supports mutual authentication and is considered secure. Although Secure Sockets Layer (SSL) can encrypt web traffic, TLS was created in 1999 as its successor. Although many network administrators still use the term SSL, in most cases today what you are using is actually TLS, not the outdated SSL. Point-to-point Tunneling Protocol (PPTP) and Internet Protocol Security (IPSec) are protocols for establishing a VPN, not for encrypting web traffic."
+          },
+          {
+            "value": 400,
+            "clue": "43. Claire has been notified of a zero-day flaw in a web application. She has the exploit code, including a SQL injection attack that is being actively exploited. How can she quickly react to prevent this issue from impacting her environment if she needs the application to continue\nA. Deploy a detection rule to her IDS.\nB. Manually update the application code after reverse-engineering it.\nC. Deploy a fix via her WAF.\nD. Install the vendor-provided patch.",
+            "solution": "43. C. Claire's best option is to deploy a detection and fix via her web application firewall (WAF) that will detect the SQL injection (SQLi) attempt and prevent it. An intrusion detection system (IDS) only detects attacks and cannot stop them. Manually updating the application code after reverse-engineering it will take time, and she may not even have the source code or the ability to modify it. Finally, vendor patches for zero days typically take some time to come out even in the best of circumstances, meaning that Claire could be waiting on a patch for quite a while if that is the option she chooses."
+          },
+          {
+            "value": 600,
+            "clue": "67. Dani wants to protect HTTP traffic that is sent from SCADA devices on her network to a cloud-hosted controller. The devices don't natively support an HTTPS connection. What could she do to transparently protect the data?\nA. Set up a VPN connection from each SCADA device to the remote server.\nB. Set up a TLS-enabled proxy between the devices and the server.\nC. Set up SD-WAN.\nD. Install X.509 certificates on each SCADA device.",
+            "solution": "67. B. A TLS-enabled proxy between the devices and server doesn't require anything else to be installed on the devices, which is typically impossible with SCADA devices. That means the VPN connection and the X.509 certificates are unlikely to work. SD-WAN helps to manage external connectivity, not to directly protect traffic in this scenario."
+          },
+          {
+            "value": 800,
+            "clue": "91. Yuri wants to use an off-site backup location. What challenge can off-site backup locations create for organizations?\nA. It is difficult to validate the integrity of the backups.\nB. Retrieving the backups may slow down recovery.\nC. The backups cannot be easily updated.\nD. Off-site backups may be impacted by the same disaster.",
+            "solution": "91. B. Off-site backup locations are typically chosen so that they will not be impacted by the same disaster. That means that recovery may be slow if the backups either need to be physically retrieved or must be downloaded via an Internet connection. Backup integrity is typically verified as part of the backup process, and this can be checked easily. Off-site backups are typically updated as part of the backup process, and this should not be an issue."
+          },
+          {
+            "value": 1000,
+            "clue": "115. Jackson has deployed a next-generation firewall. Which of the following features is most likely to help him prevent new attacks without having to create individual rules to stop them?\nA. Threat feeds\nB. Application awareness\nC. Deep packet inspection\nD. High throughput",
+            "solution": "115. A. Using threat feeds allows administrators to have rules that automatically block new threats using IP reputation and other services. Those detections may rely on application awareness or deep packet inspection, but without the feed information new rules will have to be crafted to address specific new threats. High throughput allows NGFW devices to deal with significant load as well as the demands of deep packer inspection and application awareness."
+          },
+          {
+            "value": 1200,
+            "clue": "139. Which of the following is not a common service provided by a UTM device?\nA. Firewall\nB. SD- WAN\nC. IPS\nD. Antivirus/antimalware",
+            "solution": "139. B. UTM devices commonly provide firewall, IPS, antivirus/antimalware, and a variety of other services. They are also commonly part of SD-WAN architectures, but do not themselves provide the SD-WAN service."
+          },
+          {
+            "value": 1400,
+            "clue": "163. An IDS is an example of what type of network device?\nA. Active\nB. Air gapped\nC. Fail-closed\nD. Passive",
+            "solution": "163. D. Intrusion detection systems are considered passive systems because they cannot block traffic. Active systems like firewalls, IPS, and proxies all have the ability to directly interact with and stop or allow traffic. Air gapped devices do not have a physical connection to a network, or they are on a separate network that is not connected to other networks. Fail-closed devices stop traffic when they fail. Most IPS systems are not deployed inline since they do not need to be interactive and having them inline only creates another potential failure point."
+          },
+          {
+            "value": 1600,
+            "clue": "187. Jack has deployed a load balancer for his tiane ion. ver en a ne, connection is made, the oad diployed a ligns the connection to the next fore in a ling moong through the lit ohe loid as it distribute connections. What type of load balancing algorithm is in use\nA. Capacity-based\nB. Round-robin\nC. Least load\nD. User pinning",
+            "solution": "187. B. Round-robin load balancer algorithms spread load by assigning incoming connections to servers or services on a list. This helps to spread the load evenly even without awareness of the relative load each connection creates or that the server is under simply by relying on connections evening out over time. Load-based and capacity-based models use more knowledge of the state of the servers or services. User pinning is not a load balancing model."
+          },
+          {
+            "value": 1800,
+            "clue": "211. Jack is worried about outages that may disrupt service from his laaS vendor's cloud envi-ronment. Which of the following options provides the greatest likelihood of avoiding service disruptions from an outage from his current laaS vendor?\nA. Deploying to multiple availability zones (AZs)\nB. Deploying to multiple regions\nC. Deploying to multiple cloud vendors\nD. Requiring contractual terms around uptime",
+            "solution": "211. C. In circumstances where a single vendor's outages are a major concern, multi-cloud erized or otherwise easily portable. The more customized to the current cloud vendor the application or service is, the more difficult it is to move to other cloud vendors and the more costly the move will be. In addition, multi-cloud can drive additional costs for overhead services, making multi-cloud a choice organizations undertake cautiously. Deploying in multiple AZs or regions will not avoid an outage if the laaS vendor has a cloud-wide issue, and contractual obligations won't stop outages—they will typically just provide penalties if there is an outage longer than the contract allows."
+          }
+        ]
+      },
+      {
+        "category": "Category 11",
+        "clues": [
+          {
+            "value": 200,
+            "clue": "21. Mike is concerned about data sovereignty for data that his organization captures and main-tains. What best describes his concern?\nA. Who owns the data that is captured on systems hosted in a cloud provider's infrastructure?\nB. Can Mike's organization make decisions about data that is part of its service, or does it belong to users?\nC. Is the data located in a country subject to the laws of the country where it is stored?\nD. Does data have rights on its own, or does the owner of the data determine what rights may apply to it?",
+            "solution": "21. C. Data sovereignty refers to the concept that data that is collected and stored in a country is subject to that country's laws. This can be a complex issue with multinational cloud services and providers that may store data in multiple countries as part of their normal architecture. It may also create compliance and other challenges based on differences in national laws regarding data, data privacy, and similar issues."
+          },
+          {
+            "value": 400,
+            "clue": "45. Next-generation firewalls include many cutting-edge features. Which of the following is not a common next-generation firewall capability?\nA. Geolocation\nB. IPS and/or IDS\nC. Sandboxing\nD. SQL injection",
+            "solution": "45. D. Although next-generation firewalls (NGFWs) provide may defensive capabilities, SQL injection (SQLi) is an attack instead of a defense. In addition to geolocation, intrusion detection system (IDS) and intrusion prevention system (IPS), and sandboxing capabilities, many next-generation firewalls include web application firewalls, load balancing, IP reputation and URL filtering, and antimalware and antivirus features."
+          },
+          {
+            "value": 600,
+            "clue": "69. Which of the following is not a common practice used to secure data in transit?\nA. Encryption\nB. TLS\nC. Geolocation\nD. VPN",
+            "solution": "69. C. Geolocation is used to control where data can be accessed from but does not protect data in transit. Encrypting data, encapsulating via TLS, or use of a VPN are all common methods to protect data in transit."
+          },
+          {
+            "value": 800,
+            "clue": "93. Which of the following data types best describes data covered by the European Union's GDPR?\nA. Trade secrets\nB. Intellectual property\nC. Regulated data\nD. Legal information",
+            "solution": "93. C. The European Union's (EU) General Data Protection Regulation (GDPR) is a privacy regulation, and thus, data covered by the GDPR is regulated data. The GDPR does include language that addresses not adversely impacting the rights of others, including intellectual property rights, particularly in terms of software, but the best answer remains that this is regulated data. Trade secrets and legal information are not broad enough to describe this data."
+          },
+          {
+            "value": 1000,
+            "clue": "117. What technologies are most frequently used to help enforce geographic restrictions?\nA. Wi-Fi and Bluetooth\nB. GPS and Wi-Fi\nC. GPS and encryption\nD. DNS and GPS",
+            "solution": "117. B. GPS and Wi-Fi are commonly used to enforce geofencing by determining where individual devices are. Bluetooth may be used in some cases as well, but Wi-Fi and GPS are the dominant options. DNS is not used as part of geographic restrictions, nor is encryption."
+          },
+          {
+            "value": 1200,
+            "clue": "141. Jaime has deployed smart lighting and thermostats to her new buildings. What technique will have the largest impact if she wants to harden the devices?\nA. Applying an industry standard baseline configuration\nB. Moving the devices to a separate security zone\nC. Fully patching the devices when they are deployed\nD. Vulnerability scanning, then remediating the devices on a regular basis",
+            "solution": "141. B. Moving devices to an isolated network segment that has appropriate controls in place to protect devices that may not be able to be secured or that may not receive regular patches is the best option available. Baselines, patching, and even scanning and remediation only help if the devices can be secured, patched, and otherwise protected. loT devices are often not able to be secured this way, particularly as they age and both lighting and thermostats have relatively long useful lifespans."
+          },
+          {
+            "value": 1400,
+            "clue": "165. Jerome wants to use an obfuscation method to protect data in his database. His organization works with sensitive customer data and does not want to run the risk of that data being exposed via their web application, but still wants to use the rest of their customer data in the application. What obfuscation process of tool should he use to ensure that the data can be matched to customers while remaining secure?\nA. Use a steganographic program to modify the data, then use that data for the web application.\nB. Use a masking algorithm to completely mask the data, then use a single database.\nC. Tokenize the data and use the tokenized data in a database set up for the web application.\nD. Hash the data in the original database, then use the database for the web application.",
+            "solution": "165. C. Tokenizing the data in a separate database will allow both the original unaltered database and a secured database to be used. This reduces risk while retaining data integrity where required. Steganography hides data in images and does not fit this use case. Masking only conceals data and does not protect it against attacks against the underlying application or darabase in many cases. Hashing the original database will transform the data, and using a single database remains risky."
+          },
+          {
+            "value": 1600,
+            "clue": "189. Kathleen wants to monitor her datacenter's environmental status. What solution should she invest in to meet this need?\nA. An HVAC system\nB. UPS systems\nC. Environmental sensor appliances\nD. A load balancer",
+            "solution": "189. C. Environmental sensor appliances are frequently deployed to datacenters and network closets to monitor for potential issues like high temperatures. Heating, ventilation, and air-conditioning (HVAC) systems monitor and control temperatures, but datacenters commonly add additional monitoring tools in case the HVAC system fails or other issues arise. UPS systems are not used for environmental monitoring, and load balancers are used to distribute load to servers and services."
+          },
+          {
+            "value": 1800,
+            "clue": "213. Ben has grouped his data based on use cases and sensitivity and has applied different security practices based on those groupings. What data security technique is he using?\nA. Segmentation\nB. Obfuscation\nC. Masking\nD. Tokenization",
+            "solution": "213. A. Segmentation of data separates data based on factors like use cases, sensitivity, roles, and types or classifications of information. Obfuscation attempts to conceal or hide information. Masking replaces information with other data like asterisks or X's when dis-played, allowing partial data to be displayed for business purposes. Tokenization replaces data with an alternate value, often based on a hashing algorithm that allows the alternate value to be used as an index or reference without the actual data visible."
+          }
+        ]
+      },
+      {
+        "category": "Category 12",
+        "clues": [
+          {
+            "value": 200,
+            "clue": "23. Elaine wants to adopt appropriate response and recovery controls for natural disasters. What type of control should she use to prepare for a multi-hour power outage caused by a tornado?\nA. A hot site\nB. A generator\nC. A PDU\nD. A UPS",
+            "solution": "23. B. A generator is the most appropriate answer to a multi-hour outage. Although a hot site would allow her organization to stay online, the cost of a hot site is much higher than that of a generator. A PDU, or power distribution unit, is used to manage and distribute power, not to handle power outages. Finally, UPS systems are not typically designed to handle long out-ages. Instead, they condition power and ensure that systems remain online long enough for a generator to take over providing power."
+          },
+          {
+            "value": 400,
+            "clue": "47. Theresa implements a network-based IDS. What can she do to traffic that passes through the IDS?\nA. Review the traffic based on rules and detect and alert about unwanted or undesirable traffic.\nB. Review the traffic based on rules and detect and stop traffic based on those rules.\nC. Detect sensitive data being sent to the outside world and encrypt it as it passes through the IDS.\nD. All of the above.",
+            "solution": "47. A. IDSs, or intrusion detection systems, can only detect unwanted and malicious traffic based on the detection rules and signatures that they have. They cannot stop traffic or modify it. An IPS, or intrusion prevention system, that is placed in line with network traffic can take action on that traffic. Thus, IDSs are often used when it is not acceptable to block network traffic, or when a tap or other network device is used to clone traffic for inspection."
+          },
+          {
+            "value": 600,
+            "clue": "71. Marcellus wants to ensure that his organization has sufficient capacity to handle the failure of a web server. What type of technology could he deploy to ensure that individual web server failures are handled gracefully without using an overly complex solution?\nA. Platform diversity\nB. A multi-cloud system\nC. A load balancer\nD. A warm site",
+            "solution": "71. C. A load balancer can help handle individual web server failures gracefully by moving load to the functioning web servers in a cluster. In scalable environments, this can also result in more servers being instantiated. Platform diversity helps to protect against failures or vulnerabilities in a single vendor, platform, or system. Multi-cloud systems could help in this case but are much more complex than required by the relatively simple need to handle an individual web server's failure. A warm site would be suited to a datacenter failure, not a single web server failing."
+          },
+          {
+            "value": 800,
+            "clue": "95. Jill wants to design her organization for high availability. Which of the following design elements best supports power resilience for a high-availability environment for an on-site datacenter?\nA. Using generators\nB. Using UPS systems\nC. Using UPS systems backed up by generators\nD. Using a warm site on a separate power grid",
+            "solution": "95. C. Using UPS with generators will allow systems to remain online during a power outage even if the power outage extends for some time. Generators alone will not spin up fast enough to avoid an outage, and UPS systems will run out of battery power in extended out-ages. A warm site requires setup time to bring it online, resulting in an outage."
+          },
+          {
+            "value": 1000,
+            "clue": "119. Kirk's organization contracts with a cloud service provider. Kirk is concerned about third-party vendors that his cloud service provider uses. How can Kirk best address these concerns?\nA. Through direct contracts with the third-party vendors\nB. By requiring regular audits of third-party vendors\nC. Through the contract with his cloud service provider\nD. By performing vulnerability scans of the third-party vendors",
+            "solution": "119. C. Ensuring that third-party vendors are held to appropriate standards is best accomplished through contracts with direct suppliers. Since the third-party vendors sign contracts with Kirk's cloud provider, not with Kirk's organization, the only way to have influence over them is through the cloud service provider. Audits and vulnerability scans will typically not be allowed by organizations that do not have a contract with a vendor."
+          },
+          {
+            "value": 1200,
+            "clue": "143. Lucca wants to fully validate his organization's hot site's ability to perform as needed in the event of an outage. What type of testing should he run to ensure that the hot site is completely tested as though an actual disaster has occurred?\nA. Fail over\nB. Simulation\nC. Tabletop\nD. Parallel processing",
+            "solution": "143. A. Fail over testing goes beyond parallel processing and completely takes over running services. This is the most complex and risky testing mode, but also the only one that completely tests failure scenarios in a real-world exercise. Simulations and tabletops are more abstract and would not test the site, instead focusing on practices and behaviors."
+          },
+          {
+            "value": 1400,
+            "clue": "167. Susan has deployed a network using software-defined networking. What part of her network is most critical to secure as part of this architecture?\nA. The routers\nB. The switches\nC. The SDN controller\nD. The SD-WAN connections",
+            "solution": "167. C. In a SDN environment, the SDN controller provides manages and controls all the ner-work devices, including switches and routers. That means that a compromise of the SDN controller would result in compromise of the entire network. No mention is made of SD-WAN in the question, so we don't know the connectivity or relative importance of SD-WAN in the scenario."
+          },
+          {
+            "value": 1600,
+            "clue": "191. Valerie wants to connect one of her company's remote locations back to the organization's main network. What type of solution can she use for a persistent connection between the networks that will securely tunnel data across a commodity Internet connection?\nA. A TLS VPN\nB. A web proxy\nC. An IPSec VPN\nD. An 802.1X tunnel",
+            "solution": "191. C. An IPSec VPN is a common option for organizations that need to create a secure VPN tunnel between two locations. A VPN connection is established by network devices at both locations and traffic is able to travel securely over commodity Internet connections. TLS VPNs are more commonly used for individuals to connect to an organization's network. Web proxies are used to filter and control web traffic, not for this purpose. 802.1X is used to authenticate to networks and protect them from unauthorized connections, not to create secure, multisite tunnels."
+          },
+          {
+            "value": 1800,
+            "clue": "215. Tara is monitoring web traffic to her organization's website from a local public library and notices that all of the logins seem to come from the same IP address. She knows that the library provides multiple workstations for public use as well as public Wi-Fi. What type of network appliance might be in use?\nA. A jump server\nB. A proxy server\nC. A load balancer\nD. A DLP system",
+            "solution": "215. B. A proxy server is likely to be used in an environment where the ability to filter searches may be required, such as a library with public workstations. A jump server is used to access more secure zones, a load balancer is typically used to allow multiple systems to provide a service, and a DLP system is used to prevent unauthorized data exfiltration."
+          }
+        ]
+      }
+    ],
+    "double": [
+      {
+        "category": "Category 1",
+        "clues": [
+          {
+            "value": 400,
+            "clue": "2. John is running an IDS on his network. Users sometimes report that the IDS flags legitimate traffic as an attack. What describes this?\nA. False positive\nB. False negative\nC. False trigger\nD. False flag",
+            "solution": "2. A. When an intrusion detection system (IDS) or antivirus/antimalware mistakes legitimate traffic for an attack, this is called a false positive. A false negative is when the IDS mistakes an attack for legitimate traffic. It is the opposite of a false positive. Options C and D are both incorrect. Although these may be grammatically correct, these are not the terms used in the industry. In military operations, false flag operations attempt to transfer blame to another organization or adversary, thus a \"false flag.\""
+          },
+          {
+            "value": 800,
+            "clue": "26. Chris is preparing to implement an 802.1X-enabled wireless infrastructure. He knows that he wants to use an Extensible Authentication Protocol (EAP)-based protocol that does not require client-side certificates. Which of the following options should he choose?\nA. EAP-MDS В. РЕАР\nC. LEAP\nD. EAP-TLS",
+            "solution": "26. B. The option that best meets the needs described is PEAP, the Protected Extensible Authentication Protocol. PEAP relies on server-side certificates and on tunneling to ensure communications security. EAP-MD5 is not recommended for wireless networks and does not support mutual authentication of the wireless client and network. LEAP, the Lightweight Extensible Authentication Protocol, uses WEP keys for its encryption and is not recommended due to security issues. Finally, EAP-TLS, or EAP Transport Layer Security, requires certificates on both the client and server, consuming more management overhead."
+          },
+          {
+            "value": 1200,
+            "clue": "50. Maria is responsible for security at a small company. She is concerned about unauthorized devices being connected to the network. She is looking for a device authentication process. Which of the following would be the best choice for her?\nA. CHAP\nB. Kerberos\nC. 802.111\nD. 802.1X",
+            "solution": "50. D. 802.1X is the IEEE standard for port-based network access control. This protocol is frequently used to authenticate devices. Challenge Handshake Authentication Protocol (CHAP) is an authentication protocol but not the best choice for device authentication. Kerberos is an authentication protocol but not the best choice for device authentication. 802.11i is the Wi-Fi security standard and is fully implemented in WPA2 and WPA3. It is not a device authentication procedure."
+          },
+          {
+            "value": 1600,
+            "clue": "74. Mikayla wants to prevent unauthorized users from plugging network devices into her wired network. What control would be most effective for this if she needs Ethernet jacks to be available in publicly accessible spaces for her staff to plug devices in as they move around the facility, but also wants to ensure those devices are secure?\nA. NAC\nB. Port security\nC. IPS\nD. Jump servers",
+            "solution": "74. A. Network access control (NAC) has the ability to both profile device security and validate that a given user is authorized to plug a device into a specific Ethernet jack makes this the best solution for Mikayla's use case. Port security's list of recognized MAC addresses is both potentially vulnerable to MAC spoofing and does not meet the device security check requirements described. An IPS can help prevent network attacks but does not control port-level access, and jump servers are used to allow access to secured network segments, not to protect individual network jacks."
+          },
+          {
+            "value": 2000,
+            "clue": "98. Malia is reviewing potential considerations for her ICS deployment. Which of the following is typically not a consideration that Malia can control or change for embedded devices?\nA. Ease of deployment\nB. Patch availability\nC. Risk transference\nD. Compute",
+            "solution": "98. D. Compute is rarely a significant concern for embedded systems. They're designed to function for long periods of time performing a specific function and do not have additional software or functions added. How easy they are to deploy, if they can be patched and updated, and the support lifespan as guaranteed or promised by the vendor, and risk transference by engaging third-party vendors are all likely concerns for a major industrial control system (ICS) deployment that Malia can control through the selection process."
+          },
+          {
+            "value": 2400,
+            "clue": "122. Sade works for a large organization that wants to ensure that their connectivity is properly secured. WHat type of security device should she select if throughput and advanced security capcabilities are both important factors in selection?\nA. A UTM device\nB. An NGFW device\nC. A WAF\nD. A proxy server",
+            "solution": "122. B. NGFW devices are typically deployed where throughput and advanced security features are both needed. UTM devices are more common in small to mid-sized organizations where they can be set up and will often require less management and configuration. A WAF is appropriate for web services, but does not provide enough protection for an entire organization's Internet connectivity. A proxy server is useful for filtering traffic but has the same issues with limited functionality."
+          },
+          {
+            "value": 2800,
+            "clue": "146. Helen has deployed both Cisco and Juniper routers in her organization to ensure that a vu-nerability in one vendor's products does not result in a complete outage of her organization. What is this type of design called?\nA. Platform agnostic\nB. Platform diversity\nC. Multi-cloud\nD. Parallel processing",
+            "solution": "146. B. This type of architecture leverages the idea of platform diversity. Having multiple vendors and platforms helps to ensure that a single vendor's failure or vulnerability does not prevent an organization from continuing to function. Platform agnostic is not on the Security+ exam but typically means that organizations don't have a vested interest in which platform is selected or used. Multi-cloud environments run in multiple cloud vendors' tools, but this question involves physical router hardware. Parallel processing is a failure testing mode where two or more sites run at the same time during a test."
+          },
+          {
+            "value": 3200,
+            "clue": "170. Elle is conducting an exercise for her organization and wants to run an exercise that is as close to an actual event as possible. What type of event should she run to help her organization get this type of real-world practice?\nA. A simulation\nB. A tabletop exercise\nC. A walk-through\nD. A wargame",
+            "solution": "170. A. A simulation is the closest you can get to a real-world event without having one. A tabletop exercise has personnel discussing scenarios, whereas a walk-through goes through checklists and procedures. A wargame is not a common exercise type."
+          },
+          {
+            "value": 3600,
+            "clue": "194. Which of the following is not available as part of a snapshot?\nA. The underlying hypervisor's configuration\nB. The virtual machine's power state\nC. The virtual machine's memory state\nD. The virtual machine's disks",
+            "solution": "194. A. The virtual machine's power state, memory state, and disk are all captured as part of a snapshot. The underlying hypervisor's configuration is not captured by a snapshot."
+          },
+          {
+            "value": 4000,
+            "clue": "218. What major advantage does a monitoring port have over an inline network tap?\nA. It is easier to configure.\nB. It has higher performance.\nC. It is more secure.\nD. If it fails, it will not impact the network.",
+            "solution": "218. D. The biggest advantage of a monitoring port over an inline network tap is that if the monitoring port fails, it will not impact the network traffic flow. If an inline device fails, it may impact the network traffic even if it is designed to avoid that scenario. Inline taps don't have to rely on the performance of the switch, meaning that they are often higher performance; they can be passive, meaning that they cannot be attacked like a switch's operating system can be; and since inline passive devices simply copy traffic, they are often easier to configure since you merely plug them in."
+          }
+        ]
+      },
+      {
+        "category": "Category 2",
+        "clues": [
+          {
+            "value": 400,
+            "clue": "4. What type of system is used to control and monitor power plant power generation systems?\nA. IPG\nB. SEED\nC. SCADA\nD. ICD",
+            "solution": "4. C. SCADA, or supervisory control and data acquisition systems, are commonly used to manage facilities like power plants. The remaining options were made up."
+          },
+          {
+            "value": 800,
+            "clue": "28. Mark is responsible for managing his company's load balancer and wants to use a load-sessions. Which of the following techniques should he choose? blat is reshedibie cique that will take into accoun she current server load and active\nA. Round-robin\nB. Weighted response time\nC. Least connection\nD. Source IP hashing",
+            "solution": "28. C. Least connection-based load balancing takes load into consideration and sends the next request to the server with the least number of active sessions. Round-robin simply distributes requests to each server in order, whereas weighted time uses health checks to determine which server responds the most quickly on an ongoing basis and then sends the traffic to that server. Finally, source IP hashing uses the source and destination IP addresses to generate a hash key and then uses that key to track sessions, allowing interrupted sessions to be reallocated to the same server, and thus allowing the sessions to continue."
+          },
+          {
+            "value": 1200,
+            "clue": "52. Mila wants to generate a unique digital fingerprint for a file, and needs to choose between a checksum and a hash. Which option should she choose and why should she choose it?\nA. A hash, because it is unique to the file\nB. A checksum, because it verifies the contents of the file\nC. A hash, because it can be reversed to validate the file\nD. A checksum, because it is less prone to collisions than a hash",
+            "solution": "52. A. Mila should select a hash because a hash is designed to be unique to each possible input. That means that multiple files could have the same checksum value, whereas a hashing algorithm will be unique for each file that it is run against."
+          },
+          {
+            "value": 1600,
+            "clue": "76. The company that Alex works for is preparing to adopt a platform as a service tool for their customer relationship management needs. Alex knows that third-party vendors are responsible for some, but not all, security in a PaaS environment. Which of the following is the Paas vendor responsible for?\nA. Network security\nB. Endpoint security\nC. User account security\nD. Application security",
+            "solution": "76. A. PaaS vendors are responsible for the underlying service and platform, including the net-works, systems, and infrastructure that it runs on, including their security. Customers are responsible for their use of the platform, including endpoints, users, and applications built on the platform, again including their security."
+          },
+          {
+            "value": 2000,
+            "clue": "100. Network connected devices built into washing machines, microwaves, and other household appliances are examples of what type of network device?\nA. ICS\nB. SCADA\nC. Embedded systems\nD. Virtualization",
+            "solution": "100. C. These are all examples of embedded systems, computers built into devices to allow them to function. Other examples include computers built into cars, digital cameras, and ther-mostats. They often receive fewer (or no) updates, and are required to function for long periods of time as part of other devices or systems."
+          },
+          {
+            "value": 2400,
+            "clue": "124. Geoff's data is stored in a cloud service's database. What data state is the data in?\nA. It is at rest.\nB. It is in transit.\nC. It is in use.\nD. It is sovereign.",
+            "solution": "124. A. Since the data is not actively being moved between systems or via a network, and it is not being processed, it is data at rest. If the database was being actively accessed, the data might be in transit when it was sent to an application server and in use as the server processed it. Data sovereignty is the concept that countries can regulate data within their own borders."
+          },
+          {
+            "value": 2800,
+            "clue": "148. Jessica has port-scanned a multifunction printer and has discovered that the device provides services on ports 80, 443, 515, and 9100. Which of the following terms best describes this?\nA. The printer's attack surface\nB. The printer's security zone\nC. The printer's scalability\nD. The printer's resilience",
+            "solution": "148. A. Attack surfaces are the potential points for an attack to occur. For devices, this is often the open services. For organizations, attack surfaces can include open ports and services, physical security concerns, and human vectors. Security zones are a way for organizations to categorize and manage different devices and systems based on security classification. Scalability describes whether a service or system can grow or shrink to handle demand or load. Resilience describes if a system or service can tolerate issues that might otherwise result in outages."
+          },
+          {
+            "value": 3200,
+            "clue": "172. Laura is planning for continuity of operations. What personnel concern should she plan to handle for her hot site in the event of a large-scale natural disaster in the area where her primary facility is?\nA. Lack of facility power\nB. Inability to authenticate personnel\nC. Insider threats\nD. Lack of available personnel",
+            "solution": "172. D. In a large-scale disaster scenario, personnel may be unwilling or unable to report to work. Organizations planning for disaster in an area where their personnel live and work often need to identify ways to ensure staffing in a scenario that impacts their staff. Lack of facility power is not a personnel issue. Authentication should be part of the hot-site capa-bility. Insider threats are not a common concern during disasters."
+          },
+          {
+            "value": 3600,
+            "clue": "196. Dane works for an energy provider that manages devices throughout a large geographic region using a control system that monitors and controls power infrastructure. The system operates from a central command center and uses cellular, broadband, and other connectivity methods to connect devices to the control center. What type of system is Dane's company using?\nA. RTOS\nB. Embedded systems\nC. loT\nD. SCADA",
+            "solution": "196. D. SCADA manages complex systems by combining central and local control systems with communication systems to manage large-scale industrial processes. The endpoint devices described may be embedded systems, Internet of Things (LoT), or real-time operating systems (RTOSs), but together they are a SCADA system."
+          },
+          {
+            "value": 4000,
+            "clue": "220. Naomi wants to be able to easily move her application between cloud service providers and to use automation to allow for deployment of the application. What technology best allows for applications to be bundled with the libraries and other components they need without requiring additional overhead like an operating system?\nA. Containerization\nB. Snapshots\nC. Embedded systems\nD. Segmentation",
+            "solution": "220. A. Containerization technologies bundle the needed libraries and other components for an application together in a lightweight package format that can easily be deployed to a provider's containerization service. Snapshots are used to capture a virtual machine's state and data at a given point in time. Embedded systems are computers that are built into a device or system. Segmentation is the concept of dividing a network or system into separate parts, often with security and other boundaries between them."
+          }
+        ]
+      },
+      {
+        "category": "Category 3",
+        "clues": [
+          {
+            "value": 400,
+            "clue": "6. Olivia needs to ensure an loT device does not have its operating system modified by third parties after it is sold. What solution should she implement to ensure that this does not occur?\nA. Set a default password.\nB. Require signed and encrypted firmware.\nC. Check the MDSsum for new firmware versions.\nD. Patch regularly.",
+            "solution": "6. B. If Olivia wants to ensure that third parties will be unable to modify the operating system for Internet of Things (loT) devices, requiring signed and encrypted firmware for operating system updates is an effective means of stopping all but the most advanced threats. Setting a default password means that a common password will be known. Checking the MD5sum for new firmware versions will help administrators validate that the firmware is legitimate, but signed and encrypted firmware is a much stronger control. Finally, regular patching may help secure the devices but won't prevent OS modifications."
+          },
+          {
+            "value": 800,
+            "clue": "30. Which device would most likely process the following rules? PERMIT IP ANY EQ 443; DENY IP ANY ANY;\nA. NIPS\nB. HIPS\nC. Content filter\nD. Firewall",
+            "solution": "30. D. A firewall has two types of rules. One type is to allow specific traffic on a given port. The other type of rule is to deny traffic. What is shown here is a typical firewall rule. Options A, B, and C are incorrect. The rule shown is clearly a firewall rule."
+          },
+          {
+            "value": 1200,
+            "clue": "54. Jerome needs to explain the key difference between high availability and fault tolerance to his management. What is the major difference between the two?\nA. High availability is designed to avoid service interruptions almost entirely, whereas fault-tolerant environments have minimal service disruptions.\nB. High availability provides services, whereas fault tolerance handles issues.\nC. High availability focuses on data, whereas fault tolerance focuses on infrastructure.\nD. High availability has minimal service interruptions, whereas fault-tolerant environments are designed to avoid service interruptions almost entirely.",
+            "solution": "54. D. High-availability designs are less expensive because they attempt to minimize service interruptions, whereas fault-tolerant designs seek to avoid service interruptions almost entirely, and thus cost significantly more. Both focus on service availability and typically use both hardware and software tools to meet their goals."
+          },
+          {
+            "value": 1600,
+            "clue": "78. Charles wants to adopt an encryption tool. What encryption standard should he look for the tool to support to ensure that he is using a current secure standard to protect his data?\nA. AES-512\nB. AES-256\nC. AES-128\nD. AES-192",
+            "solution": "78. B. AES-256 is the current mainstream standard for encryption. AES 128 and 192 are both less secure, and AES-512 is not an implemented or commonly used standard."
+          },
+          {
+            "value": 2000,
+            "clue": "102. What type of backup is done to update a full backup with changes made after the full backup occurred?\nA. Incremental\nB. Partial\nC. Daily\nD. Snapshots",
+            "solution": "102. A. Incremental backups only include the data that has changed since the last full backup. To restore a backup using incremental backups, the full backup is restored, then incremental backups are applied in order from oldest to most recent. Partial backups describe a backup of only certain data or parts of a system. Daily backups are just that— daily-and may be full or incremental. Snapshots are point-in-time images of a system's or a device's data and memory."
+          },
+          {
+            "value": 2400,
+            "clue": "126. Ed is building a continuity of operations plan (COOP) for his organization. What three scenarios does a COOP address?\nA. Loss of personnel, loss of systems, loss of availability\nB. Natural disasters, human-made disasters, mistakes or errors\nC. Loss of access to a facility, damage to a facility, natural disasters\nD. Loss of access to a facility, loss of personnel, and loss of services",
+            "solution": "126. D. COOP plans address loss of access to some or all of a facility, personnel, or services. Other items may cause those losses, but the focus is on continued operations addressing the key components of an organization's business or purpose-facilities, staff, and services."
+          },
+          {
+            "value": 2800,
+            "clue": "150. Bank account numbers, credit card numbers, and invoice information are all examples of what type of data?\nA. Intellectual property\nB. Financial\nC. Public\nD. Trade secrets",
+            "solution": "150. B. Financial data includes transactions, accounts, and many other types of information related to finances. Intellectual property is a broad category of data created by humans. Public information is information that is available to the public, and trade secrets are kept private to a limited number of individuals in a company for competitive advantage or other purposes."
+          },
+          {
+            "value": 3200,
+            "clue": "174. Binary files are an example of what type of data?\nA. Human-readable\nB. Restricted\nC. Non-human-readable\nD. Confidential",
+            "solution": "174. C. Binary files like executable programs are examples of non-human-readable data. That's one of the reasons encoding schemes like XML were crented for data files that can allow both machines and humans to read and interact with data. Restricted and confidential are both classification schemes that businesses may use to describe their organizational data."
+          },
+          {
+            "value": 3600,
+            "clue": "198. Brent has deployed multiple brands of loT devices across his organization to ensure that if an issue with one type of device or device vendor occurs others will still function. What is the largest concern he should address with this design that focuses on platform diversity?\nA. Complexity of management\nB. Availability\nC. Resilience\nD. Ease of deployment",
+            "solution": "198. A. IoT devices are typically deployed for long periods of time, meaning that over time the complexity of managing a multiple device and vendor environment is the largest concern. Initial concerns about ease of deployment would exist but could be overcome. Availability and resilience are both typically helped by platform diversity as outages or issues found with one device or vendor should not impact others."
+          },
+          {
+            "value": 4000,
+            "clue": "222. lan's organization uses a root certificate authority that only allows certificate signing locally. All certificates are transferred via USB drives because the system is not connected to the network. What type of security design is in use?\nA. Port security\nB. An air gapped design\nC. Defense-in-depth\nD. A zero-trust design",
+            "solution": "222. B. This is an example of air gapped design where there is no network connectivity. This prevents network-based attacks from being possible against the high-value certificate authority server. Port security is used to enable or disable network ports. Defense-in-depth is a design concept that relies on layers of defenses to ensure security. Zero trust requires continuous authentication and rights verification to provide ongoing security for a network or system architecture."
+          }
+        ]
+      },
+      {
+        "category": "Category 4",
+        "clues": [
+          {
+            "value": 400,
+            "clue": "8. Mike is a security analyst and has just removed malware from a virtual server. What feature of virtualization would he use to return the virtual server to a last known good state?\nA. Sandboxing\nB. Hypervisor\nC. Snapshot\nD. Elasticity",
+            "solution": "8. C. A snapshot is an image of the virtual machine (VM) at some point in time. It is standard practice to periodically take a snapshot of a virtual system so that you can return that system to a last known good state. Sandboxing is the process of isolating a system or software. The hypervisor is the mechanism through which the virtual environment interacts with the hardware, and elasticity is the ability for the system to scale."
+          },
+          {
+            "value": 800,
+            "clue": "32. What two connection methods are used for most geofencing applications?\nA. Cellular and GPS\nB. USB and Bluetooth\nC. GPS and Wi-Fi\nD. Cellular and Bluetooth",
+            "solution": "32. C. Global Positioning System (GPS) data and data about local Wi-Fi networks are the two most commonly used protocols to help geofencing applications determine where they are. When a known Wi-Fi signal is gained or lost, the geofencing application knows it is within range of that network. GPS data is even more useful because it can work in most locations and provide accurate location data. Although Bluetooth is sometimes used for geofencing, its limited range means that it is a third choice. Cellular information would require accurate tower-based triangulation, which means it is not typically used for geofencing applications, and of course USB is a wired protocol."
+          },
+          {
+            "value": 1200,
+            "clue": "56. Valentine wants to choose an appropriate obfuscation method to allow her customer service representatives to validate credit card numbers without exposing the full number to the staff member. What obfuscation method should she select?\nA. Masking\nB. Tokenization\nC. Steganography\nD. Hashing",
+            "solution": "56. A. Masking replaces some characters with an alternate character, allowing tasks like validating credit card numbers without exposing all of a data field. Tokenization replaces values with a replacement value allowing data to be accessed without exposing the actual value. Steganography hides data in images and is not a useful solution in this scenario. Hashing is a mathematical technique that analyzes a file and computes a unique fingerprint, known as a message digest or hash, for that file."
+          },
+          {
+            "value": 1600,
+            "clue": "80. Chris wants to create a token to substitute for data in a database. Which of the following is not a common attribute for tokens?\nA. They don't have exploitable meaning themselves.\nB. They are easily reversible to identify the original data, even without the tokenization scheme.\nC. They frequently rely on one-way hash functions.\nD. Tokens must be mapped to matching original data.",
+            "solution": "80. B. Tokens should not be easily reversible. Instead, they should require access to the original tokenization function or a mapping to the original data. Tokens should not have intrinsic meaning or value, and frequently rely on hash functions as part of their generation process to ensure this."
+          },
+          {
+            "value": 2000,
+            "clue": "104. Zhuri wants to ensure that her organization's datacenter remains online during an extended power outage. What power resilience option is best suited to extended outages?\nA. Generators\nB. Solar\nC. UPS\nD. PDUs",
+            "solution": "104. A. Generators are used by organizations that need to handle extended power outages, They are commonly paired with UPS systems that handle the immediate power outage, allowing the generator to start and stabilize. Solar power alone is not a good solution without a significant battery system, and datacenter-scale battery systems paired with solar are not yet common. PDUs (power distribution units) are used to distribute and control power in a datacenter but do not provide power generation or backup capabilities."
+          },
+          {
+            "value": 2400,
+            "clue": "128. Renee wants to choose a control that will protect her organization against SQL injection attacks. Which of the following is likely to be the most effective control for attacks that are announced without prior notice and that require a very quick response?\nA. Web application penetration testing\nB. A WAF\nC. Static code review\nD. SASE",
+            "solution": "128. B. A major advantage of WAFs is the ability to use thread and rule feeds from vendors that quickly respond to new threats and attacks. At the same time, Renee can also build WAF rules faster than it would take to deploy code fixes in many cases. Penetration testing and static code review are both slow processes and are not suited to the rapid respond described. SASE is used to protect diverse endpoints in many locations, not to counter SQL injection (SQLi) against a web service."
+          },
+          {
+            "value": 2800,
+            "clue": "152. Alains organization is required to comply with the PCI DS standard. What type of data is she most likely dealing with?\nA. Intellectual property\nB. Trade secrets\nC. Financial information\nD. Regulated information",
+            "solution": "152. C. PCI DSS is a credit card data security standard, meaning that Alaina is most likely dealing with financial information. PCI DSS does not directly address intellectual property or trade secrets, and it's not a regulation."
+          },
+          {
+            "value": 3200,
+            "clue": "176. Which of the following is typically used to manage an ICS?\nA. SDN\nB. SCADA\nC. Active Directory\nD. SD-WAN",
+            "solution": "176. B. SCADA systems are often used to manage industrial control systems (ICSs). SDN and SD-WAN are used to manage networks and connectivity respectively, whereas Active Directory is used to manage Windows servers and workstations in a domain environment."
+          },
+          {
+            "value": 3600,
+            "clue": "200. The following figure shows two simplified design concepts. What security architecture is shown in Model 2? Model 1 Model 2 Web servers Web servers Private network Private network\nA. Logical segmentation\nB. Air gapped\nC. Serverless\nD. On-premises",
+            "solution": "200. B. There is no connection between the two network security zones in Model 2. This is an air gapped model with physical isolation. Logical segmentation would show VLANs or other logical segmentation options. Servers are shown, casily dismissing serverless as an option, and there is no indication of whether this is an on-premises or an off-site design."
+          },
+          {
+            "value": 4000,
+            "clue": "224. Elaine knows that prior to 802.1X enabling a port, only EAP traffic is allowed through the port. What does this permit?\nA. Vulnerability scanning\nB. Authentication\nC. Port scanning\nD. System security status validation",
+            "solution": "224. B. EAP (Extensible Authentication Protocol) is used for 802.1X authentication before the port is enabled for other traffic. EAP does not permit vulnerability or port scanning, nor does it provide system security status validation."
+          }
+        ]
+      },
+      {
+        "category": "Category 5",
+        "clues": [
+          {
+            "value": 400,
+            "clue": "10. Which of the following is the most important benefit from implementing SDN?\nA. It will stop malware.\nB. It provides scalability.\nC. It will detect intrusions.\nD. It will prevent session hijacking.",
+            "solution": "10. B. Software-defined networking (SDN) makes the network very scalable. It is relatively easy to add on new resources or remove unneeded resources, and it helps with high availability efforts. SDN does not stop malware, detect intrusions, or prevent session hijacking."
+          },
+          {
+            "value": 800,
+            "clue": "34. Binary data is an example of what type of data?\nA. Non-human-readable\nB. Encrypted\nC. Human-readable\nD. Masked",
+            "solution": "34. A. Binary data is a form of non-human-readable data. Encrypted data may be in binary format, but not all binary data is encrypted. Binary data is not human-readable, nor is it masked, which hides elements of data to allow for it to be used without exposing the underlying data."
+          },
+          {
+            "value": 1200,
+            "clue": "58. Casey's organization has proprietary information models that they use to analyze the market that they operate in. What data type best describes this information?\nA. Trade secret\nB. Regulated\nC. Financial information\nD. Public information",
+            "solution": "58. A. Trade secrets are intellectual property that is commercially valuable and is limited to a small group of individuals. Regulated information is controlled by law or has legal requirements around it. Financial information involves things related to monetary transactions or accounts. Public information is not controlled and is available to the public or could be without causing harm or concern."
+          },
+          {
+            "value": 1600,
+            "clue": "82. Henry accesses a database server from his workstation. What data state best describes the data while it is on the network?\nA. Data at rest\nB. Data in use\nC. Data on the wire\nD. Data in transit",
+            "solution": "82. D. The Security+ exam outline recognizes three data states: data at rest, data in transit, and data in use. When Henry accesses the data and it is transferred via the network, it is data in transit. When he is working with the data, including modifying or otherwise using it, it is data in use. When it resides on the drives the database is stored in, it is data at rest. Data on the wire is not a common term for this-data in motion and data in transit are both common in industry usage, and the Security+ exam outline uses data in transit."
+          },
+          {
+            "value": 2000,
+            "clue": "106. What key data element is used to validate which systems are allowed to use Ethernet ports where port security is enabled?\nA. Their IP address\nB. The network card's manufacturer\nC. The user's password\nD. Their MAC address",
+            "solution": "106. D. Hardware addresses, known as MAC addresses, are used for port security to determine which systems can connect to a port. Their IP address, the network card manufacturer, and the user's password are not used by port security."
+          },
+          {
+            "value": 2400,
+            "clue": "130. Gary's organization provides Wi-Fi network connectivity for customers, employees, and loT building automation devices. What should he implement if he needs each of the three groups to have access to the same resources at times without the three groups of users being able to connect to each other?\nA. Fail-closed networks\nB. Security zones\nC. Data classification\nD. Fail-open networks",
+            "solution": "130. B. Each network segment should be considered a separate security zone that can be managed and secured appropriately for its ongoing use. Networks are not typically considered fail-open or fail-closed —devices are. Data classification is used to label data."
+          },
+          {
+            "value": 2800,
+            "clue": "154. What is the primary reason an organization might choose a parallel processing testing scenario over a fail over testing scenario?\nA. Parallel processing allows for more throughput.\nB. Fail over does not fully test redundant systems, Fail over requires organizations to create a significant issue to allow for the fail over to occur.\nD. Parallel processing typically handles issues without outages.",
+            "solution": "154. D. Parallel processing allows for systems to be tested without taking them offline. This means that in the event of an issue with the backup systems or facility, the primary facility can continue to operate. Parallel processing does allow for more throughput, but organizations should not rely on this as parallel processing environments need to be able to handle the full load for the organization if the primary or backup fails. Fail over does test redundant systems and does not require organizations to create a significant issue. Instead, manual fail over processes are used to conduct fail over tests."
+          },
+          {
+            "value": 3200,
+            "clue": "178. What two major differences separate backups and replication?\nA. Replication is periodic, but does not require restoration processes before data is able to be used.\nB. Backups are continuous but require restoration processes before data is able to be used. C, Backups are periodic and do not require restoration before data is able to be used Replication is continuous and does not require restoration processes before data is able to be used.",
+            "solution": "178. D. Replication is a continuous process and because of this it does not require restoration processes like restoring differential backups or journals to allow data to be used. Backups are periodic, and they typically require additional restoration work in order to be used."
+          },
+          {
+            "value": 3600,
+            "clue": "202. Liana wants to deploy a load balancer and wants to ensure that if a session is interrupted users have the highest chance of being reconnected to the same server. What algorithm should she select?\nA. Round-robin\nB. IP hash\nC. Weighted least connection\nD. Resource-based",
+            "solution": "202. B. IP hash relies on a hash of the client and server's IP addresses to associate them with a server. Even if you're not familiar with load-balancing techniques, you can rule out round-robin, which simply distributes sessions through a list in order; weighted least connection, which looks at which servers have the least traffic and a weight assigned to the server; and resource-based, which looks at how heavily loaded a server is."
+          }
+        ]
+      },
+      {
+        "category": "Category 6",
+        "clues": [
+          {
+            "value": 400,
+            "clue": "12. Abigail is responsible for datacenters in a large, multinational company. She has to support multiple datacenters in diverse geographic regions. What would be the most effective way for her to manage these centers consistently across the enterprise?\nA. Hire datacenter managers for each center.\nB. Implement enterprise-wide SDN.\nC. Implement infrastructure as code (laC).\nD. Automate provisioning and deprovisioning.",
+            "solution": "12. C. The correct answer is to implement laC. Infrastructure as code (IaC) is the process of managing and provisioning computer datacenters through machine-readable definition files, rather than physical hardware configuration or interactive configuration tools. Whether the datacenters) use physical machines or virtual machines, this is an effective way to manage the datacenters. Although datacenter managers may be needed, that won't necessarily provide consistent management across the enterprise. Software-defined networking (SDN) will not fix this problem, but it would help if Abigail needed to configure and manage her network based on usage and performance. Finally, this issue is not just about provisioning; it is about management."
+          },
+          {
+            "value": 800,
+            "clue": "36. Matt has enabled port security on the network switches in his building. What does port security do?\nA. Filters by MAC address\nB. Prevents routing protocol updates from being sent from protected ports\nC. Establishes private VLANs\nD. Prevents duplicate MAC addresses from connecting to the network",
+            "solution": "36. A. Port security filters by MAC address, permitting allow listed MAC addresses to connect to the port and blocking block listed MAC addresses. Port security can be static, using a predetermined list or dynamically allowing a specific number of addresses to connect, or it can be run in a combination mode of both static and dynamic modes."
+          },
+          {
+            "value": 1200,
+            "clue": "60. Brandon deploys a server in a VLAN used for lo device, e shen crso tes firewall ules that Blow on depossem administration nerwork to SH to thatserver so that they can man. allo sy sens in the protected network segment. What type of solution has Brandon deployed:\nA. A UTM\nB. A jump server\nC. An ICS server\nD. A VPN",
+            "solution": "60. B. Jump servers are used to access secured zones and are typically carefully controlled and monitored because they are the single point of entry from untrusted environments. A Unified Threat Management (UTM) is a security device that combines firewall features with a variety of other security functions. ICS stands for Industrial Control System. This is not an ICS, although the loT devices it allows connections to may be a form of ICS. VPNs, or virtual private networks, encapsulate and protect network traffic as it moves through untrusted networks."
+          },
+          {
+            "value": 1600,
+            "clue": "84. Hrant is deploying a nework tap that support eveRS foh tapitor iP. f he wants to ensure chat his organizations security remains the same even if the tap and IPS fails, and prefers downie to a lack of monitoring, what type of failure mode and monitoring deployment should he select?\nA. In-line, fail-closed\nB. In-line, fail-open\nC. Tap, fail-closed\nD. Tap, fail-open",
+            "solution": "84. A. Hrant's use of an IPS means he wants to be in-line to allow him to block traffic. Since he prefers that a failure remain secure rather than potentially allowing attacks through, he should select a fail-closed implementation."
+          },
+          {
+            "value": 2000,
+            "clue": "108. Rafted wants to protect his dara from being accessed by dur thorized users. Which of the following is nor well suited to preventing attacks by insider threats?\nA. Encryption\nB. Geographic restrictions\nC. Tokenization\nD. Permission restrictions",
+            "solution": "108. B. Geographic restrictions are rarely helpful for insider threats because insiders are likely to already be in the same location as authorized users in most organizations. Encryption, tokenization, and permission restrictions can all be used to ensure that only authorized users gain access to the data."
+          },
+          {
+            "value": 2400,
+            "clue": "132. Angie is logging in to a server. What data state is her authentication information in?\nA. Data in storage\nB. Data at rest\nC. Data in validation\nD. Data in use",
+            "solution": "132. D. When Angie logs in, her authentication data is processed, making it data in use. Data at rest is data that is stored and not in active use or processing. Data in storage and data in validation were made up for this question and are not typically considered data states."
+          },
+          {
+            "value": 2800,
+            "clue": "156. Marco is preparing to brief his organization's leadership about challenges that may result from adopting a hybrid cloud design. Which of the following is the primary concern that he should highlight?\nA. Jurisdictional challenges\nB. Increased complexity\nC. Increased cost\nD. Regulatory challenges",
+            "solution": "156. B. Increased complexity can include jurisdictional challenges, increased cost, and regulatory challenges as well as visibility challenges, management overhead increases, and a wide range of additional challenges from operating in multiple locations and models."
+          },
+          {
+            "value": 3200,
+            "clue": "180. What advantage does an IPSec VPN have over a TLS VPN when protecting traffic?\nA. It operates at the network layer rather than the transport layer.\nB. It supports stronger encryption types.\nC. It does not rely on tunneling.\nD. It does not provide advantages over LS, and TIS should be used instead when",
+            "solution": "180. A. IPSec VPNs operate at the network layer instead of the transport layer. That means less information is visible to potential attackers. Both support strong encryption, IPSec VPNs do support tunneling, and not relying on tunneling is not an advantage in most use cases."
+          },
+          {
+            "value": 3600,
+            "clue": "204. Using VLANs is an example of what type of segmentation?\nA. Air gapping\nB. Logical segmentation\nC. Physical segmentation\nD. Physical isolation",
+            "solution": "204. B. Logical segmentation uses software to define and create segmentation. VLANs are defined at the network layer using VLAN tags. Air gapping would remove network connectivity between a system or systems and other networks to prevent access via the network. Physical segmentation would require separate network infrastructure. Physical isolation typically means removing a system from a network."
+          }
+        ]
+      },
+      {
+        "category": "Category 7",
+        "clues": [
+          {
+            "value": 400,
+            "clue": "14. Ben has been asked to explain the security implications for an embedded system that his organization is considering building and selling. Which of the following is not a typical concern for embedded systems?\nA. Limited processor power\nB. An inability to patch\nC. Lack of authentication capabilities\nD. Lack of bulk storage",
+            "solution": "14. D. Embedded systems can bring a broad range of security implications, many of which are driven by the limited capabilities of the processors and hardware they are frequently built with. Low-power consumption designs may lack computational power and thus have challenges implementing strong cryptography, network connectivity, and other similar problems. Patching embedded systems can be challenging both because of where they are deployed and because of a lack of connectivity for them—in fact, in many environments, you may not want the devices to be connected to your network. Since many don't have a screen, keyboard, or a network connection, authentication is also a problem. Few embedded devices, however, need bulk storage, making the lack of bulk storage a problem that typically isn't a major concern."
+          },
+          {
+            "value": 800,
+            "clue": "38. Abigail is responsible for setting up a network-based intrusion prevention system (NIPS) on her network. The NIPS is located in one particular network segment. She is looking for a passive method to get a copy of all traffic to the NIPS network segment so that it can analyze the traffic. Which of the following would be her best choice?\nA. Using a network tap\nB. Using port mirroring\nC. Setting the NIPS on a VLAN that is connected to all other segments\nD. Setting up a NIPS on each segment",
+            "solution": "38. A. Network taps copy all traffic to another destination, allowing traffic visibility without a device inline. They are completely passive methods of getting network traffic to a central location. Port mirroring would get all the traffic to the network-based intrusion prevention system (NIPS) but is not completely passive. It requires the use of resources on switches to route a copy of the traffic. Incorrect switch configurations can cause looping. Configuring loop detection can prevent looped ports. Putting a network NIPS on every segment can be very expensive and require extensive configuration work. Setting up a NIPS on each segment would also dramatically increase administrative efforts."
+          },
+          {
+            "value": 1200,
+            "clue": "62. Asher's organization has created a list of potential customers based on an analysis of their use of their site, buying habits, and ability to spend money on new products. What type of data is a list like this?\nA. Legal information\nB. Trade secrets\nC. Regulated data\nD. Classified data",
+            "solution": "62. B. Intellectual property that would have value to competitors and that is kept confidential to preserve it for competitive advantage is a trade secret. Legal information is typically related to contracts, regulations, or similar matters. Regulated data is covered by law, and classified data is used by governments,"
+          },
+          {
+            "value": 1600,
+            "clue": "86. Yasmine wants to ensure that her organization has appropriate connectivity as part of their infrastructure design for their primary site. Which of the following concerns should she review to ensure that physical disasters do not disable her company's operations?\nA. Service provider path diversity\nB. Ensuring both fiber and copper connectivity are used\nC. Implementing SD-WAN\nD. Geographic dispersion",
+            "solution": "86. A. Path diversity ensures that the connectivity to the facility does not take the same path. This helps to prevent the moment network managers dread when a single accident-or construction equipment in the wrong place tears up multiple fiber or copper paths, taking organizations offline. Diversity of the cabling type is not a requirement or need, SD-WAN does not directly address physical disasters, and geographic dispersion is not possible at a single site."
+          },
+          {
+            "value": 2000,
+            "clue": "110. Lisa wants to ensure that her organization's datacenter can properly handle short power disruptions and temporary undervoltage events. What power resilience solution is best suited to her needs?\nA. Generators\nB. UPS systems\nC. PDUs\nD. Solar power",
+            "solution": "110. B. UPS systems are perfectly suited to handling short power outages and temporary under-voltage events. They sit berween systems and grid power, ensuring clean, reliable power is available. Generators take time to start, meaning that a UPS + generator solution is used for longer outages. PDUs (power distribution units) are used to distribute and manage power in datacenters. Solar power is increasingly used by datacenters to help offset their power consumption but is not a solution during nighttime hours."
+          },
+          {
+            "value": 2400,
+            "clue": "134. Servers in redundant clusters are typically not placed in the same server rack in case of a water leak or other issue that impacts the rack. What consideration describes this type of design decision?\nA. Connectivity\nB. Geographic dispersion\nC. Device placement\nD. Attack surface",
+            "solution": "134. C. Device placement can matter due to physical risks or because of concerns about latency, access to services, or other considerations. Connectivity concerns focus on whether an organization can obtain a network connection and whether it meets the organization's needs, including throughput and reliability. Geographic dispersion refers to the distance between locations that helps to ensure that a single disaster does not take an organization offline. Attack surface is the set of services, ports, and physical access that an attacker could leverage."
+          },
+          {
+            "value": 2800,
+            "clue": "158. Daria wants to establish a disaster recovery site that can immediately take over for her organization's primary datacenter in the event of a disaster. What sort of site should she build out?\nA. A hot site\nB. A warm site\nC. A cold site\nD. A dispersion site",
+            "solution": "158. A. A hot site is prepared to take over processing for on organization immediately, and infrastructure is running in parallel with your production site. A warm site would have some hardware ready to be used, but the hardware would not be configured or otherwise ready for immediate resumption of service. Cold sites are spaces that are ready to be used in a disaster but without equipment or other necessary items in place to quickly take over production if needed. The term dispersion site is not commonly used, but the concept of geographic dispersion describes placement of sites with sufficient distance between them to make the likelihood of a single disaster impacting both quite low."
+          },
+          {
+            "value": 3200,
+            "clue": "182. Katie is considering deploying embedded devices. Which of the following limitations is most commonly associated with embedded devices?\nA. Compute limitations\nB. Responsiveness limitations\nC. Availability issues\nD. Cost issues",
+            "solution": "182. A. Embedded devices typically have minimal CPUs, memory, and storage. They prioritize responsiveness for their core functions, and thus availability and responsiveness are typically met with the device. Cost for embedded devices is typically associated with the larger device they're part of rather than the embedded device itself as they are there to monitor or operate the system."
+          },
+          {
+            "value": 3600,
+            "clue": "206. The information that is found on Kirk's company's Internet-facing website needs to be classified as part of his organization-wide data classification process. What classification should he apply?\nA. Public\nB. Internal\nC. Confidential\nD. Restricted",
+            "solution": "206. A. Information that is available without restriction or authentication and that is available on an Internet-facing website should be considered public information. Internal, confiden-tial, and restricted information all require additional controls and handling practices."
+          }
+        ]
+      },
+      {
+        "category": "Category 8",
+        "clues": [
+          {
+            "value": 400,
+            "clue": "16. Devin is building a cloud system and wants to ensure that it can adapt to changes in its workload by provisioning or deprovisioning resources automatically. His goal is to ensure that the environment is not overprovisioned or underprovisioned and that he is efficiently spending money on his infrastructure. What concept describes this?\nA. Vertical scalability\nB. Elasticity\nC. Horizontal scalability\nD. Normalization",
+            "solution": "16. B. Elasticity is a cloud computing concept that matches resources to demand to ensure that an infrastructure closely matches the needs of the environment. Scalability is the ability to grow or shrink as needed but does not directly include the concept of matching to workload. Normalization is a code development concept used to ensure that data is in a consistent form."
+          },
+          {
+            "value": 800,
+            "clue": "40. Emily manages the IDS/PS for her network. She has a network-based intrusion prevention system (NIPS) installed and properly configured. It is not detecting obvious attacks on one specific network segment. She has verified that the NIPS is properly configured and working properly. What would be the most efficient way for her to address this?\nA. Implement port mirror/monitor mode for that segment.\nB. Install a NIPS on that segment.\nC. Upgrade to a more effective NIPS.\nD. Isolate that segment on its own VLAN.",
+            "solution": "40. A. The NIPS is not seeing the traffic on that network segment. By implementing port mirror-ing, the traffic from that segment can be copied to the segment where the NIPS is installed. Installing a network IPS on the segment would require additional resources. This would work but is not the most efficient approach. Nothing in this scenario suggests that the NIPS is inadequate. It just is not seeing all the traffic. Finally, isolating the segment to its own VLAN would isolate that network segment but would still not allow the NIPS to analyze the traffic from that segment."
+          },
+          {
+            "value": 1200,
+            "clue": "64. Ramon wants to conduct an exercise for his organization with the least potential to cause disruption. Which of the following testing methodologies is least likely to cause potential issues with service delivery?\nA. Tabletop exercises\nB. Fail over exercises\nC. Simulation exercises\nD. Parallel processing exercises",
+            "solution": "64. A. Tabletop exercises do not involve an actual technical system and instead are gamed out in a room. This means they're least likely to cause disruptions. Fail over and parallel processing exercises can have actual impact to live systems, and simulation exercises require care because simulated calls and actions may inadvertently become real if staff are not fully aware of the scenario being an exercise or accidentally execute a command that can cause actual impact."
+          },
+          {
+            "value": 1600,
+            "clue": "88. Alaina is planning how to staff her warm site in the case of a natural disaster that disables her primary site. What concern is most likely to impact her capacity planning for staff in this\nA. Whether staff will be able to reach the site\nB. Whether staff will be impacted by the disaster\nC. Whether the site will be impacted by the disaster\nD. Whether generator fuel will be available",
+            "solution": "88. B. Capacity planning for disaster operations needs to take the impact on staff themselves into account. While modern operations can frequently be conducted remotely, reducing the number of staff required to be physically able to reach the site, staff members may not have power, Internet access, or even housing in disaster scenarios. The remote site's ability to operate is not directly a staff capacity planning issue, nor is how generators will be fueled."
+          },
+          {
+            "value": 2000,
+            "clue": "112. Jaime wants to manage connectivity, including both MPLS and broadband Internet services, for her organization. What technology should she select to enable her to manage multiple connection types using a software-based control system?\nA. SASE\nB. SDN\nC. SD- WAN\nD. VSAN",
+            "solution": "112. C. SD-WAN, or software-defined wide area network, is a virtual wide area network architecture that relies on a software-based controller to manage multiple connections and connection types. MPLS, LTE, and broadband are commonly managed using SD-WAN technology. SASE, or Secure Access Service Edge, is used to provide end-to-end security in modern environments with systems and users spread throughout many locations and networks. SDN, or software-defined networking, is a code-based network management scheme. However, SD-WAN is the correct answer for wide area networks that rely on things like MPLS and broadband rather than on-premises networks. VSAN, or virtual SAN, is a virtual storage area network."
+          },
+          {
+            "value": 2400,
+            "clue": "136. Kim's organization operates a cloud-hosted laaS environment and uses an infrastructure as code model to deploy systems. A vulnerability has been found in the web server vulnerability? software that the organization uses. What process should her team use to remediate the\nA. Manually patch each web server.\nB. Update the underlying base image for the servers and redeploy the web servers.\nC. Add the patch to the code repository for the servers, transfer the load to other servers, and replace unpatched servers with patched versions by reinstantiating them.\nD. Update the underlying base image, drain the load from working servers, and replace with new instances.",
+            "solution": "136. C. In an infrastructure as code (laC) environment, updating the code that defines what a fully patched server is, then replacing servers in a cluster one at a time will be the least disruptive option while also ensuring that future instances will have the patches installed. Rebuilding a base image each time a patch comes out is not efficient, and manually patching is not a best practice in la environments and may lead to human error."
+          },
+          {
+            "value": 2800,
+            "clue": "160. The GDPR, HIPAA, FERPA, and the GLBA all impact what type of data?\nA. Intellectual property\nB. Classified data\nC. Regulated data\nD. Trade secrets",
+            "solution": "160. C. The General Data Protection Regulation (GDPR), Health Insurance Portability and Accountability Act (HIPAA), Family Educational Rights and Privacy Act (FERPA), and the Gramm-Leach-Bliley Act (GLBA) are all regulations, meaning that data they cover is regulated data. Intellectual property is the result of human creativity, classified data is a designation used by governments, and trade secrets are proprietary data with limited access often used by organizations for competitive advantage."
+          },
+          {
+            "value": 3200,
+            "clue": "184. Jaime is concerned about the volume of logs that her new application may create. What capacity planning item should she focus on?\nA. Compute\nB. Power\nC. Storage\nD. People",
+            "solution": "184. C. Storage capacity should be part of Jaime's infrastructure planning to ensure that large volumes of logs do not overwhelm her infrastructure. Compute is typically not an issue with logs, but it could be with log analysis later in her design process. People and power are not directly impacted by logging, but people might be needed for log analysis later as well."
+          },
+          {
+            "value": 3600,
+            "clue": "208. Theo wants to ensure that artifacts in his laC environment have not been tampered with. What should he require as part of his version control check-in system?\nA. Artifact signing\nB. Container image scanning\nC. Dependency checks\nD. Static analysis",
+            "solution": "208. A. Having artifacts signed after they have made it through the build and validation process helps ensure that they haven't been modified and that the artifact has had the organization's checks done. Container image scanning helps to find issues like malware and dependency issues. Dependency checks can validate things like open source tool risks or issues. Static analysis requires manual review of code."
+          }
+        ]
+      },
+      {
+        "category": "Category 9",
+        "clues": [
+          {
+            "value": 400,
+            "clue": "18. George is a network administrator at a power plant. He norices that several turbines had George irane-up in cycles last week. After investigating, he finds that an execurable was uploade to the system control console and caused shiA.ich of the following would be most effective in preventing this from affecting the SCADA system in the future?\nA. Implement SDN.\nB. Improve patch management.\nC. Place the SCADA system on a separate VLAN.\nD. Implement encrypted data transmissions.",
+            "solution": "18. C. Separating the SCADA (supervisory control and data acquisition) system from the main network makes it less likely that the SCADA system can be affected from the main network. This includes malware as well as human action. Software-defined networking (SDN) would make isolating the SCADA system easier but would not actually isolate it. Patch management is always important, but in this case, it would not have prevented the issue. Encrypted data transmissions, such as TLS, would have no effect on this situation."
+          },
+          {
+            "value": 800,
+            "clue": "42. Ryan is concerned about the security of his company's web application. Since the application processes confidential data, he is most concerned about data exposure. Which of the following would be the most important for him to implement?\nA. WAF\nB. TLS\nC. NIPS\nD. NIDS",
+            "solution": "42. B. The correct answer is to encrypt all the web traffic to this application using Transport Layer Security (TLS). This is one of the most fundamental security steps to take with any website. A web application firewall (WAF) is probably a good idea, but it is not the most important thing for Ryan to implement. While a network-based intrusion prevention system (NIPS) or network-based intrusion detection system (NIDS) may be a good idea, those should be considered after TLS is configured."
+          },
+          {
+            "value": 1200,
+            "clue": "66. Nick wants to protect Microsoft Excel files in transit across a network. Which of the following is not a method he could use to protect data in transit?\nA. TLS\nB. VPN\nC. File encryption\nD. Disk encryption",
+            "solution": "66. D. Disk encryption is used to protect data at rest, not data in use or data in transit. TLS, VPNs, and file encryption can all be used to protect files that are sent via a network."
+          },
+          {
+            "value": 1600,
+            "clue": "90. Jack wants to ensure that files have not changed. What technique can he use to compare current versions of the files to an original copy?\nA. Encryption.\nB. Check the file size.\nC. Check the file metadata.\nD. Compare hashes of the files.",
+            "solution": "90. D. Comparing hashes is an effective way of determining if a file is different from the original. While file length may be the same and metadata can be modified, hashes will still show changes. Encrypting the files does not compare them, and should not be used for this purpose."
+          },
+          {
+            "value": 2000,
+            "clue": "114. Contracts, NDAs, and SOWs are all examples of what type of data?\nA. Legal information\nB. Trade secrets\nC. Regulated\nD. Financial",
+            "solution": "114. A. Contracts, nondisclosure agreements (NDAs), and statements of work (SOWs) are all examples of legal information. They may include trade secrets or financial information but do not have to. Regulated data is regulated by law and is not the same as legal information."
+          },
+          {
+            "value": 2400,
+            "clue": "138. Which of the following is not a common consideration for legacy devices?\nA. Cost\nB. Ease of recovery\nC. Patch availability\nD. Inability to patch",
+            "solution": "138. A. Legacy devices typically cannot be purchased, so their cost becomes irrelevant. Whether they can be recovered, if patches are available, and the issues that lack of patching may cause are all common issues for legacy devices."
+          },
+          {
+            "value": 2800,
+            "clue": "162. Jill knows that IPSec uses a number of common protocols. Which of the following is not a key IPSec protocol? А. АН\nB. ISA\nC. ESP\nD. IKE",
+            "solution": "162. B. AH (Authentication Header), ESP (Encapsulating Security Payload), and IKE (Internet Key Exchange) are all important IPSec (Internet Protocol Security) protocols. ISA is not an IPSec protocol."
+          },
+          {
+            "value": 3200,
+            "clue": "186. Tom wants to use geographic restrictions as part of his security design. What type of tool is commonly used to manage geographic restrictions for mobile devices?\nA. EDR\nB. MDM\nC. 802.1X\nD. VPNS",
+            "solution": "186. B. Mobile device management (MDM) tools are often used to enforce geographic restrictions on devices by using GPS and Wi-Fi to determine where they are and to limit their access to sensitive systems or data if they are not in an allowed geographic boundary. This often matches being in a specific office building with known Wi-Fi for highly sensitive access or work hour requirements. Endpoint detection and response (EDR) is used to counter ransomware and other malicious software, 802.1X is used to control access to net-works, and VPNs are used to provide site-to-site connectivity through untrusted networks as well as to location shift devices."
+          },
+          {
+            "value": 3600,
+            "clue": "210. Which of the following is not a common security issue with loT devices?\nA. Insecure communication\nB. Data leaks\nC. Ransomware\nD. Device vulnerabilities",
+            "solution": "210. C. Ransomware concerns are typically found with desktops, laptops, mobile devices, and servers instead of loT devices. loT devices often don't have patches or aren't patched, send data to third parties that may not be desired, and may not use secure communications."
+          }
+        ]
+      },
+      {
+        "category": "Category 10",
+        "clues": [
+          {
+            "value": 400,
+            "clue": "20. Nora has rented a building with access to bandwidth and power in case her organization ever experiences a disaster. What type of site has she established?\nA. A hot site\nB. A cold site\nC. A warm site\nD. A MOU site",
+            "solution": "20. B. Nora has established a cold site. A cold site is a location that can be brought online but does not have systems; cold sites typically have access to power and bandwidth, but they need to be fully equipped to operate after a disaster since they are just rented space. Warm sites have some or all of the infrastructure and systems Nora needs but does not have data. A hot site is a fully functional environment with all of the hardware, software, and data needed to operate an organization. They are expensive to maintain and run but are used by organizations that cannot take the risk of downtime. A MOU is a memorandum of understanding and is not a type of disaster recovery site."
+          },
+          {
+            "value": 800,
+            "clue": "44. Christina wants to ensure that session persistence is maintained by her load balancer. What is she attempting to do?\nA. Ensure that all of a client's requests go to the same server for the duration of a given session or transaction.\nB. Assign the same internal IP address to clients whenever they connect through the load balancer.\nC. Ensure that all transactions go to the current server in a round-robin during the time it is the primary server.\nD. Assign the same external IP address to all servers whenever they are the primary server assigned by the load balancer.",
+            "solution": "44. A. Session persistence makes sure that all of a client's traffic for a transaction or session goes to the same server or service. The remaining options do not properly describe how session persistence works."
+          },
+          {
+            "value": 1200,
+            "clue": "68. Selah's organization is conducting a simulation exercise. Which of the following is not a common element of a simulation?\nA. Testing of notification processes\nB. Testing of procedures\nC. Testing of fail over capabilities\nD. Testing of communication systems",
+            "solution": "68. C. Simulations try to avoid causing potential outages and work to simulate a scenario. They may validate that notification processes communication systems and procedures all work."
+          },
+          {
+            "value": 1600,
+            "clue": "92. Which of the following is a common part of technology capacity planning for resilience?\nA. Cross-training staff\nB. Using load balancers\nC. Using multiple geographically diverse datacenters\nD. Deploying uninterruptible power supplies",
+            "solution": "92. B. Load balancers are commonly used to help provide resilience by allowing applications and servers to be clustered. Cross-training staff is a people- or staff-based capacity planning solution. Both geographically diverse datacenters and UPS are examples of infrastructure resilience options."
+          },
+          {
+            "value": 2000,
+            "clue": "116. Which of the following is not provided by an IPSec VPN?\nA. Confidentiality\nB. Authentication\nC. Availability\nD. Integrity",
+            "solution": "116. C. IPSec VPNs provide encryption, which allows for confidentiality and integrity through hashing. They also provide authentication because both ends authenticate as part of the VPN connection process. Availability is not a feature of an IPSec connection, and it must be designed and built into the hardware and network infrastructure that the IPSec VPN relies on."
+          },
+          {
+            "value": 2400,
+            "clue": "140. Nick wants to enable remote access for his organization and wants users to have a simple experience without significant overhead when connecting. What type of solution should he implement?\nA. A TLS VPN\nB. SD-WAN\nC. SDN\nD. An IPSec VPN",
+            "solution": "140. A. TLS VPNs are typically easier to set up and don't require clients to be installed, unlike an IPSec VPN. SD-WAN is used to manage external connectivity, and software-defined networking (SDN) is used to manage networks and their performance, not to allow remote access by users."
+          },
+          {
+            "value": 2800,
+            "clue": "164. Why can't hashing be used to securely store data that needs to be accessed in its original form?\nA. Hashing takes too long to reverse.\nB. Hashing uses symmetric encryption.\nC. Hashing uses a one-way function.\nD. Hashing uses asymmetric encryption.",
+            "solution": "164. C. Hashing uses a one-way function and should not be able to be reversed. This means that you can use hashing to securely store a password because you can hash the password, then compare hashes without needing to know the password. If you hash a database field, how-ever, there's no way to know what the original data was from the hash. Hashing should not be reversible, and it does not use symmetric or asymmetric encryption."
+          },
+          {
+            "value": 3200,
+            "clue": "188. What is the best way to protect data at rest?\nA. Classification\nB. Segmentation\nC. Encryption\nD. Hashing",
+            "solution": "188. C. Encryption is the most effective way to protect data at rest. Classification is useful to ensure data is handled in appropriate ways, but does not directly protect the data. Segmentation can help keep data in the right locations with appropriate controls around it, but again does not directly protect the data if the server or data store is accessible. Hashing is a one-way function and does not leave data in a usable state for most purposes that rely on the data being intact and in its original form."
+          },
+          {
+            "value": 3600,
+            "clue": "212. Chuck is responsible for an on-site datacenter. He wants to ensure that the datacenter has appropriate network connectivity to ensure resilience and performance. Which of the following will have the greatest impact on meeting that requirement?\nA. Contract for a higher bandwidth connection from a single vendor.\nB. Deploy a UPS.\nC. Contract with two separate network service providers.\nD. Install a generator.",
+            "solution": "212. C. Meeting both resilience and performance requirements can be best addressed in this scenario by contracting with two separate network service providers. This allows for both resilience and the possibility of sending traffic through both connections for greater performance. Both a generator and a UPS can help with power resilience, but the focus of this question is network connectivity."
+          }
+        ]
+      },
+      {
+        "category": "Category 11",
+        "clues": [
+          {
+            "value": 400,
+            "clue": "22. What are the key limiting factors for cryptography on low-power devices?\nA. There are system limitations on memory, CPU, and storage.\nB. The devices cannot support public key encryption due to an inability to factor prime numbers.\nC. There is a lack of chipset support for encryption.\nD. Legal limitations for low-power devices prevent encryption from being supported.",
+            "solution": "22. A. Low-power devices typically have limited processor speed, memory, and storage, meaning that encryption can be a challenge. Fortunately, solutions exist that implement low-power cryptographic processing capabilities, and continued advances in processor design continue to make lower-power processors faster and more efficient. Legal limitations do not typically take into account whether a device is a low-power device, and public key encryption can be implemented on a wide range of CPUs and embedded systems, so factoring prime numbers is unlikely to be an issue."
+          },
+          {
+            "value": 800,
+            "clue": "46. Patrick has been asked to identify a UTM appliance for his organization. Which of the following capabilities is not a common feature for a UTM device?\nA. IDS and or IPS\nB. Antivirus/antimalware\nC. MDM\nD. DLP",
+            "solution": "46. C. UTM, or unified threat management, devices commonly serve as firewalls, intrusion detection system (IDS)/intrusion prevention system (IPS), antivirus/antimalware, web prox-ies, web application and deep packer inspection, secure email gateways, data loss prevention (DLP), security information and event management (SIEM), and even virtual private networking (VPN) devices. They aren't mobile device management (MDM) or universal endpoint management devices, however, since their primary focus is on network security, not systems or device management."
+          },
+          {
+            "value": 1200,
+            "clue": "70. Olivia wants to deploy a new firewall. What type of firewall should she select if the ability to operate at layer 7 is important to her?\nA. A WAF\nB. An NGFW\nC. A stateful firewall\nD. A packet filter",
+            "solution": "70. B. Next-generation firewalls (NGFWs) typically provide the ability to inspect traffic at both the transport layer (layer 4) and the application layer (layer 7). This means an NGFW will best fit the need. Web application firewalls also work at this level, but only focus on web applications, which does not fully meet the broad application inspection requirement in the question. Stateful firewalls and packet filters both operate at layer 4 only."
+          },
+          {
+            "value": 1600,
+            "clue": "94. What is the biggest downside of using journaling as part of a backup restoration process?\nA. Larger volumes of data may be lost.\nB. The time it takes to restore from a journal.\nC. Journals cannot be encrypted for security.\nD. Journaling does not support live databases.",
+            "solution": "94. B. Journaling replays transactions, which can take an extended period of time if the time between the last backup and the data loss event was longer and there was a high volume of transactions. Journals typically minimize the amount of transaction data that is lost; they can be encrypted, although care must be taken to ensure that they can be recovered; and journaling is used with live databases to ensure transactions are recoverable to as close to the point in time of a data loss event as possible."
+          },
+          {
+            "value": 2000,
+            "clue": "118. In the cloud responsibility matrix, what three areas is the provider always responsible for in an laaS environment?\nA. Data, devices, and accounts\nB. Identities, applications, and network controls\nC. Operating systems, applications, and physical hosts\nD. Datacenters, networks, and physical hosts",
+            "solution": "118. D. Infrastructure-as-a-service (laaS) providers are responsible for the underlying infrastruc-ture, including datacenters, networks, and physical hosts. In some cases, they may also be responsible for some operating systems, network controls, applications, and Identity and Access Management (LAM) infrastructure. Customers are always responsible for data and accounts, but may be responsible for applications, network controls, and operating systems"
+          },
+          {
+            "value": 2400,
+            "clue": "142. Chuck has deployed a cloud-based security environment that combines SD-WAN, zero crus, has deplos security broker (CASB), and firewall services to replace traditional VEN . What sort of service has Chuck deployed?\nA. SaaS\nB. SASE\nC. SONET\nD. SCM",
+            "solution": "142. B. Secure access service edge (SASE) deployments combine SD-WAN with a variety of cloud-hosted security services, including zero trust and CASB tools to replace VPNs. This provides an edge device-oriented security architecture with end-to-end security. SaaS is involved but is not a specific enough answer. SONET is a communication protocol used for fiber networks. Supply chain management (SCM) is not a term used in this context."
+          },
+          {
+            "value": 2800,
+            "clue": "166. Jules is planning a SCADA deployment for her organization. Which of the following is most likely to be a major concern over the lifetime of the SCADA system?\nA. Cost\nB. Scalability\nC. Inability to patch\nD. Availability",
+            "solution": "166. C. SCADA and ICS systems often suffer from a lack of patches and updates. Cost is typically amortized over long periods of time, and SCADA and ICS systems are critical to organizational functions. Scalability is rarely a concern for embedded devices, and SCADA and ICS devices are designed for long life cycles and reliability."
+          },
+          {
+            "value": 3200,
+            "clue": "190. Danielle's organization has experienced a total power outage. The datacenter is currently running on its UPS. What concern should Danielle have if the UPS is her organization's only power resilience control?\nA. The generator may not start.\nB. The UPS batteries may run out before the outage is over.\nC. The generator may run out of fuel in a long outage.\nD. The UPS may not handle the surge when power resumes.",
+            "solution": "190. B. Organizations typically deploy both a UPS and a generator (or generators!). Long power outages will drain the batteries that a UPS relies on. Since UPS systems are typically intended to run for minutes, rather than hours, for datacenters this should be Danielle's first concern. No generator was mentioned, and in fact the UPS is her only power resilience con-trol. While a UPS may experience issues with surges when power resumes, temporary drops in voltage, and power outages are not uncommon even on well-maintained power grids, and UPS systems are designed to handle them under normal circumstances while protecting the systems they provide emergency power to."
+          },
+          {
+            "value": 3600,
+            "clue": "214. Monica wants to prevent users from sharing data and cares more about control than flex-ibility. What type of access control model is best suited to ensuring central control over file access?\nA. Role BAC\nB. DAC\nC. MAC\nD. Rule BAC",
+            "solution": "214. C. Mandatory access control (MAC) is used in scenarios where users should not have the ability to grant access to files. Role-based access control and rule-based access control both provide more flexibility, and they are more commonly used than mandatory access control in cases where that is desired. Discretionary access control (DAC) allows users to grant access to other users and does not fit the requirements either."
+          }
+        ]
+      },
+      {
+        "category": "Category 12",
+        "clues": [
+          {
+            "value": 400,
+            "clue": "24. Tim wants to ensure that his web servers can scale horizontally during traffic increases, while also allowing them to be patched or upgraded without causing outages. What type of network device should he deploy?\nA. A firewall\nB. A switch\nC. A horizontal scaler\nD. A network load balancer",
+            "solution": "24. D. Network load balancers distribute traffic among systems, allowing systems to be added or removed, and making patching and upgrades easier by draining connections from systems and removing them from the pool when work needs to be done on them. They can also help monitor systems for performance, report on issues, and ensure that loads match the capabilities of the systems that they are in front of. Firewalls are used for security, switches are a network device used to transfer traffic to the correct system, and a horizontal scaler was made up for this question."
+          },
+          {
+            "value": 800,
+            "clue": "48. Murali is building his organization's container security best practices document and wants to ensure that he covers the most common items for container security. Which of the following is not a specific concern for containers?\nA. The security of the container host\nB. Securing the management stack for the container\nC. Insider threats\nD. Monitoring network traffic to and from the containers for threats and attacks",
+            "solution": "48. C. Although insider threats are a concern, they're not any different for containers than any other system. Ensuring container host security, securing the management stack, and making sure that network traffic to and from containers is secure are all common container security concerns."
+          },
+          {
+            "value": 1200,
+            "clue": "72. What failure mode is typically preferred for in-line network taps?\nA. Fail-open\nB. Pail over\nC. Fail-closed\nD. Fail-reset",
+            "solution": "72. A. In-line network taps are typically configured to fail-open since they are used to create a copy of the network traffic. Devices that provide in-line security like IPS systems may be configured to fail-closed because their failure removes critical security functionality. Fail over describes the ability to fail to another device, which is not a common function for an in-line tap. Fail-reset was made up for this question."
+          },
+          {
+            "value": 1600,
+            "clue": "96. Valerie is concerned that the data obfuscation technique that her organization is using to enseric is comer dad is not visible to staff members whe do owing ed to see it for their jobs to be vulnerable to client-side tampering resulting in de-obfuscation? maybe cutora deto cline-side tampering. Which of the follswing techniques is most likely\nA. Masking\nB. Tokenization\nC. Encryption\nD. Hashing",
+            "solution": "96. A. Masking may be conducted in client-side code, resulting in potential exposures of data. Secure designs require masking to occur in server-side code rather than in the client-side web application. Tokenization typically relies on a separate database or field, making it less likely to be a problem. Encryption and hashing are both unlikely to have problems with client-side tampering, making them less secure."
+          },
+          {
+            "value": 2000,
+            "clue": "120. Frankie wants to connect two remote sites so that they appeare me on the same local neck. work se want. to can type of solution is best suited eo this regiment it she wants tratto sent between the locations to be secure despite traversing the public Internet?\nA. Establish a VLAN between the two locations.\nB. Use LS to encapsulate each service provided between the two locations.\nC. Set up a VPN tunnel between the two locations.\nD. Reclassify the data as public and send the data as normal.",
+            "solution": "120. C. VPNs, or virtual private networks, are commonly established between two locations to provide a secure connection that can make the networks appear to be on the same network segment. A VLAN may then be used if desired, but a VLAN alone does not provide encryption and cannot be set up across a public connection. TLS encapsulating each service would provide security, but that would not make the two sites appear to be on the same network segment. Reclassifying the data does not secure the data or make the networks appear to be on the same segment, either."
+          },
+          {
+            "value": 2400,
+            "clue": "144. Christina's organization has purchased a remote facility that they intend to use in case of a major disaster. The building has basic utilities, including Internet connectivity, but no other preparation has been made. What type of site is this?\nA. A warm site\nB. A hot site\nC. A cold site\nD. A dispersion site",
+            "solution": "144. C. Cold sites are spaces that are ready to be used in a disaster but without equipment or other necessary items in place to quickly take over production if needed. A warm site would have some hardware ready to be used, but the hardware would not be configured or otherwise ready for immediate resumption of service. A hot site is prepared to take over processing for an organization immediately, and infrastructure is running in parallel with your production site. Geographic dispersion is used to ensure that a single disaster does not impact multiple sites."
+          },
+          {
+            "value": 2800,
+            "clue": "168. The ability to obtain third-party support for a device or system is an example of which consideration?\nA. Availability\nB. Risk transference\nC. Compute\nD. Responsiveness",
+            "solution": "168. B. Third-party support availability is an example of risk transference where the support contract moves the risk to the contractor. Availability and responsiveness may be considerations for the contractor, but the ability to obtain support doesn't imply either of these. Compute is most commonly a concern where embedded devices or hardware solutions may not have sufficient computational power to meet new needs."
+          },
+          {
+            "value": 3200,
+            "clue": "192. What does port security use to determine what machines or devices can connect to a network port?\nA. A list of userIDs\nB. A multifactor token code for each user\nC. A list of MAC addresses\nD. A list of IP addresses",
+            "solution": "192. C. Port security associates a list of allowed hardware (MAC) addresses with a port and only allows systems with permitted MAC addresses to connect to and send traffic through the network port. 802.1X uses authentication, which can include userlDs and multifactor. IP addresses are not a way that port security filters systems."
+          },
+          {
+            "value": 3600,
+            "clue": "216. What three responsibilities are typically shared in PaaS environments according to the cloud responsibility matrix?\nA. Identity infrastructure, applications, and network controls\nB. Data, devices, and accounts\nC. Physical hosts, physical networks, and physical datacenters\nD. Operating systems, applications, and data",
+            "solution": "216. A. In platform-as-a-service (PaaS) environments, customers and providers typically share responsibility for identity and directory infrastructure, applications, and network controls. Customers are responsible for data, devices, and accounts, and the provider is responsible for the underlying systems, including operating systems and physical infrastructure."
+          }
+        ]
+      }
+    ],
+    "final_jeopardy": {
+      "category": "Final Jeopardy",
+      "clue": "226. Parvati wants to configure her web application firewall to prevent basic SQL injection attacks. Which of the following rules could she use to accomplish this?\nA. Filter out all OR statements.\nB. Filter out single quotes.\nC. Block all SQL statements.\nD. Block all AND statements.",
+      "solution": "226. B. While blocking single quotes won't stop all SQL injection, it will stop many basic injection attacks. Preventing the use of SQL or AND and OR statements may break some applica-tions, although secure web applications should be using stored queries."
+    }
+  },
   "chapter 4": {
     "single": [
       {
