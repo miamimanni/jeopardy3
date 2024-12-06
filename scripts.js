@@ -1544,7 +1544,7 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "16. Which of the following defenses is most likely to prevent Trojan installation?\nA. Installing patches for known vulnerabilities\nB. Preventing downloads from application stores\nC. Preventing the use of USB drives\nD. Disabling autorun from USB drives",
             "solution": "16. B. Trojans are often found in application stores where they appear to be innocuous but desirable applications."
@@ -1670,7 +1670,7 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "20. Nation-state-driven social media campaigns about the trustworthiness of the U.S. election in 2016 are an example of what type of social engineering?\nA. Smishing\nB. Pretexting\nC. Disinformation\nD. Spraying",
             "solution": "20. C. Disinformation campaigns are used to shift public opinion or to accomplish other goals. They are not limited to nation-state actors but are an increasingly heavily used social engineering tactic at a broad scale. Smishing relies on SMS messages, pretexting involves using a reason that creates urgency or importance in a request from a social engineer, and spraying is a type of password brute forcing."
@@ -1811,7 +1811,7 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "10. Which of the following human vectors is primarily associated with nation-state actors?\nA. Misinformation campaigns\nB. Watering hole attacks\nC. Business email compromise\nD. Password spraying",
             "solution": "10. A. Misinformation and disinformation campaigns are primarily associated with nation-state actors."
@@ -1937,7 +1937,7 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "20. Which one of the CVSS metrics would contain information about the type of account access that an attacker must have to execute an attack?\nA. V\nB. C\nC. PR\nD. AC",
             "solution": "20. C. The privileges required (PR) metric indicates the type of system access that an attacker must have to execute the attack."
@@ -2229,7 +2229,7 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "20. Joe is examining the logs for his web server and discovers that a user sent input to a web application that contained the string WAITFOR. What type of attack was the user likely attempting?\nA. Timing-based SQL injection\nB. HTML injection\nC. Cross-site scripting\nD. Content-based SQL injection",
             "solution": "20. A. The use of the SOL WAITFOR command is a signature characteristic of a timing-based SQL injection attack."
@@ -2390,7 +2390,7 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "19. Wendy is a penetration tester who wishes to engage in a session hijacking attack. What information is crucial for Wendy to obtain if her attack will be successful?\nA. Session ticket\nB. Session cookie\nC. Username\nD. User password",
             "solution": "19. B. Websites use HTTP cookies to maintain sessions over time. If Wendy is able to obtain a copy of the user's session cookie, she can use that cookie to impersonate the user's browser and hijack the authenticated session."
@@ -2516,7 +2516,7 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "20. When Mike receives the digitally signed message from David, what key should he use to verify the digital signature?\nA. David's public key\nB. David's private key\nC. Mike's public key\nD. Mike's private key",
             "solution": "20. A. The recipient of a digitally signed message may verify the digital signature by decrypting it with the public key of the individual who signed the message."
@@ -2672,7 +2672,7 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "15. What type of security solution provides a hardware platform for the storage and management of encryption keys?\nA. HSM\nB. IPS\nC. SIM\nD. SOAR",
             "solution": "15. A. Hardware security modules (HSMs) provide an effective way to manage encryption keys."
@@ -2798,7 +2798,7 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "20. What type of access control scheme best describes the Linux filesystem?\nA. MAC B, RBAC\nC. DAC\nD. ABAC",
             "solution": "20. C. Linux users can change who can read, write, or execute files and directories they own, which is discretionary access control (DAC). Mandatory access control (MAC) would enforce settings set by the systems administrator without users having the rights to make their own decisions. While role-based access control is involved, DAC best describes the access control scheme. ABAC is not a default method for setting rights for the Linux filesystem."
@@ -2969,7 +2969,7 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "12. A PIN is an example of what type of factor?\nA. Something you know\nB. Something you are\nC. Something you have\nD. Something you set",
             "solution": "12. A. PINs and passwords are both examples of something you know. Something you set is not a type of factor. Biometric factors are an example of something you are, and a physical USB token would be a common example of something you have."
@@ -3095,7 +3095,7 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "20. Gurvinder identifies a third-party datacenter provider over 90 miles away to run his redundant datacenter operations. Why has he placed the datacenter that far away?\nA. Because it is required by law\nB. Network traffic latency concerns\nC. Geographic dispersion\nD. Geographic tax reasons",
             "solution": "20. C. Geographic dispersion helps ensure that a single natural or human-made disaster does not disable multiple facilities. This distance is not required by law; latency increases with distance; and though there may be tax reasons in some cases, this is not a typical concern for a security professional."
@@ -3256,7 +3256,7 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "20. Gurvinder identifies a third-party datacenter provider over 90 miles away to run his redundant datacenter operations. Why has he placed the datacenter that far away?\nA. Because it is required by law\nB. Network traffic latency concerns\nC. Geographic dispersion\nD. Geographic tax reasons",
             "solution": "20. C. Geographic dispersion helps ensure that a single natural or human-made disaster does not disable multiple facilities."
@@ -3382,7 +3382,7 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "20. Tony purchases virtual machines from Microsoft Azure exclusively for use by his organization. What model of cloud computing is this?\nA. Public cloud\nB. Private cloud\nC. Hybrid cloud\nD. Community cloud",
             "solution": "20. A. This is an example of public cloud computing because Tony is using a public cloud pro-vider, Microsoft Azure. The fact that Tony is limiting access to virtual machines to his own organization is not relevant because the determining factor for the cloud model is whether the underlying infrastructure is shared, not whether virtualized resources are shared."
@@ -3538,7 +3538,7 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "4. Greg would like to find a reference document that describes how to map cloud security controls to different regulatory standards. What document would best assist with this task?\nA. CSA CCM\nB. NIST SP 500-292\nC. ISO 27001\nD. PCI DSS",
             "solution": "4. A. The Cloud Security Alliance (CSA) Cloud Controls Matrix (CCM) is a reference document designed to help organizations understand the appropriate use of cloud security controls and map those controls to various regulatory standards. NIST SP 500-292 is a reference model for cloud computing and operates at a high level. ISO 27001 is a general standard for cybersecurity, and PCI DSS is a regulatory requirement for organizations involved in processing credit card transactions."
@@ -3664,7 +3664,7 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "20. Elaine wants to securely erase the contents of a tape used for backups in her organization's tape library. What is the fastest secure erase method available to her that will allow the tape to be reused?\nA. Using a degausser\nB. Wiping the tape by writing a random pattern of 1s and 0s to it\nC. Incinerating the tape\nD. Wiping the tape by writing all 1s or all Os to it",
             "solution": "20. A. A degausser is a quick and effective way to erase a tape before it is reused. Wiping a tape by writing 1s, Os, or a pattern of 1s and Os to it will typically be a slow operation and is not a common method of destroying data on a tape. Incinerating the tape won't allow it to be reused!"
@@ -3830,7 +3830,7 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "4. Oliver wants to store and manage secrets in his cloud service provider's environment. What type of solution should he look for as part of their offerings?\nA. A TPM\nB. A secure enclave\nC. A KMS\nD. A Titan M",
             "solution": "4. C. Oliver should look for a key management system, or KMS, which will allow him to securely create, store, and manage keys in a cloud environment. TPMs, secure enclaves, and Google's Titan M are all local hardware solutions."
@@ -3956,7 +3956,7 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "20. Fred wants to ensure that the administrative interfaces for the switches and routers are protected so that they cannot be accessed by attackers. Which of the following solutions should he recommend as part of his organization's network design?\nA. NAC\nB. Trunking\nC. Out-of-band management\nD. Port security",
             "solution": "20. C. Out-of-band management places the administrative interface of a switch, router, or other device on a separate network or requires direct connectivity to the device to access and manage it. This ensures that an attacker who has access to the network cannot make changes to the network devices. NAC and port security help protect the network itself, whereas trunking is used to combine multiple interfaces, VLANs, or ports together."
@@ -4117,7 +4117,7 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "17. Wayne is concerned that an on-path attack has been used against computers he is responsible for. What artifact is he most likely to find associated with this attack?\nA. A compromised router\nB. A browser plug-in\nC. A compromised server\nD. A modified hosts file",
             "solution": "17. B. Browser on-path attacks use malicious browser plug-ins or proxies to modify traffic at the browser level."
@@ -4243,7 +4243,7 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "20. Octavia discovers that the contact list from her phone has been acquired via a wireless attack. Which of the following is the most likely culprit?\nA. Bluejacking\nB. An evil maid\nC. Bluesnarfing\nD. An evil twin",
             "solution": "20. C. Bluesnarfing is the theft of information from a Bluetooth enabled device. If Octavia left Bluetooth on and had not properly secured her device, then an attacker may have been able to access her contact list and download its contents. A bluejacking attack occurs when unwanted messages are sent to a device via Bluetooth. Evil twins are malicious access points configured to appear to be legitimate access points, and an evil maid attack is an in-person attack where an attacker takes advantage of physical access to hardware to acquire information or to insert malicious software on a device."
@@ -4419,7 +4419,7 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "11. What is the most frequent concern that leads to GPS tagging being disabled by some companies via an MDM tool?\nA. Chain of custody\nB. The ability to support geofencing\nC. Privacy\nD. Context-aware authentication",
             "solution": "11. C. Geotagging places a location stamp in documents and pictures that can include position, time, and date. This can be a serious privacy issue."
@@ -4545,7 +4545,7 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "20. Henry wants to check to see if services were installed by an attacker. What commonly gathered organizational data can he use to see if a new service appeared on systems?\nA. Registry dumps from systems throughout his organization\nB. Firewall logs\nC. Vulnerability scans\nD. Flow logs",
             "solution": "20. C. Vulnerability scans are the best way to find new services that are offered by systems. In fact, many vulnerability scanners will flag new services when they appear, allowing administrators to quickly notice unexpected new services. Registry information is not regularly dumped or collected in most organizations. Firewall logs and flow logs could show information about the services being used by systems whose traffic passes through them, but this is a less useful and accurate way of identifying new services and would work only if those services were also being used."
@@ -4706,7 +4706,7 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "7. The company that Ben works for wants to test its incident response plan. Ben gathers the incident response team in a room and walks through a scenario to validate the organization's processes and procedures. What type of event has Ben hosted?\nA. A checklist exercise\nB. A simulation\nC. A tabletop exercise\nD. A fail-over exercise",
             "solution": "7. C. Ben's organization is conducting a tabletop exercise. Tabletop exercises are conducted with more flexibility-team members are given a scenario and asked how they would respond and what they would do to accomplish tasks they believe would be relevant. Checklist exercises are not a specific type of exercise. A simulation exercise attempts to more fully re-create an actual incident to test responses. Fail-over exercises are conducted by actually failing a datacenter over to a hot location."
@@ -4832,7 +4832,7 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "20. What is the key difference between hashing and checksums?\nA. Both can validate integrity, but a hash also provides a unique digital fingerprint.\nB. A hash can be reversed, and a checksum cannot be.\nC. Checksums provide greater security than hashing.\nD. Checksums have fewer message collisions than a hash.",
             "solution": "20. A. Although both a checksum and a hash can be used to validate message integrity, a hash has fewer collisions than a checksum and will also provide a unique fingerprint for a file. Checksums are primarily used as a quick means of checking that that integrity is maintained, whereas hashes are used for many other purposes such as secure password validation without retaining the original password. A checksum would not be useful for proving a forensic image was identical, but it could be used to ensure that your work had not changed the contents of the drive."
@@ -4973,7 +4973,7 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "17. Henry is following the EDRM model and is preparing to review data. What two key tasks occur during this stage?\nA. Validating that time stamps match between systems and that data is properly hashed to confirm that original data is sent\nB. Validating that the legal hold request is valid and that all documented items are included\nC. Validating that the desired data is included and that information that should not be shared is not included\nD. Validating that chain of custody is ensured and that malicious files are not included",
             "solution": "17. C. It is important to ensure that data prepared for e-discovery only contains what it is supposed to, and that information that should not be shared is not included."
@@ -5099,7 +5099,7 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "20. Which one of the following items is not normally included in a request for an exception to security policy?\nA. Description of a compensating control\nB. Description of the risks associated with the exception\nC. Proposed revision to the security policy\nD. Business justification for the exception",
             "solution": "20. C. Requests for an exception to a security policy would not normally include a proposed revision to the policy. Exceptions are documented variances from the policy because of specific technical and/or business requirements. They do not alter the original policy, which remains in force for systems not covered by the exception."
@@ -5255,7 +5255,7 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "8. Which organization produces independent security benchmarks?\nA. Microsoft\nB. Center for Internet Security\nC. Cloud Security Alliance\nD. Cisco",
             "solution": "8. B. The Center for Internet Security (CIS) produces independent security benchmarks."
@@ -5381,7 +5381,7 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "20. Brian recently conducted a risk mitigation exercise and has determined the level of risk that remains after implementing a series of controls. What term best describes this risk?\nA. Inherent risk\nB. Control risk\nC. Risk appetite\nD. Residual risk",
             "solution": "20. D. The residual risk is the risk that remains after an organization implements controls designed to mitigate, avoid, and/or transfer the inherent risk."
@@ -5547,7 +5547,7 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "18. Which type of analysis uses numeric data in the analysis, resulting in assessments that allow the very straightforward prioritization of risk?\nA. Qualitative\nB. One-time\nC. Recurring\nD. Quantitative",
             "solution": "18. D. Quantitative risk analysis uses numeric data in the analysis, resulting in assessments that allow the straightforward prioritization of risks."
@@ -8670,7 +8670,7 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "226. Parvati wants to configure her web application firewall to prevent basic SQL injection attacks. Which of the following rules could she use to accomplish this?\nA. Filter out all OR statements.\nB. Filter out single quotes.\nC. Block all SQL statements.\nD. Block all AND statements.",
             "solution": "226. B. While blocking single quotes won't stop all SQL injection, it will stop many basic injection attacks. Preventing the use of SQL or AND and OR statements may break some applica-tions, although secure web applications should be using stored queries."
