@@ -1817,7 +1817,7 @@ const gameData = {
             "solution": "10. A. Misinformation and disinformation campaigns are primarily associated with nation-state actors."
         }
     },
-    "Chapter 5 - Secuirty Assessment and Testing": {
+    "Chapter 5 - Security Assessment and Testing": {
         "single": [
             {
                 "category": "Category 1",
@@ -1943,7 +1943,7 @@ const gameData = {
             "solution": "20. C. The privileges required (PR) metric indicates the type of system access that an attacker must have to execute the attack."
         }
     },
-    "Chapter 5 - Secuirty Assessment and Testing - Categorized": {
+    "Chapter 5 - Security Assessment and Testing - Categorized": {
         "single": [
             {
                 "category": "Security Assessment Techniques",
