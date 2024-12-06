@@ -1,8 +1,4 @@
-const googleApiURL = 'https://script.google.com/macros/s/AKfycbwJfBza6jdoK9bPrsALQpyUs45l0EAxZ2via_K-ZEJM20VYl1fwzngj8UzVa0H0z1Gr_g/exec';
-
-document.addEventListener('DOMContentLoaded', () => {
-
-const gameData = {
+{
     "Chapter 1 - Todays Security Professional": {
         "single": [
             {
@@ -1392,147 +1388,162 @@ const gameData = {
     "Chapter 3 - Malicious Code - Categorized": {
         "single": [
             {
-                "category": "Malware Types",
+                "category": "Malware Types and Classification",
                 "clues": [
                     {
                         "value": 200,
                         "clue": "1. Ryan wants to prevent logic bombs created by insider threats from impacting his organization. What technique will most effectively limit the likelihood of logic bombs being put in place?\nA. Deploying antivirus software\nB. Using a code review process\nC. Deploying endpoint detection and response (EDR) software\nD. Disabling autorun for USB drives",
-                        "solution": "1. B. Logic bombs are embedded in code, so Ryan's organization would get the most benefit from a code review process for any code that goes into production. Antivirus and EDR are unlikely to detect logic bombs created by staff in Ryan's organization."
+                        "solution": "1. B. Logic bombs are embedded in code, so Ryan's organization would get the most benefit from a code review process for any code that goes into production."
                     },
                     {
                         "value": 400,
                         "clue": "5. Mike discovers that attackers have left software that allows them to have remote access to systems on a computer in his company's network. How should he describe or classify this malware?\nA. A worm\nB. Crypto malware\nC. A trojan\nD. A backdoor",
-                        "solution": "5. D. Remote access to a system is typically provided by a backdoor. Backdoors may also appear in firmware or even in hardware. None of the other items listed provide remote access by default, although they may have a backdoor as part of a more capable malware package."
+                        "solution": "5. D. Remote access to a system is typically provided by a backdoor. Backdoors may also appear in firmware or even in hardware."
                     },
                     {
                         "value": 600,
-                        "clue": "9. Nancy is concerned that there is a software keylogger on the system she's investigating. What best describes data that may have been stolen?\nA. All files on the system\nB. All keyboard input\nC. All files the user accessed while the keylogger was active\nD. Keyboard and other input from the user",
-                        "solution": "9. D. While keyloggers often focus on keyboard input, other types of input may also be captured, meaning Nancy should worry about any user input that occurred while the keylogger was installed. Keyloggers typically do not target files on systems, although if Nancy finds a keylogger, she may want to check for other malware packages with additional capabilities."
+                        "clue": "10. A system in Elaine's company has suddenly displayed a message demanding payment in Bitcoin and claiming that the data from the system has been encrypted. What type of malware has Elaine likely encountered?\nA. Worms\nB. A virus\nC. Ransomware\nD. Rootkit",
+                        "solution": "10. C. Ransomware demands payment to be made while typically using encryption to make data inaccessible."
                     }
                 ]
             },
             {
-                "category": "Threat Scenarios",
+                "category": "Detection and Prevention Techniques",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "1. Ryan wants to prevent logic bombs created by insider threats from impacting his organization. What technique will most effectively limit the likelihood of logic bombs being put in place?\nA. Deploying antivirus software\nB. Using a code review process\nC. Deploying endpoint detection and response (EDR) software\nD. Disabling autorun for USB drives",
+                        "solution": "1. B. Logic bombs are embedded in code, so Ryan's organization would get the most benefit from a code review process for any code that goes into production."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "13. Selah wants to ensure that malware is completely removed from a system. What should she do to ensure this?\nA. Run multiple antimalware tools and use them to remove all detections.\nB. Wipe the drive and reinstall from known good media.\nC. Use the delete setting in her antimalware software rather than the quarantine setting.\nD. There is no way to ensure the system is safe and it should be destroyed.",
+                        "solution": "13. B. In most malware infection scenarios, wiping the drive and reinstalling from known good media is the best option available."
+                    }
+                ]
+            },
+            {
+                "category": "Insider Threats and Behavioral Indicators",
                 "clues": [
                     {
                         "value": 200,
                         "clue": "3. Nathan works at a school and notices that one of his staff appears to have logged in and changed grades for a single student to higher grades, even in classes that staff member is not responsible for. When asked, the staff member says that they did not perform the action. Which of the following is the most likely way that a student could have gotten access to the staff member's password?\nA. A keylogger\nB. A rootkit\nC. Spyware\nD. A logic bomb",
-                        "solution": "3. A. Nathan should check the staff member's computer for a keylogger, which would have captured their username and password. A student could have then used the staff member's credentials to make the changes described. A rootkit would be used to retain access, spyware gathers a variety of data but is not specifically aimed at capturing keystrokes like this, and logic bombs have specific events or triggers that cause them to take action."
+                        "solution": "3. A. Nathan should check the staff member's computer for a keylogger, which would have captured their username and password."
                     }
                 ]
             },
             {
-                "category": "Defensive Measures",
+                "category": "Spread and Propagation",
                 "clues": [
                     {
                         "value": 200,
-                        "clue": "13. Selah wants to ensure that malware is completely removed from a system. What should she do to ensure this?\nA. Run multiple antimalware tools and use them to remove all detections.\nB. Wipe the drive and reinstall from known good media.\nC. Use the delete setting in her antimalware software rather than the quarantine setting.\nD. There is no way to ensure the system is safe and it should be destroyed.",
-                        "solution": "13. B. In most malware infection scenarios, wiping the drive and reinstalling from known good media is the best option available. If the malware has tools that can infect the system BIOS/UEFI, even this may not be sufficient, but BIOS/UEFI resident malware is relatively uncommon. Multiple antivirus and antimalware tools, even if they are set to delete malware, may still fail against unknown or advanced malware packages. Destroying systems is uncommon, expensive, and unlikely to be acceptable."
+                        "clue": "17. Jason's security team reports that a recent WordPress vulnerability seems to have been exploited by malware and that their organization's entire WordPress service cluster has been infected. What type of malware is most likely involved if a vulnerability in the software was exploited over the network?\nA. A logic bomb\nB. A Trojan\nC. A worm\nD. A rootkit",
+                        "solution": "17. C. Worms often spread via networks, taking advantage of vulnerabilities to install themselves on targeted systems."
                     }
                 ]
             },
             {
-                "category": "Miscellaneous",
+                "category": "Analysis and Investigation",
                 "clues": [
                     {
                         "value": 200,
-                        "clue": "8. Matt uploads a malware sample to a third-party malware scanning site that uses multiple antimalware and antivirus engines to scan the sample. He receives multiple different answers for what the malware package is. What has occurred?\nA. The package contains more than one piece of malware.\nB. The service is misconfigured.\nC. The malware is polymorphic and changed while being tested.\nD. Different vendors use different names for malware packages.",
-                        "solution": "8. D. One of the challenges security practitioners can face when attempting to identify malware is that different antivirus and antimalware vendors will name malware packages and families differently. This means that Matt may need to look at different names to figure out what he is dealing with."
-                    },
+                        "clue": "15. Ben wants to analyze Python code that he believes may be malicious code written by an employee of his organization. What can he do to determine if the code is malicious?\nA. Run a decompiler against it to allow him to read the code\nB. Open the file using a text editor to review the code\nC. Test the code using an antivirus tool\nD. Submit the Python code to a malware testing website",
+                        "solution": "15. B. Python is an interpreted rather than a compiled language, so Ben doesn't need to use a decompiler."
+                    }
+                ]
+            },
+            {
+                "category": "Unique or Specialized Cases",
+                "clues": [
                     {
-                        "value": 400,
-                        "clue": "14. What is the key difference between a worm and a virus?\nA. What operating system they run on\nB. How they spread\nC. What their potential impact is\nD. The number of infections",
-                        "solution": "14. B. The key difference between worms and viruses is how they spread. Worms spread themselves, whereas viruses rely on human interaction."
-                    },
-                    {
-                        "value": 600,
-                        "clue": "16. Which of the following defenses is most likely to prevent Trojan installation?\nA. Installing patches for known vulnerabilities\nB. Preventing downloads from application stores\nC. Preventing the use of USB drives\nD. Disabling autorun from USB drives",
-                        "solution": "16. B. Trojans are often found in application stores where they appear to be innocuous but desirable applications or are listed in confusingly similar ways to legitimate applications. Many organizations choose to lock down the ability to acquire applications from app stores to prevent this type of issue. Since Trojans do not self-spread and rely on user action, patching typically won't prevent them. While users may try to transfer files via USB, this isn't the most common means for modern Trojans to spread."
+                        "value": 200,
+                        "clue": "6. What is the primary impact of bloatware?\nA. Consuming resources\nB. Logging keystrokes\nC. Providing information about users and devices to third parties\nD. Allowing unauthorized remote access",
+                        "solution": "6. A. Bloatware is typically not a significant security threat, but it consumes resources like disk space, CPU, and memory."
                     }
                 ]
             }
         ],
         "double": [
             {
-                "category": "Malware Types",
+                "category": "Malware Types and Classification",
                 "clues": [
                     {
                         "value": 400,
-                        "clue": "7. What type of malware is used to gather information about a user's browsing habits and system?\nA. A Trojan\nB. Bloatware\nC. Spyware\nD. A rootkit",
-                        "solution": "7. C. Spyware is specifically designed to gather information about users and systems and to send that data back to a central collector. Trojans pretend to be useful software and include malicious components, bloatware is preinstalled software that isn't needed, and rootkits are used to conceal malicious software and retain a foothold on compromised systems."
+                        "clue": "11. Rick believes that a system he is responsible for has been compromised with malware that uses a rootkit to obtain and retain access to the system. When he runs an antimalware tool's scanner, the system doesn't show any malware. If he has other data that indicates the system is infected, what should his next step be if he wants to determine what malware may be on the system?\nA. Rerun the antimalware scan.\nB. Mount the drive on another system and scan it that way.\nC. Disable the systems antivirus because it may be causing a false negative.\nD. The system is not infected and he should move on.",
+                        "solution": "11. B. Rootkits are designed to hide from antimalware scanners and can often defeat locally run scans."
                     },
                     {
                         "value": 800,
-                        "clue": "10. A system in Elaine's company has suddenly displayed a message demanding payment in Bitcoin and claiming that the data from the system has been encrypted. What type of malware has Elaine likely encountered?\nA. Worms\nB. A virus\nC. Ransomware\nD. Rootkit",
-                        "solution": "10. C. Ransomware demands payment to be made while typically using encryption to make data inaccessible. Worms, viruses, and rootkits are not defined by behavior like this."
+                        "clue": "7. What type of malware is used to gather information about a user's browsing habits and system?\nA. A Trojan\nB. Bloatware\nC. Spyware\nD. A rootkit",
+                        "solution": "7. C. Spyware is specifically designed to gather information about users and systems and to send that data back to a central collector."
                     },
                     {
                         "value": 1200,
-                        "clue": "17. Jason's security team reports that a recent WordPress vulnerability seems to have been exploited by malware and that their organization's entire WordPress service cluster has been infected. What type of malware is most likely involved if a vulnerability in the software was exploited over the network?\nA. A logic bomb\nB. A Trojan\nC. A worm\nD. A rootkit",
-                        "solution": "17. C. Worms often spread via networks, taking advantage of vulnerabilities to install themselves on targeted systems and then to propagate further. Trojans require human interaction to install software that appears desirable. Logic bombs are embedded in code and perform actions when triggers like a date or event occur. Rootkits are used to hide malware and to conceal attacker's actions."
+                        "clue": "14. What is the key difference between a worm and a virus?\nA. What operating system they run on\nB. How they spread\nC. What their potential impact is\nD. The number of infections",
+                        "solution": "14. B. The key difference between worms and viruses is how they spread. Worms spread themselves, whereas viruses rely on human interaction."
                     },
                     {
                         "value": 1600,
                         "clue": "19. What type of malware connects to a command and control system, allowing attackers to manage, control, and update it remotely?\nA. A bot\nB. A drone\nC. A vampire\nD. A worm",
-                        "solution": "19. A. Bots connect to command and control (C&C) systems, allowing them to be updated, controlled, and managed remotely. Worms spread via vulnerabilities, and drones and vampires aren't common terms for malware."
+                        "solution": "19. A. Bots connect to command and control (C&C) systems, allowing them to be updated, controlled, and managed remotely."
                     }
                 ]
             },
             {
-                "category": "Threat Scenarios",
+                "category": "Detection and Prevention Techniques",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "2. Yasmine believes that her organization may be dealing with an advanced rootkit and wants to write IoC definitions for it. Which of the following is not likely to be a useful IoC for a rootkit?\nA. File hashes\nB. Command and control domains\nC. Pop-ups demanding a ransom\nD. Behavior-based identifiers",
+                        "solution": "2. C. Rootkits are intended to be stealthy, and a pop-up demanding ransom works against that purpose."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "18. Hui's organization recently purchased new Windows computers from an office supply store. The systems have a number of unwanted programs on them that load at startup that were installed by the manufacturer. What type of software is this?\nA. Viruses\nB. Trojans\nC. Spyware\nD. Bloatware",
+                        "solution": "18. D. Unwanted, typically preinstalled programs are known as bloatware. They take up space and resources without providing value."
+                    }
+                ]
+            },
+            {
+                "category": "Insider Threats and Behavioral Indicators",
                 "clues": [
                     {
                         "value": 400,
                         "clue": "4. Amanda notices traffic between her systems and a known malicious host on TCP port 6667. What type of traffic is she most likely detecting?\nA. Command and control\nB. Spyware\nC. A worm\nD. A hijacked web browser",
-                        "solution": "4. A. Amanda has most likely discovered a botnet's command and control channel, and the system or systems she is monitoring are probably using IRC as the command and control channel. Spyware is likely to simply send data to a central server via HTTP/HTTPS, worms spread by attacking vulnerable services, and a hijacked web browser would probably operate on common HTTP or HTTPS ports (80/443)."
+                        "solution": "4. A. Amanda has most likely discovered a botnet's command and control channel, and the system or systems she is monitoring are probably using IRC as the command and control channel."
                     },
                     {
                         "value": 800,
                         "clue": "12. A recently terminated developer from Jaya's organization has contacted the organization claiming that they left code in an application that they wrote that will delete files and bring the application down if they are not employed by the company. What type of malware is this?\nA. Ransomware\nB. Extortionware\nC. A logic bomb\nD. A Trojan",
-                        "solution": "12. C. Jaya's former employee is describing a logic bomb, malicious code that will cause harm when a trigger or specific action occurs. In this case, the former employee is claiming that the trigger is them not being employed at the company. Jaya will need to assess all of the code that the employee wrote to determine if a logic bomb exists. Ransomware is a type of malicious software that typically uses encryption to extort a ransom. Extortionware is not a commonly used term."
+                        "solution": "12. C. Jaya's former employee is describing a logic bomb, malicious code that will cause harm when a trigger or specific action occurs."
                     }
                 ]
             },
             {
-                "category": "Defensive Measures",
+                "category": "Spread and Propagation",
                 "clues": [
                     {
                         "value": 400,
-                        "clue": "11. Rick believes that a system he is responsible for has been compromised with malware that uses a rootkit to obtain and retain access to the system. When he runs an antimalware tool's scanner, the system doesn't show any malware. If he has other data that indicates the system is infected, what should his next step be if he wants to determine what malware may be on the system?\nA. Rerun the antimalware scan.\nB. Mount the drive on another system and scan it that way.\nC. Disable the system's antivirus because it may be causing a false negative.\nD. The system is not infected and he should move on.",
-                        "solution": "11. B. Rootkits are designed to hide from antimalware scanners and can often defeat locally run scans. Mounting the drive in another system in read-only mode or booting from a USB drive and scanning using a trusted, known good operating system can be an effective way to determine what malware is on a potentially infected system."
+                        "clue": "20. Randy believes that a system that he is responsible for was infected after a user picked up a USB drive and plugged it in. The user claims that they only opened one file on the drive to see who might own it. What type of malware is most likely involved?\nA. A virus\nB. A worm\nC. A trojan\nD. A spyware tool",
+                        "solution": "20. A. Randy knows that viruses spread through user interaction with files on thumb drives."
                     }
                 ]
             },
             {
-                "category": "Miscellaneous",
+                "category": "Analysis and Investigation",
                 "clues": [
                     {
                         "value": 400,
-                        "clue": "18. Hui's organization recently purchased new Windows computers from an office supply store. The systems have a number of unwanted programs on them that load at startup that were installed by the manufacturer. What type of software is this?\nA. Viruses\nB. Trojans\nC. Spyware\nD. Bloatware",
-                        "solution": "18. D. Unwanted, typically preinstalled programs are known as bloatware. They take up space and resources without providing value, and many organizations either uninstall them or install clean operating system images to avoid them. There is no indication of malicious activity in the question, so these are most likely not viruses, Trojans, or spyware."
-                    },
-                    {
-                        "value": 800,
-                        "clue": "15. Ben wants to analyze Python code that he believes may be malicious code written by an employee of his organization. What can he do to determine if the code is malicious?\nA. Run a decompiler against it to allow him to read the code\nB. Open the file using a text editor to review the code\nC. Test the code using an antivirus tool\nD. Submit the Python code to a malware testing website",
-                        "solution": "15. B. Python is an interpreted rather than a compiled language, so Ben doesn't need to use a decompiler. Instead, his best bet is to open the file and review the code to see what it does. Since it was written by an employee, it is unlikely that it will match an existing known malicious package, which means antivirus and antimalware tools and sites will be useless."
-                    },
-                    {
-                        "value": 1200,
-                        "clue": "2. Yasmine believes that her organization may be dealing with an advanced rootkit and wants to write IoC definitions for it. Which of the following is not likely to be a useful IoC for a rootkit?",
-                        "solution": "2. C. Rootkits are intended to be stealthy, and a pop-up demanding ransom works against that purpose. File hashes, command and control details, and behavior-based identifiers are all useful IoCs likely to be relevant to a rootkit."
-                    },
-                    {
-                        "value": 1600,
-                        "clue": "6. What is the primary impact of bloatware?",
-                        "solution": "6. A. Bloatware is typically not a significant security threat, but it consumes resources like disk space, CPU, and memory. Unfortunately, some bloatware can be vulnerable and may not get regularly patched, meaning it's both useless and a potential risk!"
+                        "clue": "8. Matt uploads a malware sample to a third-party malware scanning site that uses multiple antimalware and antivirus engines to scan the sample. He receives multiple different answers for what the malware package is. What has occurred?\nA. The package contains more than one piece of malware.\nB. The service is misconfigured.\nC. The malware is polymorphic and changed while being tested.\nD. Different vendors use different names for malware packages.",
+                        "solution": "8. D. One of the challenges security practitioners face is that different antivirus and antimalware vendors name malware packages differently."
                     }
                 ]
             }
         ],
-        "final": {
+        "final_jeopardy": {
             "category": "Final Jeopardy",
-            "clue": "20. Randy believes that a system that he is responsible for was infected after a user picked up a USB drive and plugged it in. The user claims that they only opened one file on the drive to see who might own it. What type of malware is most likely involved?\nA. A virus\nB. A worm\nC. A trojan\nD. A spyware tool",
-            "solution": "20. A. Randy knows that viruses spread through user interaction with files on thumb drives. A worm would spread itself, a Trojan would look like a useful or desirable file, and there is no indication of spyware in the question."
+            "clue": "16. Which of the following defenses is most likely to prevent Trojan installation?\nA. Installing patches for known vulnerabilities\nB. Preventing downloads from application stores\nC. Preventing the use of USB drives\nD. Disabling autorun from USB drives",
+            "solution": "16. B. Trojans are often found in application stores where they appear to be innocuous but desirable applications."
         }
     },
     "Chapter 4 - Social Engineering and Password Attacks": {
@@ -8661,481 +8672,4 @@ const gameData = {
             "solution": "226. B. While blocking single quotes won't stop all SQL injection, it will stop many basic injection attacks. Preventing the use of SQL or AND and OR statements may break some applica-tions, although secure web applications should be using stored queries."
         }
     }
-};
-
-    // Current game state
-    let currentRound = 'single';
-    let cluesRemaining = 0;
-    let solutionRevealed = false;
-    let players = [];
-    let currentClueValue = 0;
-    let selectedBoard = null;
-
-    // Get references to DOM elements
-    const gameBoard = document.getElementById('game-board');
-    const clueModal = document.getElementById('clue-modal');
-    const modalContent = document.getElementById('modal-content');
-    const clueText = document.getElementById('clue-text');
-    const solutionText = document.getElementById('solution-text');
-    const nextRoundBtn = document.getElementById('next-round-btn');
-    const playerScores = document.getElementById('player-scores');
-    const scoreButtons = document.getElementById('score-buttons');
-    const dailyDoubleCaption = document.getElementById('daily-double-caption');
-    const clueImage = document.getElementById('clue-image');
-
-    // Audio elements
-    const jeopardyThemeBtn = document.getElementById('jeopardy-theme-btn');
-    const jeopardyThemeAudio = document.getElementById('jeopardy-theme-audio');
-    const dailyDoubleAudio = document.getElementById('daily-double-audio');
-    const correctAnswerAudio = document.getElementById('correct-answer-audio');
-    const wrongAnswerAudio = document.getElementById('wrong-answer-audio');
-
-    // Player setup elements
-    const playerSetupModal = document.getElementById('player-setup-modal');
-    const playerInputs = document.getElementById('player-inputs');
-    const addPlayerBtn = document.getElementById('add-player-btn');
-    const startGameBtn = document.getElementById('start-game-btn');
-    const boardSelect = document.getElementById('board-select');
-
-    // Populate board selection options
-    Object.keys(gameData).forEach(boardName => {
-        const option = document.createElement('option');
-        option.value = boardName;
-        option.textContent = boardName;
-        boardSelect.appendChild(option);
-    });
-
-    // Event listeners for player setup
-    addPlayerBtn.addEventListener('click', addPlayerInput);
-    startGameBtn.addEventListener('click', startGame);
-
-    function addPlayerInput() {
-        const playerInput = document.createElement('input');
-        playerInput.type = 'text';
-        playerInput.classList.add('player-name-input');
-        playerInput.placeholder = `Player ${playerInputs.children.length + 1}`;
-        playerInputs.appendChild(playerInput);
-    }
-
-    function startGame() {
-        selectedBoard = boardSelect.value;
-
-        if (!selectedBoard || !gameData[selectedBoard]) {
-            alert('Please select a valid board.');
-            return;
-        }
-
-        const playerNameInputs = document.querySelectorAll('.player-name-input');
-        players = [];
-        playerNameInputs.forEach(input => {
-            const name = input.value.trim();
-            if (name !== '') {
-                players.push({ name: name, score: 0 });
-            }
-        });
-
-        if (players.length === 0) {
-            alert('Please enter at least one player name.');
-            return;
-        }
-
-        updatePlayerScores();
-        playerSetupModal.style.display = 'none';
-        buildGameBoard(gameData[selectedBoard][currentRound]);
-    }
-
-    function updatePlayerScores() {
-        playerScores.innerHTML = '';
-        players.forEach((player, index) => {
-            const playerDiv = document.createElement('div');
-            playerDiv.classList.add('player-score');
-
-            const playerNameDiv = document.createElement('div');
-            playerNameDiv.classList.add('player-name');
-            playerNameDiv.innerText = player.name;
-
-            const playerAmountDiv = document.createElement('div');
-            playerAmountDiv.classList.add('player-amount');
-            playerAmountDiv.innerText = `$${player.score}`;
-
-            // Increase and Decrease Buttons
-            const adjustmentDiv = document.createElement('div');
-            adjustmentDiv.classList.add('manual-adjustment');
-
-            const increaseBtn = document.createElement('button');
-            increaseBtn.innerText = `+$100`;
-            increaseBtn.classList.add('increase-btn');
-            increaseBtn.addEventListener('click', () => {
-                adjustPlayerScore(index, 100);
-            });
-
-            const decreaseBtn = document.createElement('button');
-            decreaseBtn.innerText = `–$100`;
-            decreaseBtn.classList.add('decrease-btn');
-            decreaseBtn.addEventListener('click', () => {
-                adjustPlayerScore(index, -100);
-            });
-
-            adjustmentDiv.appendChild(increaseBtn);
-            adjustmentDiv.appendChild(decreaseBtn);
-
-            playerDiv.appendChild(playerNameDiv);
-            playerDiv.appendChild(playerAmountDiv);
-            playerDiv.appendChild(adjustmentDiv);
-            playerScores.appendChild(playerDiv);
-        });
-    }
-
-    function adjustPlayerScore(playerIndex, amount) {
-        players[playerIndex].score += amount;
-        updatePlayerScores();
-    }
-
-    function buildGameBoard(roundData) {
-        // Clear the game board
-        gameBoard.innerHTML = '';
-
-        if (currentRound === 'final') {
-            buildFinalJeopardy(gameData[selectedBoard].final);
-            return;
-        }
-
-        // Set up the grid columns based on the number of categories
-        const numCategories = roundData.length;
-        gameBoard.style.gridTemplateColumns = `repeat(${numCategories}, 1fr)`;
-
-        // Build category headers
-        roundData.forEach(category => {
-            const categoryCell = document.createElement('div');
-            categoryCell.classList.add('category-cell');
-            categoryCell.innerText = category.category;
-            gameBoard.appendChild(categoryCell);
-        });
-
-        // Determine the maximum number of clues in any category
-        let maxClues = 0;
-        roundData.forEach(category => {
-            if (category.clues.length > maxClues) {
-                maxClues = category.clues.length;
-            }
-        });
-
-        // Build clue cells
-        for (let i = 0; i < maxClues; i++) {
-            roundData.forEach(category => {
-                const clueCell = document.createElement('div');
-                clueCell.classList.add('clue-cell');
-
-                if (category.clues[i]) {
-                    const clue = category.clues[i];
-                    clueCell.innerText = `$${clue.value}`;
-                    clueCell.dataset.round = currentRound;
-                    clueCell.addEventListener('click', () => {
-                        if (!clueCell.classList.contains('used')) {
-                            openClue(clue, clueCell);
-                            clueCell.classList.add('used');
-                        }
-                    });
-                } else {
-                    // Empty cell for uneven clues
-                    clueCell.classList.add('empty-cell');
-                }
-
-                gameBoard.appendChild(clueCell);
-            });
-        }
-
-        // Update the number of remaining clues
-        cluesRemaining = roundData.reduce((total, category) => total + category.clues.length, 0);
-    }
-
-    function openClue(clue, clueCell) {
-        // Send a POST request to reset player answers using XMLHttpRequest
-        const xhr = new XMLHttpRequest();
-        const xhr2 = new XMLHttpRequest();
-        xhr2.open('GET', googleApiURL, true);
-        xhr2.onreadystatechange = function () {
-            if (xhr2.readyState === XMLHttpRequest.DONE) {
-                if (xhr2.status === 200) {
-                    xhr.open('POST', googleApiURL, true);
-                    // xhr.setRequestHeader('Content-Type', 'application/json');
-                    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-                    xhr.onreadystatechange = function () {
-                        if (xhr.readyState === XMLHttpRequest.DONE) {
-                            if (xhr.status === 200) {
-                                console.log('Player answers reset successfully:', xhr.responseText);
-                            } else {
-                                console.error('Failed to reset player answers:', xhr.statusText);
-                            }
-                        }
-                    };
-                    let jsonPayload = JSON.stringify({ action: 'reset' })
-                    let encodedData = btoa(jsonPayload);
-                    let stringPayload = `data=${encodedData}`;
-
-                    xhr.send(stringPayload);
-                }
-            }
-        };
-        xhr2.send();
-
-        clueText.innerText = clue.clue;
-        solutionText.style.display = 'none';
-        solutionText.innerText = clue.solution;
-        clueModal.style.display = 'block';
-        solutionRevealed = false;
-        currentClueValue = clue.value;
-
-        // Check if the clue is a Daily Double
-        if (clue.dailyDouble) {
-            dailyDoubleCaption.style.display = 'block';
-            dailyDoubleAudio.play();
-        } else {
-            dailyDoubleCaption.style.display = 'none';
-        }
-
-        // Check if the clue has an image
-        if (clue.image) {
-            clueImage.src = clue.image;
-            clueImage.style.display = 'block';
-        } else {
-            clueImage.style.display = 'none';
-        }
-
-        // Decrement clues remaining
-        cluesRemaining--;
-
-        // Check if round is over
-        if (cluesRemaining === 0) {
-            if (currentRound !== 'double') {
-                nextRoundBtn.innerText = 'Proceed to Double Jeopardy';
-            } else {
-                nextRoundBtn.innerText = 'Proceed to Final Jeopardy';
-            }
-            nextRoundBtn.style.display = 'inline-block';
-        }
-
-        let answersContainer = document.getElementById('player-answers');
-        answersContainer.innerHTML = "";
-
-        // Add the "Get Player Answers" button dynamically
-        addGetPlayerAnswersButton(clueModal);
-    }
-
-    function addGetPlayerAnswersButton(parentElement) {
-        const getPlayerAnswersBtn = document.getElementById('get-answers-btn')
-        // const getPlayerAnswersBtn = document.createElement('button');
-        // getPlayerAnswersBtn.innerText = 'Get Player Answers';
-        // getPlayerAnswersBtn.classList.add('get-answers-btn');
-        getPlayerAnswersBtn.addEventListener('click', fetchPlayerAnswers);
-        // parentElement.appendChild(getPlayerAnswersBtn);
-    }
-
-    function fetchPlayerAnswers() {
-        const xhr = new XMLHttpRequest();
-        xhr.open('GET', googleApiURL, true);
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === XMLHttpRequest.DONE) {
-                if (xhr.status === 200) {
-                    const data = JSON.parse(xhr.responseText);
-    
-                    if (!Array.isArray(data)) {
-                        console.error('Unexpected response format');
-                        return;
-                    }
-
-                    // Clear existing answers (if any)
-                    const existingAnswers = document.querySelector('.player-answers');
-                    // if (existingAnswers) 
-                    //     existingAnswers.remove();
-    
-                    // Create a new container for answers
-                    // let answersContainer = document.getElementById('player-answers');
-                    // answersContainer.innerHTML = "";
-                    existingAnswers.innerHTML = "";
-
-                    // Display answers
-                    data.forEach(item => {
-                        for (const player in item) {
-                          // console.log(`Player: ${player}, Value: ${item[player]}`);
-                          const answerDiv = document.createElement('div');
-                          answerDiv.innerText = `Player: ${player}, Value: ${item[player]}`;
-                        //   answersContainer.appendChild(answerDiv);
-                            existingAnswers.appendChild(answerDiv);
-                        }
-                      });
-                    // data.forEach(({ player, answer }) => {
-                    //     const answerDiv = document.createElement('div');
-                    //     answerDiv.innerText = `${player}: ${answer}`;
-                    //     answersContainer.appendChild(answerDiv);
-                    // });
-
-                    // modalContent.appendChild(answersContainer);
-                    modalContent.appendChild(existingAnswers);
-                } else {
-                    console.error('Failed to fetch player answers:', xhr.statusText);
-                }
-            }
-        };
-        xhr.send();
-    }
-
-    // Event listener for clicks within the modal content
-    modalContent.addEventListener('click', () => {
-        if (!solutionRevealed) {
-            // Reveal the solution
-            solutionText.style.display = 'block';
-            solutionRevealed = true;
-
-            // Show score adjustment buttons
-            showScoreAdjustmentButtons();
-        } else {
-            // Close the modal if the solution is already revealed
-            clueModal.style.display = 'none';
-            scoreButtons.style.display = 'none';
-        }
-    });
-
-    // Prevent event propagation to avoid closing modal when clicking on next round button
-    nextRoundBtn.addEventListener('click', (event) => {
-        event.stopPropagation();
-        nextRoundBtn.style.display = 'none';
-        clueModal.style.display = 'none';
-        scoreButtons.style.display = 'none';
-
-        if (currentRound === 'single') {
-            currentRound = 'double';
-            buildGameBoard(gameData[selectedBoard][currentRound]);
-        } else if (currentRound === 'double') {
-            currentRound = 'final';
-            buildGameBoard(gameData[selectedBoard][currentRound]);
-        } else if (currentRound === 'final') {
-            // Display final scores
-            displayFinalScores();
-        }
-    });
-
-    // Close modal when clicking outside the modal content, after solution is revealed
-    window.addEventListener('click', (event) => {
-        if (event.target === clueModal && solutionRevealed) {
-            clueModal.style.display = 'none';
-            scoreButtons.style.display = 'none';
-        }
-    });
-
-    function showScoreAdjustmentButtons() {
-        scoreButtons.innerHTML = '';
-        players.forEach((player, index) => {
-            const adjustmentDiv = document.createElement('div');
-            adjustmentDiv.classList.add('score-adjustment');
-
-            const playerNameDiv = document.createElement('div');
-            playerNameDiv.classList.add('player-name');
-            playerNameDiv.innerText = player.name;
-
-            const correctBtn = document.createElement('button');
-            correctBtn.innerText = `+$${currentClueValue}`;
-            correctBtn.classList.add('increase-btn');
-            correctBtn.addEventListener('click', (event) => {
-                event.stopPropagation();
-                adjustPlayerScore(index, currentClueValue);
-
-                // Play correct answer audio
-                correctAnswerAudio.currentTime = 0; // Reset audio to start
-                correctAnswerAudio.play();
-            });
-
-            const incorrectBtn = document.createElement('button');
-            incorrectBtn.innerText = `–$${currentClueValue}`;
-            incorrectBtn.classList.add('decrease-btn');
-            incorrectBtn.addEventListener('click', (event) => {
-                event.stopPropagation();
-                adjustPlayerScore(index, -currentClueValue);
-
-                // Play wrong answer audio
-                wrongAnswerAudio.currentTime = 0; // Reset audio to start
-                wrongAnswerAudio.play();
-            });
-
-            adjustmentDiv.appendChild(playerNameDiv);
-            adjustmentDiv.appendChild(correctBtn);
-            adjustmentDiv.appendChild(incorrectBtn);
-
-            scoreButtons.appendChild(adjustmentDiv);
-        });
-        scoreButtons.style.display = 'block';
-    }
-
-    function buildFinalJeopardy(finalData) {
-        // Clear the game board
-        gameBoard.innerHTML = '';
-
-        const finalCategory = document.createElement('div');
-        finalCategory.classList.add('final-category');
-        finalCategory.innerText = `Final Jeopardy Category: ${finalData.category}`;
-        gameBoard.appendChild(finalCategory);
-
-        const finalClueBtn = document.createElement('button');
-        finalClueBtn.classList.add('final-clue-btn');
-        finalClueBtn.innerText = 'View Final Jeopardy Clue';
-        finalClueBtn.addEventListener('click', () => {
-            openFinalClue(finalData);
-            finalClueBtn.style.display = 'none';
-        });
-        gameBoard.appendChild(finalClueBtn);
-    }
-
-    function openFinalClue(finalData) {
-        clueText.innerText = finalData.clue;
-        solutionText.style.display = 'none';
-        solutionText.innerText = finalData.solution;
-        clueModal.style.display = 'block';
-        solutionRevealed = false;
-        currentClueValue = 0; // For Final Jeopardy, you may handle wagers separately
-
-        // Hide the Daily Double caption for Final Jeopardy
-        dailyDoubleCaption.style.display = 'none';
-
-        // Hide the clue image for Final Jeopardy (or display if needed)
-        clueImage.style.display = 'none';
-
-        // Show score adjustment buttons (for Final Jeopardy)
-        showScoreAdjustmentButtons();
-    }
-
-    function displayFinalScores() {
-        gameBoard.innerHTML = '<h2>Final Scores</h2>';
-        players.forEach(player => {
-            const playerDiv = document.createElement('div');
-            playerDiv.classList.add('player-score');
-
-            const playerNameDiv = document.createElement('div');
-            playerNameDiv.classList.add('player-name');
-            playerNameDiv.innerText = player.name;
-
-            const playerAmountDiv = document.createElement('div');
-            playerAmountDiv.classList.add('player-amount');
-            playerAmountDiv.innerText = `$${player.score}`;
-
-            playerDiv.appendChild(playerNameDiv);
-            playerDiv.appendChild(playerAmountDiv);
-            gameBoard.appendChild(playerDiv);
-        });
-    }
-
-    // Event listener for Jeopardy Theme button
-    jeopardyThemeBtn.addEventListener('click', () => {
-        if (jeopardyThemeAudio.paused) {
-            jeopardyThemeAudio.play();
-            jeopardyThemeBtn.innerText = 'Pause Theme';
-        } else {
-            jeopardyThemeAudio.pause();
-            jeopardyThemeBtn.innerText = 'Jeopardy Theme';
-        }
-    });
-
-    
-    const xhr3 = new XMLHttpRequest();
-    xhr3.open('GET', googleApiURL, true);
-    xhr3.send();
-});
+}
