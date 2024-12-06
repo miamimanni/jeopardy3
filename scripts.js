@@ -1,4 +1,8 @@
-{
+const googleApiURL = 'https://script.google.com/macros/s/AKfycbwJfBza6jdoK9bPrsALQpyUs45l0EAxZ2via_K-ZEJM20VYl1fwzngj8UzVa0H0z1Gr_g/exec';
+
+document.addEventListener('DOMContentLoaded', () => {
+
+const gameData = {
     "Chapter 1 - Todays Security Professional": {
         "single": [
             {
@@ -8672,4 +8676,481 @@
             "solution": "226. B. While blocking single quotes won't stop all SQL injection, it will stop many basic injection attacks. Preventing the use of SQL or AND and OR statements may break some applica-tions, although secure web applications should be using stored queries."
         }
     }
-}
+};
+
+    // Current game state
+    let currentRound = 'single';
+    let cluesRemaining = 0;
+    let solutionRevealed = false;
+    let players = [];
+    let currentClueValue = 0;
+    let selectedBoard = null;
+
+    // Get references to DOM elements
+    const gameBoard = document.getElementById('game-board');
+    const clueModal = document.getElementById('clue-modal');
+    const modalContent = document.getElementById('modal-content');
+    const clueText = document.getElementById('clue-text');
+    const solutionText = document.getElementById('solution-text');
+    const nextRoundBtn = document.getElementById('next-round-btn');
+    const playerScores = document.getElementById('player-scores');
+    const scoreButtons = document.getElementById('score-buttons');
+    const dailyDoubleCaption = document.getElementById('daily-double-caption');
+    const clueImage = document.getElementById('clue-image');
+
+    // Audio elements
+    const jeopardyThemeBtn = document.getElementById('jeopardy-theme-btn');
+    const jeopardyThemeAudio = document.getElementById('jeopardy-theme-audio');
+    const dailyDoubleAudio = document.getElementById('daily-double-audio');
+    const correctAnswerAudio = document.getElementById('correct-answer-audio');
+    const wrongAnswerAudio = document.getElementById('wrong-answer-audio');
+
+    // Player setup elements
+    const playerSetupModal = document.getElementById('player-setup-modal');
+    const playerInputs = document.getElementById('player-inputs');
+    const addPlayerBtn = document.getElementById('add-player-btn');
+    const startGameBtn = document.getElementById('start-game-btn');
+    const boardSelect = document.getElementById('board-select');
+
+    // Populate board selection options
+    Object.keys(gameData).forEach(boardName => {
+        const option = document.createElement('option');
+        option.value = boardName;
+        option.textContent = boardName;
+        boardSelect.appendChild(option);
+    });
+
+    // Event listeners for player setup
+    addPlayerBtn.addEventListener('click', addPlayerInput);
+    startGameBtn.addEventListener('click', startGame);
+
+    function addPlayerInput() {
+        const playerInput = document.createElement('input');
+        playerInput.type = 'text';
+        playerInput.classList.add('player-name-input');
+        playerInput.placeholder = `Player ${playerInputs.children.length + 1}`;
+        playerInputs.appendChild(playerInput);
+    }
+
+    function startGame() {
+        selectedBoard = boardSelect.value;
+
+        if (!selectedBoard || !gameData[selectedBoard]) {
+            alert('Please select a valid board.');
+            return;
+        }
+
+        const playerNameInputs = document.querySelectorAll('.player-name-input');
+        players = [];
+        playerNameInputs.forEach(input => {
+            const name = input.value.trim();
+            if (name !== '') {
+                players.push({ name: name, score: 0 });
+            }
+        });
+
+        if (players.length === 0) {
+            alert('Please enter at least one player name.');
+            return;
+        }
+
+        updatePlayerScores();
+        playerSetupModal.style.display = 'none';
+        buildGameBoard(gameData[selectedBoard][currentRound]);
+    }
+
+    function updatePlayerScores() {
+        playerScores.innerHTML = '';
+        players.forEach((player, index) => {
+            const playerDiv = document.createElement('div');
+            playerDiv.classList.add('player-score');
+
+            const playerNameDiv = document.createElement('div');
+            playerNameDiv.classList.add('player-name');
+            playerNameDiv.innerText = player.name;
+
+            const playerAmountDiv = document.createElement('div');
+            playerAmountDiv.classList.add('player-amount');
+            playerAmountDiv.innerText = `$${player.score}`;
+
+            // Increase and Decrease Buttons
+            const adjustmentDiv = document.createElement('div');
+            adjustmentDiv.classList.add('manual-adjustment');
+
+            const increaseBtn = document.createElement('button');
+            increaseBtn.innerText = `+$100`;
+            increaseBtn.classList.add('increase-btn');
+            increaseBtn.addEventListener('click', () => {
+                adjustPlayerScore(index, 100);
+            });
+
+            const decreaseBtn = document.createElement('button');
+            decreaseBtn.innerText = `–$100`;
+            decreaseBtn.classList.add('decrease-btn');
+            decreaseBtn.addEventListener('click', () => {
+                adjustPlayerScore(index, -100);
+            });
+
+            adjustmentDiv.appendChild(increaseBtn);
+            adjustmentDiv.appendChild(decreaseBtn);
+
+            playerDiv.appendChild(playerNameDiv);
+            playerDiv.appendChild(playerAmountDiv);
+            playerDiv.appendChild(adjustmentDiv);
+            playerScores.appendChild(playerDiv);
+        });
+    }
+
+    function adjustPlayerScore(playerIndex, amount) {
+        players[playerIndex].score += amount;
+        updatePlayerScores();
+    }
+
+    function buildGameBoard(roundData) {
+        // Clear the game board
+        gameBoard.innerHTML = '';
+
+        if (currentRound === 'final') {
+            buildFinalJeopardy(gameData[selectedBoard].final);
+            return;
+        }
+
+        // Set up the grid columns based on the number of categories
+        const numCategories = roundData.length;
+        gameBoard.style.gridTemplateColumns = `repeat(${numCategories}, 1fr)`;
+
+        // Build category headers
+        roundData.forEach(category => {
+            const categoryCell = document.createElement('div');
+            categoryCell.classList.add('category-cell');
+            categoryCell.innerText = category.category;
+            gameBoard.appendChild(categoryCell);
+        });
+
+        // Determine the maximum number of clues in any category
+        let maxClues = 0;
+        roundData.forEach(category => {
+            if (category.clues.length > maxClues) {
+                maxClues = category.clues.length;
+            }
+        });
+
+        // Build clue cells
+        for (let i = 0; i < maxClues; i++) {
+            roundData.forEach(category => {
+                const clueCell = document.createElement('div');
+                clueCell.classList.add('clue-cell');
+
+                if (category.clues[i]) {
+                    const clue = category.clues[i];
+                    clueCell.innerText = `$${clue.value}`;
+                    clueCell.dataset.round = currentRound;
+                    clueCell.addEventListener('click', () => {
+                        if (!clueCell.classList.contains('used')) {
+                            openClue(clue, clueCell);
+                            clueCell.classList.add('used');
+                        }
+                    });
+                } else {
+                    // Empty cell for uneven clues
+                    clueCell.classList.add('empty-cell');
+                }
+
+                gameBoard.appendChild(clueCell);
+            });
+        }
+
+        // Update the number of remaining clues
+        cluesRemaining = roundData.reduce((total, category) => total + category.clues.length, 0);
+    }
+
+    function openClue(clue, clueCell) {
+        // Send a POST request to reset player answers using XMLHttpRequest
+        const xhr = new XMLHttpRequest();
+        const xhr2 = new XMLHttpRequest();
+        xhr2.open('GET', googleApiURL, true);
+        xhr2.onreadystatechange = function () {
+            if (xhr2.readyState === XMLHttpRequest.DONE) {
+                if (xhr2.status === 200) {
+                    xhr.open('POST', googleApiURL, true);
+                    // xhr.setRequestHeader('Content-Type', 'application/json');
+                    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState === XMLHttpRequest.DONE) {
+                            if (xhr.status === 200) {
+                                console.log('Player answers reset successfully:', xhr.responseText);
+                            } else {
+                                console.error('Failed to reset player answers:', xhr.statusText);
+                            }
+                        }
+                    };
+                    let jsonPayload = JSON.stringify({ action: 'reset' })
+                    let encodedData = btoa(jsonPayload);
+                    let stringPayload = `data=${encodedData}`;
+
+                    xhr.send(stringPayload);
+                }
+            }
+        };
+        xhr2.send();
+
+        clueText.innerText = clue.clue;
+        solutionText.style.display = 'none';
+        solutionText.innerText = clue.solution;
+        clueModal.style.display = 'block';
+        solutionRevealed = false;
+        currentClueValue = clue.value;
+
+        // Check if the clue is a Daily Double
+        if (clue.dailyDouble) {
+            dailyDoubleCaption.style.display = 'block';
+            dailyDoubleAudio.play();
+        } else {
+            dailyDoubleCaption.style.display = 'none';
+        }
+
+        // Check if the clue has an image
+        if (clue.image) {
+            clueImage.src = clue.image;
+            clueImage.style.display = 'block';
+        } else {
+            clueImage.style.display = 'none';
+        }
+
+        // Decrement clues remaining
+        cluesRemaining--;
+
+        // Check if round is over
+        if (cluesRemaining === 0) {
+            if (currentRound !== 'double') {
+                nextRoundBtn.innerText = 'Proceed to Double Jeopardy';
+            } else {
+                nextRoundBtn.innerText = 'Proceed to Final Jeopardy';
+            }
+            nextRoundBtn.style.display = 'inline-block';
+        }
+
+        let answersContainer = document.getElementById('player-answers');
+        answersContainer.innerHTML = "";
+
+        // Add the "Get Player Answers" button dynamically
+        addGetPlayerAnswersButton(clueModal);
+    }
+
+    function addGetPlayerAnswersButton(parentElement) {
+        const getPlayerAnswersBtn = document.getElementById('get-answers-btn')
+        // const getPlayerAnswersBtn = document.createElement('button');
+        // getPlayerAnswersBtn.innerText = 'Get Player Answers';
+        // getPlayerAnswersBtn.classList.add('get-answers-btn');
+        getPlayerAnswersBtn.addEventListener('click', fetchPlayerAnswers);
+        // parentElement.appendChild(getPlayerAnswersBtn);
+    }
+
+    function fetchPlayerAnswers() {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', googleApiURL, true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    const data = JSON.parse(xhr.responseText);
+    
+                    if (!Array.isArray(data)) {
+                        console.error('Unexpected response format');
+                        return;
+                    }
+
+                    // Clear existing answers (if any)
+                    const existingAnswers = document.querySelector('.player-answers');
+                    // if (existingAnswers) 
+                    //     existingAnswers.remove();
+    
+                    // Create a new container for answers
+                    // let answersContainer = document.getElementById('player-answers');
+                    // answersContainer.innerHTML = "";
+                    existingAnswers.innerHTML = "";
+
+                    // Display answers
+                    data.forEach(item => {
+                        for (const player in item) {
+                          // console.log(`Player: ${player}, Value: ${item[player]}`);
+                          const answerDiv = document.createElement('div');
+                          answerDiv.innerText = `Player: ${player}, Value: ${item[player]}`;
+                        //   answersContainer.appendChild(answerDiv);
+                            existingAnswers.appendChild(answerDiv);
+                        }
+                      });
+                    // data.forEach(({ player, answer }) => {
+                    //     const answerDiv = document.createElement('div');
+                    //     answerDiv.innerText = `${player}: ${answer}`;
+                    //     answersContainer.appendChild(answerDiv);
+                    // });
+
+                    // modalContent.appendChild(answersContainer);
+                    modalContent.appendChild(existingAnswers);
+                } else {
+                    console.error('Failed to fetch player answers:', xhr.statusText);
+                }
+            }
+        };
+        xhr.send();
+    }
+
+    // Event listener for clicks within the modal content
+    modalContent.addEventListener('click', () => {
+        if (!solutionRevealed) {
+            // Reveal the solution
+            solutionText.style.display = 'block';
+            solutionRevealed = true;
+
+            // Show score adjustment buttons
+            showScoreAdjustmentButtons();
+        } else {
+            // Close the modal if the solution is already revealed
+            clueModal.style.display = 'none';
+            scoreButtons.style.display = 'none';
+        }
+    });
+
+    // Prevent event propagation to avoid closing modal when clicking on next round button
+    nextRoundBtn.addEventListener('click', (event) => {
+        event.stopPropagation();
+        nextRoundBtn.style.display = 'none';
+        clueModal.style.display = 'none';
+        scoreButtons.style.display = 'none';
+
+        if (currentRound === 'single') {
+            currentRound = 'double';
+            buildGameBoard(gameData[selectedBoard][currentRound]);
+        } else if (currentRound === 'double') {
+            currentRound = 'final';
+            buildGameBoard(gameData[selectedBoard][currentRound]);
+        } else if (currentRound === 'final') {
+            // Display final scores
+            displayFinalScores();
+        }
+    });
+
+    // Close modal when clicking outside the modal content, after solution is revealed
+    window.addEventListener('click', (event) => {
+        if (event.target === clueModal && solutionRevealed) {
+            clueModal.style.display = 'none';
+            scoreButtons.style.display = 'none';
+        }
+    });
+
+    function showScoreAdjustmentButtons() {
+        scoreButtons.innerHTML = '';
+        players.forEach((player, index) => {
+            const adjustmentDiv = document.createElement('div');
+            adjustmentDiv.classList.add('score-adjustment');
+
+            const playerNameDiv = document.createElement('div');
+            playerNameDiv.classList.add('player-name');
+            playerNameDiv.innerText = player.name;
+
+            const correctBtn = document.createElement('button');
+            correctBtn.innerText = `+$${currentClueValue}`;
+            correctBtn.classList.add('increase-btn');
+            correctBtn.addEventListener('click', (event) => {
+                event.stopPropagation();
+                adjustPlayerScore(index, currentClueValue);
+
+                // Play correct answer audio
+                correctAnswerAudio.currentTime = 0; // Reset audio to start
+                correctAnswerAudio.play();
+            });
+
+            const incorrectBtn = document.createElement('button');
+            incorrectBtn.innerText = `–$${currentClueValue}`;
+            incorrectBtn.classList.add('decrease-btn');
+            incorrectBtn.addEventListener('click', (event) => {
+                event.stopPropagation();
+                adjustPlayerScore(index, -currentClueValue);
+
+                // Play wrong answer audio
+                wrongAnswerAudio.currentTime = 0; // Reset audio to start
+                wrongAnswerAudio.play();
+            });
+
+            adjustmentDiv.appendChild(playerNameDiv);
+            adjustmentDiv.appendChild(correctBtn);
+            adjustmentDiv.appendChild(incorrectBtn);
+
+            scoreButtons.appendChild(adjustmentDiv);
+        });
+        scoreButtons.style.display = 'block';
+    }
+
+    function buildFinalJeopardy(finalData) {
+        // Clear the game board
+        gameBoard.innerHTML = '';
+
+        const finalCategory = document.createElement('div');
+        finalCategory.classList.add('final-category');
+        finalCategory.innerText = `Final Jeopardy Category: ${finalData.category}`;
+        gameBoard.appendChild(finalCategory);
+
+        const finalClueBtn = document.createElement('button');
+        finalClueBtn.classList.add('final-clue-btn');
+        finalClueBtn.innerText = 'View Final Jeopardy Clue';
+        finalClueBtn.addEventListener('click', () => {
+            openFinalClue(finalData);
+            finalClueBtn.style.display = 'none';
+        });
+        gameBoard.appendChild(finalClueBtn);
+    }
+
+    function openFinalClue(finalData) {
+        clueText.innerText = finalData.clue;
+        solutionText.style.display = 'none';
+        solutionText.innerText = finalData.solution;
+        clueModal.style.display = 'block';
+        solutionRevealed = false;
+        currentClueValue = 0; // For Final Jeopardy, you may handle wagers separately
+
+        // Hide the Daily Double caption for Final Jeopardy
+        dailyDoubleCaption.style.display = 'none';
+
+        // Hide the clue image for Final Jeopardy (or display if needed)
+        clueImage.style.display = 'none';
+
+        // Show score adjustment buttons (for Final Jeopardy)
+        showScoreAdjustmentButtons();
+    }
+
+    function displayFinalScores() {
+        gameBoard.innerHTML = '<h2>Final Scores</h2>';
+        players.forEach(player => {
+            const playerDiv = document.createElement('div');
+            playerDiv.classList.add('player-score');
+
+            const playerNameDiv = document.createElement('div');
+            playerNameDiv.classList.add('player-name');
+            playerNameDiv.innerText = player.name;
+
+            const playerAmountDiv = document.createElement('div');
+            playerAmountDiv.classList.add('player-amount');
+            playerAmountDiv.innerText = `$${player.score}`;
+
+            playerDiv.appendChild(playerNameDiv);
+            playerDiv.appendChild(playerAmountDiv);
+            gameBoard.appendChild(playerDiv);
+        });
+    }
+
+    // Event listener for Jeopardy Theme button
+    jeopardyThemeBtn.addEventListener('click', () => {
+        if (jeopardyThemeAudio.paused) {
+            jeopardyThemeAudio.play();
+            jeopardyThemeBtn.innerText = 'Pause Theme';
+        } else {
+            jeopardyThemeAudio.pause();
+            jeopardyThemeBtn.innerText = 'Jeopardy Theme';
+        }
+    });
+
+    
+    const xhr3 = new XMLHttpRequest();
+    xhr3.open('GET', googleApiURL, true);
+    xhr3.send();
+});
