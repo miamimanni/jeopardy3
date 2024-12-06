@@ -3,7 +3,7 @@ const googleApiURL = 'https://script.google.com/macros/s/AKfycbwJfBza6jdoK9bPrsA
 document.addEventListener('DOMContentLoaded', () => {
 
 const gameData = {
-    "Chapter 1": {
+    "Chapter 1 - Todays Security Professional": {
         "single": [
             {
                 "category": "Chapter 1 part 1",
@@ -316,7 +316,7 @@ const gameData = {
             "solution": "What is the solution to the Final Jeopardy clue?"
         }
     },
-    "Chapter 1 Categorized": {
+    "Chapter 1 - Todays Security Professional - Categorized": {
         "single": [
             {
                 "category": "Risk Management and Controls part 1",
@@ -634,7 +634,7 @@ const gameData = {
             "solution": "What is the solution to the Final Jeopardy clue?"
         }
     },
-    "Chapter 2": {
+    "Chapter 2 - Cybersecurity Threat Landscape": {
         "single": [
             {
                 "category": "Chapter 2 part 1",
@@ -946,7 +946,7 @@ const gameData = {
             "solution": "What is the solution to the Final Jeopardy clue?"
         }
     },
-    "Chapter 2 Categorized": {
+    "Chapter 2 - Cybersecurity Threat Landscape - Categorized": {
         "single": [
             {
                 "category": "Threat Intelligence and APTs",
@@ -1263,7 +1263,7 @@ const gameData = {
             "solution": "What is the solution to the Final Jeopardy clue?"
         }
     },
-    "Chapter 3": {
+    "Chapter 3 - Malicious Code": {
         "single": [
             {
                 "category": "Category 1",
@@ -1383,155 +1383,159 @@ const gameData = {
                 ]
             }
         ],
-        "final_jeopardy": {
+        "final": {
             "category": "Final Jeopardy",
             "clue": "20. Randy believes that a system that he is responsible for was infected after a user picked up a USB drive and plugged it in. The user claims that they only opened one file on the drive to see who might own it. What type of malware is most likely involved?\nA. A virus\nB. A worm\nC. A trojan\nD. A spyware tool",
             "solution": "20. A. Randy knows that viruses spread through user interaction with files on thumb drives. A worm would spread itself, a Trojan would look like a useful or desirable file, and there is no indication of spyware in the question."
         }
     },
-    "Chapter 3 - Categorized": {
+    "Chapter 3 - Malicious Code - Categorized": {
         "single": [
             {
-                "category": "Malware Types and Classification",
+                "category": "Malware Types",
                 "clues": [
                     {
                         "value": 200,
-                        "clue": "Ryan wants to prevent logic bombs created by insider threats from impacting his organization. What technique will most effectively limit the likelihood of logic bombs being put in place?",
-                        "solution": "Using a code review process to detect embedded malicious code."
+                        "clue": "1. Ryan wants to prevent logic bombs created by insider threats from impacting his organization. What technique will most effectively limit the likelihood of logic bombs being put in place?\nA. Deploying antivirus software\nB. Using a code review process\nC. Deploying endpoint detection and response (EDR) software\nD. Disabling autorun for USB drives",
+                        "solution": "1. B. Logic bombs are embedded in code, so Ryan's organization would get the most benefit from a code review process for any code that goes into production. Antivirus and EDR are unlikely to detect logic bombs created by staff in Ryan's organization."
                     },
                     {
                         "value": 400,
-                        "clue": "Mike discovers that attackers have left software that allows them to have remote access to systems on a computer in his company's network. How should he describe or classify this malware?",
-                        "solution": "Classify this as a backdoor."
+                        "clue": "5. Mike discovers that attackers have left software that allows them to have remote access to systems on a computer in his company's network. How should he describe or classify this malware?\nA. A worm\nB. Crypto malware\nC. A trojan\nD. A backdoor",
+                        "solution": "5. D. Remote access to a system is typically provided by a backdoor. Backdoors may also appear in firmware or even in hardware. None of the other items listed provide remote access by default, although they may have a backdoor as part of a more capable malware package."
                     },
                     {
                         "value": 600,
-                        "clue": "Nancy is concerned that there is a software keylogger on the system she's investigating. What best describes data that may have been stolen?",
-                        "solution": "Concern includes all keyboard and other user inputs captured."
-                    },
-                    {
-                        "value": 800,
-                        "clue": "A system in Elaine's company has suddenly displayed a message demanding payment in Bitcoin and claiming that the data from the system has been encrypted. What type of malware has Elaine likely encountered?",
-                        "solution": "Likely ransomware."
+                        "clue": "9. Nancy is concerned that there is a software keylogger on the system she's investigating. What best describes data that may have been stolen?\nA. All files on the system\nB. All keyboard input\nC. All files the user accessed while the keylogger was active\nD. Keyboard and other input from the user",
+                        "solution": "9. D. While keyloggers often focus on keyboard input, other types of input may also be captured, meaning Nancy should worry about any user input that occurred while the keylogger was installed. Keyloggers typically do not target files on systems, although if Nancy finds a keylogger, she may want to check for other malware packages with additional capabilities."
                     }
                 ]
             },
             {
-                "category": "Detection and Investigation",
+                "category": "Threat Scenarios",
                 "clues": [
                     {
                         "value": 200,
-                        "clue": "Rick believes that a system he is responsible for has been compromised with malware that uses a rootkit to obtain and retain access to the system. When he runs an antimalware tool's scanner, the system doesn't show any malware. If he has other data that indicates the system is infected, what should his next step be if he wants to determine what malware may be on the system?",
-                        "solution": "Mount the drive on another system for scanning."
+                        "clue": "3. Nathan works at a school and notices that one of his staff appears to have logged in and changed grades for a single student to higher grades, even in classes that staff member is not responsible for. When asked, the staff member says that they did not perform the action. Which of the following is the most likely way that a student could have gotten access to the staff member's password?\nA. A keylogger\nB. A rootkit\nC. Spyware\nD. A logic bomb",
+                        "solution": "3. A. Nathan should check the staff member's computer for a keylogger, which would have captured their username and password. A student could have then used the staff member's credentials to make the changes described. A rootkit would be used to retain access, spyware gathers a variety of data but is not specifically aimed at capturing keystrokes like this, and logic bombs have specific events or triggers that cause them to take action."
+                    }
+                ]
+            },
+            {
+                "category": "Defensive Measures",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "13. Selah wants to ensure that malware is completely removed from a system. What should she do to ensure this?\nA. Run multiple antimalware tools and use them to remove all detections.\nB. Wipe the drive and reinstall from known good media.\nC. Use the delete setting in her antimalware software rather than the quarantine setting.\nD. There is no way to ensure the system is safe and it should be destroyed.",
+                        "solution": "13. B. In most malware infection scenarios, wiping the drive and reinstalling from known good media is the best option available. If the malware has tools that can infect the system BIOS/UEFI, even this may not be sufficient, but BIOS/UEFI resident malware is relatively uncommon. Multiple antivirus and antimalware tools, even if they are set to delete malware, may still fail against unknown or advanced malware packages. Destroying systems is uncommon, expensive, and unlikely to be acceptable."
+                    }
+                ]
+            },
+            {
+                "category": "Miscellaneous",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "8. Matt uploads a malware sample to a third-party malware scanning site that uses multiple antimalware and antivirus engines to scan the sample. He receives multiple different answers for what the malware package is. What has occurred?\nA. The package contains more than one piece of malware.\nB. The service is misconfigured.\nC. The malware is polymorphic and changed while being tested.\nD. Different vendors use different names for malware packages.",
+                        "solution": "8. D. One of the challenges security practitioners can face when attempting to identify malware is that different antivirus and antimalware vendors will name malware packages and families differently. This means that Matt may need to look at different names to figure out what he is dealing with."
                     },
                     {
                         "value": 400,
-                        "clue": "Ben wants to analyze Python code that he believes may be malicious code written by an employee of his organization. What can he do to determine if the code is malicious?",
-                        "solution": "Review the code in a text editor as Python is interpreted."
-                    }
-                ]
-            },
-            {
-                "category": "Mitigation and Prevention",
-                "clues": [
-                    {
-                        "value": 200,
-                        "clue": "Selah wants to ensure that malware is completely removed from a system. What should she do to ensure this?",
-                        "solution": "Wipe the drive and reinstall from known good media."
+                        "clue": "14. What is the key difference between a worm and a virus?\nA. What operating system they run on\nB. How they spread\nC. What their potential impact is\nD. The number of infections",
+                        "solution": "14. B. The key difference between worms and viruses is how they spread. Worms spread themselves, whereas viruses rely on human interaction."
                     },
                     {
-                        "value": 400,
-                        "clue": "Which of the following defenses is most likely to prevent Trojan installation?",
-                        "solution": "Disable downloads from untrusted application stores."
-                    }
-                ]
-            },
-            {
-                "category": "Differences Between Threats",
-                "clues": [
-                    {
-                        "value": 200,
-                        "clue": "What is the key difference between a worm and a virus?",
-                        "solution": "Worms spread themselves, viruses require human interaction."
+                        "value": 600,
+                        "clue": "16. Which of the following defenses is most likely to prevent Trojan installation?\nA. Installing patches for known vulnerabilities\nB. Preventing downloads from application stores\nC. Preventing the use of USB drives\nD. Disabling autorun from USB drives",
+                        "solution": "16. B. Trojans are often found in application stores where they appear to be innocuous but desirable applications or are listed in confusingly similar ways to legitimate applications. Many organizations choose to lock down the ability to acquire applications from app stores to prevent this type of issue. Since Trojans do not self-spread and rely on user action, patching typically won't prevent them. While users may try to transfer files via USB, this isn't the most common means for modern Trojans to spread."
                     }
                 ]
             }
         ],
         "double": [
             {
-                "category": "Malware Types and Classification",
+                "category": "Malware Types",
                 "clues": [
                     {
                         "value": 400,
-                        "clue": "Jason's security team reports that a recent WordPress vulnerability seems to have been exploited by malware and that their organization's entire WordPress service cluster has been infected. What type of malware is most likely involved if a vulnerability in the software was exploited over the network?",
-                        "solution": "Likely a worm, exploiting network-based vulnerabilities."
+                        "clue": "7. What type of malware is used to gather information about a user's browsing habits and system?\nA. A Trojan\nB. Bloatware\nC. Spyware\nD. A rootkit",
+                        "solution": "7. C. Spyware is specifically designed to gather information about users and systems and to send that data back to a central collector. Trojans pretend to be useful software and include malicious components, bloatware is preinstalled software that isn't needed, and rootkits are used to conceal malicious software and retain a foothold on compromised systems."
                     },
                     {
                         "value": 800,
-                        "clue": "Hui's organization recently purchased new Windows computers from an office supply store. The systems have a number of unwanted programs on them that load at startup that were installed by the manufacturer. What type of software is this?",
-                        "solution": "These are Trojans, often found in application stores."
+                        "clue": "10. A system in Elaine's company has suddenly displayed a message demanding payment in Bitcoin and claiming that the data from the system has been encrypted. What type of malware has Elaine likely encountered?\nA. Worms\nB. A virus\nC. Ransomware\nD. Rootkit",
+                        "solution": "10. C. Ransomware demands payment to be made while typically using encryption to make data inaccessible. Worms, viruses, and rootkits are not defined by behavior like this."
+                    },
+                    {
+                        "value": 1200,
+                        "clue": "17. Jason's security team reports that a recent WordPress vulnerability seems to have been exploited by malware and that their organization's entire WordPress service cluster has been infected. What type of malware is most likely involved if a vulnerability in the software was exploited over the network?\nA. A logic bomb\nB. A Trojan\nC. A worm\nD. A rootkit",
+                        "solution": "17. C. Worms often spread via networks, taking advantage of vulnerabilities to install themselves on targeted systems and then to propagate further. Trojans require human interaction to install software that appears desirable. Logic bombs are embedded in code and perform actions when triggers like a date or event occur. Rootkits are used to hide malware and to conceal attacker's actions."
                     },
                     {
                         "value": 1600,
-                        "clue": "What type of malware connects to a command and control system, allowing attackers to manage, control, and update it remotely?",
-                        "solution": "This is a bot."
-                    },
-                    {
-                        "value": 2000,
-                        "clue": "What type of malware is used to gather information about a user's browsing habits and system?",
-                        "solution": "This is spyware."
+                        "clue": "19. What type of malware connects to a command and control system, allowing attackers to manage, control, and update it remotely?\nA. A bot\nB. A drone\nC. A vampire\nD. A worm",
+                        "solution": "19. A. Bots connect to command and control (C&C) systems, allowing them to be updated, controlled, and managed remotely. Worms spread via vulnerabilities, and drones and vampires aren't common terms for malware."
                     }
                 ]
             },
             {
-                "category": "Detection and Investigation",
+                "category": "Threat Scenarios",
                 "clues": [
                     {
                         "value": 400,
-                        "clue": "Yasmine believes that her organization may be dealing with an advanced rootkit and wants to write IoC definitions for it. Which of the following is not likely to be a useful IoC?",
-                        "solution": "Ransom pop-ups are not useful indicators for a rootkit."
+                        "clue": "4. Amanda notices traffic between her systems and a known malicious host on TCP port 6667. What type of traffic is she most likely detecting?\nA. Command and control\nB. Spyware\nC. A worm\nD. A hijacked web browser",
+                        "solution": "4. A. Amanda has most likely discovered a botnet's command and control channel, and the system or systems she is monitoring are probably using IRC as the command and control channel. Spyware is likely to simply send data to a central server via HTTP/HTTPS, worms spread by attacking vulnerable services, and a hijacked web browser would probably operate on common HTTP or HTTPS ports (80/443)."
                     },
                     {
                         "value": 800,
-                        "clue": "Amanda notices traffic between her systems and a known malicious host on TCP port 6667. What type of traffic is she most likely detecting?",
-                        "solution": "Likely botnet command and control traffic."
+                        "clue": "12. A recently terminated developer from Jaya's organization has contacted the organization claiming that they left code in an application that they wrote that will delete files and bring the application down if they are not employed by the company. What type of malware is this?\nA. Ransomware\nB. Extortionware\nC. A logic bomb\nD. A Trojan",
+                        "solution": "12. C. Jaya's former employee is describing a logic bomb, malicious code that will cause harm when a trigger or specific action occurs. In this case, the former employee is claiming that the trigger is them not being employed at the company. Jaya will need to assess all of the code that the employee wrote to determine if a logic bomb exists. Ransomware is a type of malicious software that typically uses encryption to extort a ransom. Extortionware is not a commonly used term."
                     }
                 ]
             },
             {
-                "category": "Mitigation and Prevention",
+                "category": "Defensive Measures",
                 "clues": [
                     {
                         "value": 400,
-                        "clue": "Randy believes that a system that he is responsible for was infected after a user picked up a USB drive and plugged it in. The user claims that they only opened one file on the drive to see who might own it. What type of malware is most likely involved?",
-                        "solution": "Likely a virus spread through file interaction."
+                        "clue": "11. Rick believes that a system he is responsible for has been compromised with malware that uses a rootkit to obtain and retain access to the system. When he runs an antimalware tool's scanner, the system doesn't show any malware. If he has other data that indicates the system is infected, what should his next step be if he wants to determine what malware may be on the system?\nA. Rerun the antimalware scan.\nB. Mount the drive on another system and scan it that way.\nC. Disable the system's antivirus because it may be causing a false negative.\nD. The system is not infected and he should move on.",
+                        "solution": "11. B. Rootkits are designed to hide from antimalware scanners and can often defeat locally run scans. Mounting the drive in another system in read-only mode or booting from a USB drive and scanning using a trusted, known good operating system can be an effective way to determine what malware is on a potentially infected system."
+                    }
+                ]
+            },
+            {
+                "category": "Miscellaneous",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "18. Hui's organization recently purchased new Windows computers from an office supply store. The systems have a number of unwanted programs on them that load at startup that were installed by the manufacturer. What type of software is this?\nA. Viruses\nB. Trojans\nC. Spyware\nD. Bloatware",
+                        "solution": "18. D. Unwanted, typically preinstalled programs are known as bloatware. They take up space and resources without providing value, and many organizations either uninstall them or install clean operating system images to avoid them. There is no indication of malicious activity in the question, so these are most likely not viruses, Trojans, or spyware."
                     },
                     {
                         "value": 800,
-                        "clue": "What is the primary impact of bloatware?",
-                        "solution": "Consumes system resources and may introduce vulnerabilities."
-                    }
-                ]
-            },
-            {
-                "category": "Differences Between Threats",
-                "clues": [
+                        "clue": "15. Ben wants to analyze Python code that he believes may be malicious code written by an employee of his organization. What can he do to determine if the code is malicious?\nA. Run a decompiler against it to allow him to read the code\nB. Open the file using a text editor to review the code\nC. Test the code using an antivirus tool\nD. Submit the Python code to a malware testing website",
+                        "solution": "15. B. Python is an interpreted rather than a compiled language, so Ben doesn't need to use a decompiler. Instead, his best bet is to open the file and review the code to see what it does. Since it was written by an employee, it is unlikely that it will match an existing known malicious package, which means antivirus and antimalware tools and sites will be useless."
+                    },
                     {
-                        "value": 400,
-                        "clue": "A recently terminated developer from Jaya's organization has contacted the organization claiming that they left code in an application that they wrote that will delete files and bring the application down if they are not employed by the company. What type of malware is this?",
-                        "solution": "Classify as a logic bomb, triggered by specific events."
+                        "value": 1200,
+                        "clue": "2. Yasmine believes that her organization may be dealing with an advanced rootkit and wants to write IoC definitions for it. Which of the following is not likely to be a useful IoC for a rootkit?",
+                        "solution": "2. C. Rootkits are intended to be stealthy, and a pop-up demanding ransom works against that purpose. File hashes, command and control details, and behavior-based identifiers are all useful IoCs likely to be relevant to a rootkit."
+                    },
+                    {
+                        "value": 1600,
+                        "clue": "6. What is the primary impact of bloatware?",
+                        "solution": "6. A. Bloatware is typically not a significant security threat, but it consumes resources like disk space, CPU, and memory. Unfortunately, some bloatware can be vulnerable and may not get regularly patched, meaning it's both useless and a potential risk!"
                     }
                 ]
             }
         ],
-        "final_jeopardy": {
-            "value": 800,
-            "clue": "Matt uploads a malware sample to a third-party malware scanning site that uses multiple antimalware and antivirus engines to scan the sample. He receives multiple different answers for what the malware package is. What has occurred?",
-            "solution": "Vendors use different names for malware families."
+        "final": {
+            "category": "Final Jeopardy",
+            "clue": "20. Randy believes that a system that he is responsible for was infected after a user picked up a USB drive and plugged it in. The user claims that they only opened one file on the drive to see who might own it. What type of malware is most likely involved?\nA. A virus\nB. A worm\nC. A trojan\nD. A spyware tool",
+            "solution": "20. A. Randy knows that viruses spread through user interaction with files on thumb drives. A worm would spread itself, a Trojan would look like a useful or desirable file, and there is no indication of spyware in the question."
         }
-    }
-,
-    "Chapter 4": {
+    },
+    "Chapter 4 - Social Engineering and Password Attacks": {
         "single": [
             {
                 "category": "Category 1",
@@ -1657,7 +1661,148 @@ const gameData = {
             "solution": "20. C. Disinformation campaigns are used to shift public opinion or to accomplish other goals. They are not limited to nation-state actors but are an increasingly heavily used social engineering tactic at a broad scale. Smishing relies on SMS messages, pretexting involves using a reason that creates urgency or importance in a request from a social engineer, and spraying is a type of password brute forcing."
         }
     },
-    "Chapter 5": {
+    "Chapter 4 - Social Engineering and Password Attacks - Categorized": {
+        "single": [
+            {
+                "category": "Phishing and Its Variants",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "1. Joseph receives an email notifying him that he needs to change his password due to a recent issue. He notices that the email links him to a website using the domain amazon.com. What type of attack should he describe this as?\nA. Typosquatting\nB. Phishing\nC. Smishing\nD. A watering hole attack",
+                        "solution": "1. B. This email is an attempt to get account information and is a phishing email. Joseph did not enter the URL himself, which is the behavior that a typosquatter relies on. A smishing attack relies on SMS, and a watering hole attack uses a frequently visited website."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "13. Phishing emails sent pretending to be from a company that recipients are familiar with and likely to respond to is what type of attack?\nA. Phishing\nB. Pharming\nC. Brand impersonation\nD. Pretexting",
+                        "solution": "13. C. Brand impersonation attacks are designed to appear to be from a company that recipients are likely to be familiar with, and thus are more likely to elicit a response. While these are a type of phishing, the more specific answer of brand impersonation is the best answer."
+                    },
+                    {
+                        "value": 600,
+                        "clue": "17. Naomi receives a report of smishing. What type of attack should she be looking for?\nA. Compressed files in phishing\nB. Text message-based phishing\nC. Voicemail-based phishing\nD. Server-based phishing",
+                        "solution": "17. B. Smishing is a type of phishing that occurs via text (SMS) message."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "15. Fred is concerned about text message-based attacks. Which of the following attacks relies on text messages as its primary focus?\nA. Impersonation\nB. Watering hole attacks\nC. Smishing\nD. Business email compromise",
+                        "solution": "15. C. Smishing attacks are SMS-based."
+                    }
+                ]
+            },
+            {
+                "category": "Social Engineering",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "14. When a caller was recently directed to Amanda, who is a junior IT employee at her company, the caller informed her that they were the head of IT for her organization and that she needed to immediately disable the organization's firewall. After Amanda made the change, she discovered that the caller was not the head of IT, and that they were actually a penetration tester hired by her company. What social engineering attack best describes this?\nA. Smishing\nB. Pretexting\nC. Impersonation\nD. Vishing",
+                        "solution": "14. C. This is an example of an impersonation attack."
+                    }
+                ]
+            },
+            {
+                "category": "Systematic and Technical Attacks",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "3. While reviewing her logs, Michele notices that a remote system has attempted to log into her server via SSH using the username admin and a variety of passwords like 'password' and 'ninja.' What type of attack has Michele noticed?\nA. A brute-force attack\nB. Shoulder surfing\nC. An on-path attack\nD. Pretexting",
+                        "solution": "3. A. Michele has discovered a brute-force attack."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "7. Ben wants to determine if brute-force password attacks are being used against his company. What log information is least likely to be useful when working to detect brute-force attacks?\nA. Source IP address or hostname\nB. Failed login logs\nC. The password that was used for each attempt\nD. The geographic location of system being logged into",
+                        "solution": "7. D. Knowing where the system being logged into is located isn't useful when tracking brute-force attempts."
+                    },
+                    {
+                        "value": 600,
+                        "clue": "9. Alaina wants to determine if a password spraying attack was used against her organization. Which of the following indicators would be most useful as part of her investigation?\nA. The time the login attempts happened\nB. The passwords used for failed attempts\nC. The source IP address of the attempts\nD. The number of failed attempts for each user",
+                        "solution": "9. B. Password spraying attempts try to use a single common password for many user accounts."
+                    }
+                ]
+            },
+            {
+                "category": "Miscellaneous Cybersecurity Concepts",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "5. One of the staff at Susan's organization has reported that a critical vendor has contacted them about an unpaid invoice. After Susan investigates, she discovers that the invoice was sent from an email account that was not typically a contact and that the invoice requested payment to a PayPal account. What type of social engineering attack has Susan most likely\nA. Smishing\nB. Business email compromise\nC. Disinformation\nD. Typosquatting",
+                        "solution": "5. B. Susan has most likely discovered a business email compromise."
+                    }
+                ]
+            }
+        ],
+        "double": [
+            {
+                "category": "Phishing and Its Variants",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "2. When you combine phishing with voicemail, it is known as:\nA. Whaling\nB. Spoofing\nC. Spooning\nD. Vishing",
+                        "solution": "2. D. Vishing is a form of phishing done via voice phone call or voicemail."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "19. Gwyne's company has been contacted by customers asking about a new social media account operating under the company's brand. The social media account is advertising cryptocurrency, which Gwyne's organization does not sell or work with. What type of attack best describes what Gwyne's organization has encountered?\nA. Impersonation\nB. Brand impersonation\nC. Mis-branding\nD. Crypto-phishing",
+                        "solution": "19. B. Using an organization's brand in this way is an example of brand impersonation."
+                    },
+                    {
+                        "value": 1200,
+                        "clue": "4. Joanna wants to detect password spraying attacks. What type of rule should she deploy through her security systems?\nA. Match attempts to log into many systems with the same username and password.\nB. Match multiple attempts to log into the same user account using different passwords.\nC. Match repeated use of the same password during failed login attempts for multiple accounts.\nD. Match all attempts to use passwords with slight changes for the same account.",
+                        "solution": "4. C. Password spraying involves the use of the same password to attempt to log into multiple accounts."
+                    },
+                    {
+                        "value": 1600,
+                        "clue": "11. Nicole accidentally types www.smazon.com into her browser and discovers that she is directed to a different site loaded with ads and pop-ups. Which of the following is the most accurate description of the attack she has experienced?\nA. DNS hijacking\nB. Pharming\nC. Typosquatting\nD. Hosts file compromise",
+                        "solution": "11. C. Typosquatting uses misspellings and common typos of websites to redirect traffic for profit or malicious reasons."
+                    }
+                ]
+            },
+            {
+                "category": "Social Engineering",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "8. Melissa receives a call and the caller informs her a senior manager in her organization needs her to buy gift cards for an event that starts in an hour. The caller says that the senior leader forgot to get the cards, and that the event is critical to her organization. Melissa buys the cards and sends them to the Gmail address the caller says that the senior leader needs them sent to. What type of attack has Melissa fallen for?\nA. Phishing\nB. Pretexting\nC. Business email compromise\nD. Carding",
+                        "solution": "8. B. The caller is using pretexting, providing Melissa with a story that relies on urgency and perceived authority."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "20. Nation-state-driven social media campaigns about the trustworthiness of the U.S. election in 2016 are an example of what type of social engineering?\nA. Smishing\nB. Pretexting\nC. Disinformation\nD. Spraying",
+                        "solution": "20. C. Disinformation campaigns are used to shift public opinion or to accomplish other goals."
+                    }
+                ]
+            },
+            {
+                "category": "Systematic and Technical Attacks",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "6. Selah infects the ads on a website that users from her target company frequently visit with malware as part of her penetration test. What technique has she used?\nA. A watering hole attack\nB. Vishing\nC. Whaling\nD. Typosquatting",
+                        "solution": "6. A. Watering hole attacks rely on compromising or infecting a website that targeted users frequently visit."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "12. Devon is a penetration tester and sets up malicious tools on his target organization's primary internal website. What type of attack is he conducting?\nA. A misinformation campaign\nB. A watering hole attack\nC. A typosquatting attack\nD. A disinformation campaign",
+                        "solution": "12. B. Devon is conducting a watering hole attack."
+                    },
+                    {
+                        "value": 1200,
+                        "clue": "18. Jack's organization wants to prevent typosquatting. What option should he select to address this issue?\nA. Copyright the domain name\nB. Purchase the most common typos for his organization's domain\nC. Trademark the domain name\nD. Disable typo resolution for the domain",
+                        "solution": "18. B. Purchasing and registering the most common typos related to your organization's domain is the most effective option available."
+                    },
+                    {
+                        "value": 1600,
+                        "clue": "16. Sharif notices that his authentication logs have many different usernames showing failed logins with the same password. What type of attack has he discovered?\nA. Credential harvesting\nB. Impersonation\nC. BEC\nD. Spraying",
+                        "solution": "16. D. Sharif has discovered a spraying attack that uses the same password with many usernames."
+                    }
+                ]
+            }
+        ],
+        "final_jeopardy": {
+            "category": "Final Jeopardy",
+            "clue": "10. Which of the following human vectors is primarily associated with nation-state actors?\nA. Misinformation campaigns\nB. Watering hole attacks\nC. Business email compromise\nD. Password spraying",
+            "solution": "10. A. Misinformation and disinformation campaigns are primarily associated with nation-state actors."
+        }
+    },
+    "Chapter 5 - Secuirty Assessment and Testing": {
         "single": [
             {
                 "category": "Category 1",
@@ -1783,7 +1928,173 @@ const gameData = {
             "solution": "20. C. The privileges required (PR) metric indicates the type of system access that an attacker must have to execute the attack."
         }
     },
-    "Chapter 6": {
+    "Chapter 5 - Secuirty Assessment and Testing - Categorized": {
+        "single": [
+            {
+                "category": "Security Assessment Techniques",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "1. Which one of the following security assessment techniques assumes that an organization has already been compromised and searches for evidence of that compromise?\nA. Vulnerability scanning\nB. Penetration testing\nC. Threat hunting\nD. War driving",
+                        "solution": "1. C. Threat hunting is an assessment technique that makes an assumption of compromise and then searches the organization for indicators of compromise that confirm the assumption."
+                    }
+                ]
+            },
+            {
+                "category": "Penetration Testing",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "13. Kyle is conducting a penetration test. After gaining access to an organization's database server, he installs a backdoor on the server to grant himself access in the future. What term best describes this action?\nA. Privilege escalation\nB. Lateral movement\nC. Maneuver\nD. Persistence",
+                        "solution": "13. D. Backdoors are a persistence tool, designed to make sure that the attacker's access persists after the original vulnerability is remediated."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "7. Which one of the following security assessment tools is least likely to be used during the reconnaissance phase of a penetration test?\nA. Nmap\nB. Nessus\nC. Metasploit\nD. Nslookup",
+                        "solution": "7. C. Metasploit is an exploitation framework used to execute and attack and would be better suited for the Attacking and Exploiting phase of a penetration test."
+                    }
+                ]
+            },
+            {
+                "category": "Vulnerabilities and Controls",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "5. Tara recently analyzed the results of a vulnerability scan report and found that a vulnerability reported by the scanner did not exist because the system was actually patched. What term describes this?\nA. False positive\nB. False negative\nC. True positive\nD. True negative",
+                        "solution": "5. A. A false positive error occurs when the vulnerability scanner reports a vulnerability that does not actually exist."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "9. Which one of the following tools is most likely to detect an XSS vulnerability?\nA. Static application test\nB. Web application vulnerability scanner\nC. Intrusion detection system\nD. Network vulnerability scanner",
+                        "solution": "9. B. A web application vulnerability scanner is the most likely to detect it because it is specifically designed to test web applications."
+                    }
+                ]
+            },
+            {
+                "category": "Cybersecurity Frameworks and Metrics",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "15. Which element of the SCAP framework can be used to consistently describe vulnerabilities?\nA. CPE\nB. CVE\nC. CVSS\nD. CCE",
+                        "solution": "15. B. Common Vulnerabilities and Exposures (CVE) provides a standard nomenclature for describing security-related software flaws."
+                    }
+                ]
+            },
+            {
+                "category": "Reconnaissance Techniques",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "14. Which one of the following techniques would be considered passive reconnaissance?\nA. Port scans\nB. Vulnerability scans\nC. WHOIS lookups\nD. Footprinting",
+                        "solution": "14. C. WHOIS lookups use external registries and are an example of open source intelligence (OSINT), which is a passive reconnaissance technique."
+                    }
+                ]
+            },
+            {
+                "category": "Rules and Documentation",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "17. Lila is working on a penetration testing team and she is unsure whether she is allowed to conduct social engineering as part of the test. What document should she consult to find this information?\nA. Contract\nB. Statement of work\nC. Rules of engagement\nD. Lessons learned report",
+                        "solution": "17. C. The rules of engagement normally include details about allowed techniques and activities."
+                    }
+                ]
+            }
+        ],
+        "double": [
+            {
+                "category": "Security Assessment Techniques",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "3. Ryan is planning to conduct a vulnerability scan of a business-critical system using dangerous plug-ins. What would be the best approach for the initial scan?\nA. Run the scan against production systems to achieve the most realistic results possible.\nB. Run the scan during business hours.\nC. Run the scan in a test environment.\nD. Do not run the scan to avoid disrupting the business.",
+                        "solution": "3. C. Ryan should first run his scan against a test environment to identify likely vulnerabilities and assess whether the scan itself might disrupt business activities."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "2. Renee is configuring her vulnerability management solution to perform credentialed scans of servers on her network. What type of account should she provide to the scanner?\nA. Domain administrator\nB. Local administrator\nC. Root\nD. Read-only",
+                        "solution": "2. D. Credentialed scans only require read-only access to target servers. Renee should follow the principle of least privilege and limit the access available to the scanner."
+                    }
+                ]
+            },
+            {
+                "category": "Penetration Testing",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "16. Bruce is conducting a penetration test for a client. The client provided him with full details of their systems in advance. What type of test is Bruce conducting?\nA. Partially known environment test\nB. Detailed environment test\nC. Known environment test\nD. Unknown environment test",
+                        "solution": "16. C. Known environment tests are performed with full knowledge of the underlying technology, configurations, and settings that make up the target."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "10. During a penetration test, Patrick deploys a toolkit on a compromised system and uses it to gain access to other systems on the same network. What term best describes this activity?\nA. Lateral movement\nB. Privilege escalation\nC. Footprinting\nD. OSINT",
+                        "solution": "10. A. Moving from one compromised system to other systems on the same network is known as lateral movement."
+                    }
+                ]
+            },
+            {
+                "category": "Vulnerabilities and Controls",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "6. Brian ran a penetration test against a school's grading system and discovered a flaw that would allow students to alter their grades by exploiting a SQL injection vulnerability. What type of control should he recommend to the school's cybersecurity team to prevent students from engaging in this type of activity?\nA. Confidentiality\nB. Integrity\nC. Alteration\nD. Availability",
+                        "solution": "6. B. Brian should recommend that the school deploy integrity controls that prevent unauthorized modifications."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "8. During a vulnerability scan, Brian discovered that a system on his network contained this vulnerability: THREAT: Microsoft Server Message Block (SMB) Protocol. What security control, if deployed, would likely have addressed this issue?\nA. Patch management\nB. File integrity monitoring\nC. Intrusion detection\nD. Threat hunting",
+                        "solution": "8. A. This vulnerability is corrected by a patch that was released by Microsoft in 2017. A strong patch management program would have identified and remediated the missing patch."
+                    }
+                ]
+            },
+            {
+                "category": "Cybersecurity Frameworks and Metrics",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "20. Which one of the CVSS metrics would contain information about the type of account access that an attacker must have to execute an attack?\nA. V\nB. C\nC. PR\nD. AC",
+                        "solution": "20. C. The privileges required (PR) metric indicates the type of system access that an attacker must have to execute the attack."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "19. Kevin recently identified a new security vulnerability and computed its CVSS base score as 6.5. Which risk category would this vulnerability fall into?\nA. Low\nB. Medium\nC. High\nD. Critical",
+                        "solution": "19. B. Vulnerabilities with CVSS base scores between 4.0 and 6.9 fit into the medium risk category."
+                    }
+                ]
+            },
+            {
+                "category": "Reconnaissance Techniques",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "18. Grace would like to determine the operating system running on a system that she is targeting in a penetration test. Which one of the following techniques will most directly provide her with this information?\nA. Port scanning\nB. Footprinting\nC. Vulnerability scanning\nD. Packet capture",
+                        "solution": "18. B. Footprinting is a technique specifically designed to elicit this information."
+                    }
+                ]
+            },
+            {
+                "category": "Rules and Documentation",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "12. Which one of the following assessment techniques is designed to solicit participation from external security experts and reward them for discovering vulnerabilities?\nA. Threat hunting\nB. Penetration testing\nC. Bug bounty\nD. Vulnerability scanning",
+                        "solution": "12. C. Bug bounty programs allow external security experts to test systems and uncover vulnerabilities."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "11. Zian is coordinating a security audit to validate the organization's financial statements to investors. What term best describes this audit?\nA. External audit\nB. Penetration test\nC. Internal audit\nD. Informal audit",
+                        "solution": "11. A. Audits performed to validate an organization's financial statements are very formal audits performed by independent third-party auditors."
+                    }
+                ]
+            }
+        ],
+        "final": {
+            "category": "Final Jeopardy",
+            "clue": "4. Which one of the following values for the CVSS attack complexity metric would indicate that the specified attack is simplest to exploit?\nA. High\nB. Medium\nC. Low\nD. Severe",
+            "solution": "4. C. An attack complexity of 'low' indicates that exploiting the vulnerability does not require any specialized conditions."
+        }
+    },
+    "Chapter 6 - Application Security": {
         "single": [
             {
                 "category": "Category 1",
@@ -1909,7 +2220,168 @@ const gameData = {
             "solution": "20. A. The use of the SOL WAITFOR command is a signature characteristic of a timing-based SQL injection attack."
         }
     },
-    "Chapter 7": {
+    "Chapter 6 - Application Security - Categorized": {
+        "single": [
+            {
+                "category": "Code Analysis",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "1. Adam is conducting software testing by reviewing the source code of the application. What type of code testing is Adam conducting?\nA. Mutation testing\nB. Static code analysis\nC. Dynamic code analysis\nD. Fuzzing",
+                        "solution": "1. B. Adam is conducting static code analysis by reviewing the source code. Dynamic code analysis requires running the program, and both mutation testing and fuzzing are types of dynamic analysis."
+                    }
+                ]
+            },
+            {
+                "category": "Software Development and Deployment",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "7. Tim is working on a change to a web application used by his organization to fix a known bug. What environment should he be working in?\nA. Test\nB. Development\nC. Staging\nD. Production",
+                        "solution": "7. B. Developers working on active changes to code should always work in the development environment. The test environment is where the software or systems can be tested without impacting the production environment. The staging environment is a transition environment for code that has successfully cleared testing and is waiting to be deployed into production. The production environment is the live system. Software, patches, and other changes that have been tested and approved move to production."
+                    }
+                ]
+            },
+            {
+                "category": "Cybersecurity Automation",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "9. Which one of the following is not an advantage of automation in cybersecurity operations?\nA. Enforcing baselines\nB. Technical debt\nC. Employee retention\nD. Standardizing infrastructure configurations",
+                        "solution": "9. B. The main benefits of automation are efficiency and time savings, enforcing baselines, standardizing infrastructure configurations, scaling in a secure manner, retaining employees, reducing reaction time, and serving as a workforce multiplier. Technical debt is one of the potential drawbacks of automation."
+                    }
+                ]
+            },
+            {
+                "category": "Attack Techniques",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "13. What type of attack places an attacker in the position to eavesdrop on communications between a user and a web server?\nA. On-path attack\nB. Session hijacking\nC. Buffer overflow\nD. Meet-in-the-middle",
+                        "solution": "13. A. In an on-path attack, the attacker fools the user into thinking that the attacker is actually the target website and presenting a fake authentication form. They may then authenticate to the website on the user's behalf and obtain the cookie. This is slightly different from a session hijacking attack, where the attacker steals the cookie associated with an active session."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "18. Joe's adventures in web server log analysis are not yet complete. As he continues to review the logs, he finds the request: www.mycompany.com/ ///etc/passwd What type of attack was most likely attempted?\nA. SQL injection\nB. Session hijacking\nC. Directory traversal\nD. File upload",
+                        "solution": "18. C. In this case, the .. operators are the telltale giveaway that the attacker was attempting to conduct a directory traversal attack. This particular attack sought to break out of the web server's root directory and access the / etc/passwd file on the server."
+                    },
+                    {
+                        "value": 600,
+                        "clue": "17. Upon further inspection, Joe finds a series of thousands of requests to the same URL coming from a single IP address. Here are a few examples: www.mycompany.com/servicestatus.php?serviceID=1 www.mycompany.com/servicestatus.php?serviceID=2 www.mycompany.com/servicestatus.php?serviceID=3 www.mycompany.com/servicestatus.php?serviceID=4 www.mycompany.com/servicestatus.php?serviceID=5 www.mycompany.com/servicestatus.php?serviceID=6 What type of vulnerability was the attacker likely trying to exploit?\nA. Insecure direct object reference\nB. File upload\nC. Unvalidated redirect\nD. Session hijacking",
+                        "solution": "17. A. The series of thousands of requests incrementing a variable indicate that the attacker was most likely attempting to exploit an insecure direct object reference vulnerability."
+                    }
+                ]
+            },
+            {
+                "category": "Input Validation and Mitigation",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "2. Charles is worried about users conducting SQL injection attacks. Which of the following solutions will best address his concerns?\nA. Using secure session management\nB. Enabling logging on the database\nC. Performing user input validation\nD. Implementing TLS",
+                        "solution": "2. C. Charles should perform user input validation to strip out any SQL code or other unwanted input. Secure session management can help prevent session hijacking, logging may provide useful information for incident investigation, and implementing TLS can help protect network traffic, but only input validation helps with the issue described."
+                    }
+                ]
+            },
+            {
+                "category": "Session Management and Authentication",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "5. The application that Scott is writing has a flaw that occurs when two operations are attempted at the same time, resulting in unexpected results when the two actions do not occur in the expected order. What type of flaw does the application have?\nA. Dereferencing\nB. A race condition\nC. An insecure function\nD. Improper error handling",
+                        "solution": "5. B. The application has a race condition, which occurs when multiple operations cause undesirable results due to their order of completion. De-referencing accesses or uses a memory pointer, an insecure function would have security issues in the function itself, and improper error handling would involve an error and how it was displayed or what data it provided."
+                    }
+                ]
+            }
+        ],
+        "double": [
+            {
+                "category": "Code Analysis",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "4. During a web application test, Ben discovers that the application shows SQL code as part of an error provided to application users. What should he note in his report?\nA. Improper error handling\nB. Code exposure\nC. SQL injection\nD. A default configuration issue",
+                        "solution": "4. A. Improper error handling often exposes data to users and possibly attackers that should not be exposed. In this case, knowing what SQL code is used inside the application can provide an attacker with details they can use to conduct further attacks."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "8. Ricky is concerned that developers in his organization make use of third-party code in their applications, which may introduce unknown vulnerabilities. He is concerned about the risk of the organization running code that it is not aware it is using. Which one of the following activities would best address this risk?\nA. Web application firewalls\nB. Package monitoring\nC. Static analysis\nD. Dynamic analysis",
+                        "solution": "8. B. All of the activities listed here may reduce the risk of the vulnerabilities created by the code. However, Ricky is specifically concerned about the fact that the organization may not be aware of all of the code that it is running. Package monitoring would inventory and monitor these third-party libraries, so that is the best answer here."
+                    }
+                ]
+            },
+            {
+                "category": "Software Development and Deployment",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "6. Every time Susan checks code into her organization's code repository, it is tested and validated, and then if accepted, it is immediately put into production. What is the term for this?\nA. Continuous integration\nB. Continuous delivery\nC. A security nightmare\nD. Agile development",
+                        "solution": "6. B. Although this example includes continuous integration, the key thing to notice is that the code is then deployed into production. This means that Susan is operating in a continuous deployment environment, where code is both continually integrated and deployed. Agile is a development methodology and often uses CI/CD, but we cannot determine if Susan is using Agile."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "14. Tom is a software developer who creates code for sale to the public. He would like to assure his users that the code they receive actually came from him. What technique can he use to best provide this assurance?\nA. Code signing\nB. Code endorsement\nC. Code encryption\nD. Code obfuscation",
+                        "solution": "14. A. Code signing provides developers with a way to confirm the authenticity of their code to end users. Developers use a cryptographic function to digitally sign their code with their own private key, and then browsers can use the developer's public key to verify that signature and ensure that the code is legitimate and was not modified by unauthorized individuals."
+                    }
+                ]
+            },
+            {
+                "category": "Cybersecurity Automation",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "11. Which one of the following is not a common drawback of automating cybersecurity operations?\nA. Reducing employee satisfaction\nB. Creating single points of failure\nC. Costs\nD. Complexity",
+                        "solution": "11. A. Automation normally increases employee retention. The common drawbacks to automation include complexity, cost, creating single points of failure, incurring technical debt, and creating challenges to ongoing supportability."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "10. Chris is creating a script that will automatically screen any user requests and flag those that exceed normal thresholds for manual review. What term best describes this automation use case?\nA. User provisioning\nB. Guard rails\nC. Ticket creation\nD. Escalation",
+                        "solution": "10. B. This is an example of the guard rails use case for automation. Cybersecurity professionals can use scripting to automatically review user actions and block any that are outside of normal parameters."
+                    }
+                ]
+            },
+            {
+                "category": "Attack Techniques",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "12. Frank is investigating a security incident where the attacker entered a very long string into an input field, which was followed by a system command. What type of attack likely took place?\nA. Cross-site request forgery\nB. Server-side request forgery\nC. Command injection\nD. Buffer overflow",
+                        "solution": "12. D. Buffer overflow attacks occur when an attacker manipulates a program into placing more data into an area of memory than is allocated for that program's use. The goal is to overwrite other information in memory with instructions that may be executed by a different process running on the system."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "16. Joe checks his web server logs and sees that someone sent the following query string to an application running on the server: www.mycompany.com/servicestatus.php?serviceID=892&serviceID=892'%20; DROP%20TABLE%20Services; -- What type of attack was most likely attempted?\nA. Cross-site scripting\nB. Session hijacking\nC. Parameter pollution\nD. On-path",
+                        "solution": "16. C. This query string is indicative of a parameter pollution attack. In this case, it appears that the attacker was waging a SQL injection attack and tried to use parameter pollution to slip the attack past content filtering technology. The two instances of the serviceID parameter in the query string indicate a parameter pollution attempt."
+                    },
+                    {
+                        "value": 1200,
+                        "clue": "20. Joe is examining the logs for his web server and discovers that a user sent input to a web application that contained the string WAITFOR. What type of attack was the user likely attempting?\nA. Timing-based SQL injection\nB. HTML injection\nC. Cross-site scripting\nD. Content-based SQL injection",
+                        "solution": "20. A. The use of the SQL WAITFOR command is a signature characteristic of a timing-based SQL injection attack."
+                    }
+                ]
+            },
+            {
+                "category": "Input Validation and Mitigation",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "3. Precompiled SQL statements that only require variables to be input are an example of what type of application security control?\nA. Parameterized queries\nB. Encoding data\nC. Input validation\nD. Appropriate access controls",
+                        "solution": "3. A. A parameterized query (sometimes called a prepared statement) uses a prebuilt SQL statement to prevent SQL-based attacks. Variables from the application are fed to the query, rather than building a custom query when the application needs data. Encoding data helps to prevent cross-site scripting attacks, as does input validation. Appropriate access controls can prevent access to data that the account or application should not have access to, but they don't use precompiled SQL statements. Stored procedures are an example of a parameterized query implementation."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "15. Chris is reviewing evidence of a cross-site scripting attack where the attacker embedded JavaScript in a URL that a user clicked. The web page then sent the JavaScript to the user in the displayed page. What term best describes this attack?\nA. Reflected XSS\nB. Stored XSS\nC. Persistent XSS\nD. DOM-based XSS",
+                        "solution": "15. A. This is an example of a reflected attack because the script code is contained within the URL. A persistent or stored attack places the content on a web page or other location where a victim may later access it. DOM-based XSS attacks hide the attack code within the Document Object Model."
+                    }
+                ]
+            }
+        ],
+        "final_jeopardy": {
+            "category": "Final Jeopardy",
+            "clue": "19. Wendy is a penetration tester who wishes to engage in a session hijacking attack. What information is crucial for Wendy to obtain if her attack will be successful?\nA. Session ticket\nB. Session cookie\nC. Username\nD. User password",
+            "solution": "19. B. Websites use HTTP cookies to maintain sessions over time. If Wendy is able to obtain a copy of the user's session cookie, she can use that cookie to impersonate the user's browser and hijack the authenticated session."
+        }
+    },
+    "Chapter 7 - Cryptography and the PKI": {
         "single": [
             {
                 "category": "Category 1",
@@ -2035,7 +2507,163 @@ const gameData = {
             "solution": "20. A. The recipient of a digitally signed message may verify the digital signature by decrypting it with the public key of the individual who signed the message."
         }
     },
-    "Chapter 8": {
+    "Chapter 7 - Cryptography and the PKI - Categorized": {
+        "categories": [
+            {
+                "category": "Symmetric Encryption",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "1. Mike is sending David an encrypted message using a symmetric encryption algorithm. What key should he use to encrypt the message?\nA. Mike's public key\nB. Mike's private key\nC. David's public key\nD. Shared secret key",
+                        "solution": "1. D. In symmetric encryption algorithms, both the sender and the receiver use a shared secret key to encrypt and decrypt the message, respectively."
+                    }
+                ]
+            },
+            {
+                "category": "Asymmetric Encryption",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "17. David would like to send Mike a message using an asymmetric encryption algorithm. What key should he use to encrypt the message?\nA. David's public key\nB. David's private key\nC. Mike's public key\nD. Mike's private key",
+                        "solution": "17. C. When encrypting a message using an asymmetric encryption algorithm, the person performing the encryption does so using the recipient's public key."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "18. When Mike receives the message that David encrypted for him, what key should he use to decrypt the message?\nA. David's public key\nB. David's private key\nC. Mike's public key\nD. Mike's private key",
+                        "solution": "18. D. In an asymmetric encryption algorithm, the recipient of a message uses their own private key to decrypt messages that they receive."
+                    }
+                ]
+            },
+            {
+                "category": "Certificate Management",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "11. What type of digital certificate provides the greatest level of assurance that the certificate owner is who they claim to be?\nA. DV\nB. OV\nC. UV\nD. EV",
+                        "solution": "11. D. Extended validation (EV) certificates provide the highest available level of assurance. The CA issuing an EV certificate certifies that they have verified the identity and authenticity of the certificate subject."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "14. Which one of the following certificate formats is closely associated with Windows binary certificate files?\nA. DER\nB. PEM\nC. PFX\nD. P7B",
+                        "solution": "14. C. The PFX format is most closely associated with Windows systems that store certificates in binary format, whereas the P7B format is used for Windows systems storing files in text format."
+                    }
+                ]
+            },
+            {
+                "category": "Cryptographic Attacks",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "2. Shahla recently discovered an attack where the attacker managed to force a network user to use weak encryption and was then able to decrypt that content. What term best describes this attack?\nA. Downgrade\nB. Collision\nC. Homomorphic encryption\nD. Birthday attack",
+                        "solution": "2. A. Downgrade attacks try to remove or lower the strength of encryption to allow the decryption of sensitive information."
+                    }
+                ]
+            },
+            {
+                "category": "General Cryptography",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "3. Norm is using full-disk encryption technology to protect the contents of laptops against theft. What goal of cryptography is he attempting to achieve?\nA. Integrity\nB. Non-repudiation\nC. Authentication\nD. Confidentiality",
+                        "solution": "3. D. Norm's actions are designed to protect against the unauthorized disclosure of sensitive information. This is a clear example of protecting confidentiality."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "8. Kevin is configuring a web server to use digital certificates. What technology can he use to allow clients to quickly verify the status of those certificates without contacting a remote server?\nA. CRL\nB. OCSP\nC. Certificate stapling\nD. Certificate pinning",
+                        "solution": "8. C. Certificate stapling attaches a current OCSP response to the certificate to allow the client to validate the certificate without contacting the OCSP server."
+                    }
+                ]
+            }
+        ],
+        "double": [
+            {
+                "category": "Symmetric Encryption",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "9. Acme Widgets has 10 employees and they all need the ability to communicate with one another using a symmetric encryption system. The system should allow any two employees to securely communicate without other employees eavesdropping. If an 11th employee is added to the organization, how many new keys must be added to the system?\nA. 1\nB. 2\nC. 10\nD. 11",
+                        "solution": "9. C. When the 11th employee joins Acme Widgets, they will need a shared secret key with every existing employee. There are 10 existing employees, so 10 new keys are required."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "5. Which one of the following statements about cryptographic keys is incorrect?\nA. All cryptographic keys should be kept secret.\nB. Longer keys are better than shorter keys when the same algorithm is used.\nC. Asymmetric algorithms generally use longer keys than symmetric algorithms.\nD. Digital certificates are designed to share public keys.",
+                        "solution": "5. A. All of these statements are correct except for the statement that all cryptographic keys should be kept secret. The exception to this rule are public keys used in asymmetric cryptography. These keys should be freely shared."
+                    }
+                ]
+            },
+            {
+                "category": "Asymmetric Encryption",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "19. If David wishes to digitally sign the message that he is sending Mike, what key would he use to create the digital signature?\nA. David's public key\nB. David's private key\nC. Mike's public key\nD. Mike's private key",
+                        "solution": "19. B. The sender of a message may digitally sign the message by encrypting a message digest with the sender's own private key."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "20. When Mike receives the digitally signed message from David, what key should he use to verify the digital signature?\nA. David's public key\nB. David's private key\nC. Mike's public key\nD. Mike's private key",
+                        "solution": "20. A. The recipient of a digitally signed message may verify the digital signature by decrypting it with the public key of the individual who signed the message."
+                    },
+                    {
+                        "value": 1200,
+                        "clue": "10. Referring to the scenario in question 9, if Acme Widgets switched to an asymmetric encryption algorithm, how many keys would be required to add the 11th employee?\nA. 1\nB. 2\nC. 10\nD. 11",
+                        "solution": "10. B. In an asymmetric encryption algorithm, each employee needs only two keys: a public key and a private key. Adding a new user to the system requires the addition of these two keys for that user, regardless of how many other users exist."
+                    }
+                ]
+            },
+            {
+                "category": "Certificate Management",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "12. Glenn recently obtained a wildcard certificate for *.mydomain.com. Which one of the following domains would not be covered by this certificate?\nA. mydomain.com\nB. core.mydomain.com\nC. dev.www.mydomain.com\nD. mail.mydomain.com",
+                        "solution": "12. C. Wildcard certificates protect the listed domain as well as all first-level subdomains. dev.www.mydomain.com is a second-level subdomain of mydomain.com and would not be covered by this certificate."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "13. Which one of the following servers is almost always an offline CA in a large PKI deployment?\nA. Root CA\nB. Intermediate CA\nC. RA\nD. Internal CA",
+                        "solution": "13. A. Root CAs are highly protected and not normally used for certificate issuance. A root CA is usually run as an offline CA that delegates authority to intermediate CAs that run as online CAs."
+                    }
+                ]
+            },
+            {
+                "category": "Cryptographic Attacks",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "16. What type of cryptographic attack attempts to force a user to reduce the level of encryption that they use to communicate with a remote server?\nA. Birthday\nB. Frequency\nC. Downgrade\nD. Collision",
+                        "solution": "16. C. A downgrade attack is sometimes used against secure communications such as TLS in an attempt to get the user or system to inadvertently shift to less secure cryptographic modes."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "6. What type of cipher operates on one character of text at a time?\nA. Block cipher\nB. Bit cipher\nC. Stream cipher\nD. Balanced cipher",
+                        "solution": "6. C. Stream ciphers operate on one character or bit of a message (or data stream) at a time. Block ciphers operate on 'chunks,' or blocks, of a message and apply the encryption algorithm to an entire message block at the same time."
+                    }
+                ]
+            },
+            {
+                "category": "General Cryptography",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "4. Brian discovers that a user suspected of stealing sensitive information is posting many image files to a message board. What technique might the individual be using to hide sensitive information in those images?\nA. Steganography\nB. Homomorphic encryption\nC. Replay attack\nD. Birthday attack",
+                        "solution": "4. A. Steganography is the art of using cryptographic techniques to embed secret messages within another file."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "7. Vince is choosing a symmetric encryption algorithm for use in his organization. He would like to choose the strongest algorithm from these choices. What algorithm should he choose?\nA. DES\nB. 3DES\nC. RSA\nD. AES",
+                        "solution": "7. D. AES is the successor to 3DES and DES and is the best choice for a symmetric encryption algorithm. RSA is a secure algorithm, but it is asymmetric rather than symmetric."
+                    }
+                ]
+            }
+        ],
+        "final_jeopardy": {
+            "category": "Final Jeopardy",
+            "clue": "15. What type of security solution provides a hardware platform for the storage and management of encryption keys?\nA. HSM\nB. IPS\nC. SIM\nD. SOAR",
+            "solution": "15. A. Hardware security modules (HSMs) provide an effective way to manage encryption keys."
+        }
+    },
+    "Chapter 8 - Identity and Access Management": {
         "single": [
             {
                 "category": "Category 1",
@@ -2161,7 +2789,178 @@ const gameData = {
             "solution": "20. C. Linux users can change who can read, write, or execute files and directories they own, which is discretionary access control (DAC). Mandatory access control (MAC) would enforce settings set by the systems administrator without users having the rights to make their own decisions. While role-based access control is involved, DAC best describes the access control scheme. ABAC is not a default method for setting rights for the Linux filesystem."
         }
     },
-    "Chapter 9": {
+    "Chapter 8 - Identity and Access Management - Categorized": {
+        "single": [
+            {
+                "category": "Identity and Access Management (IAM)",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "1. Angela has chosen to federate with other organizations to allow use of services that each organization provides. What role does Angela's organization play when they authenticate their users and assert that those users are valid to other members of the federation?\nA. Service provider\nB. Relying party\nC. Authentication provider\nD. Identity provider",
+                        "solution": "1. D. Angela's organization is acting as an identity provider (IdP). Other members of the federation may act as a service provider or relying party when they allow her users to access their services. Authentication provider is not a named role in typical federation activities."
+                    }
+                ]
+            },
+            {
+                "category": "Authentication and Authorization",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "5. Which type of multifactor authentication is considered the least secure?\nA. HOTP\nB. SMS\nC. TOTP\nD. Biometric",
+                        "solution": "5. B. SMS messages are not secure and could be accessed by cloning a SIM card or redirecting VoIP traffic, among other possible threat models. Both HOTP and TOTP tokens and applications as well as biometric factors are generally considered more secure than an SMS-based factor."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "7. Michelle enables the Windows picture password feature to control logins for her laptop. Which type of attribute will it provide?\nA. Somewhere you are\nB. Something you know\nC. Something you are\nD. Someone you know",
+                        "solution": "7. B. Picture password asks users to click on specific, self-defined parts of a picture. This means that clicking on those points is something you know. Something you are involves biometric traits, and somewhere you are relies on geographic locations."
+                    },
+                    {
+                        "value": 600,
+                        "clue": "12. A PIN is an example of what type of factor?\nA. Something you know\nB. Something you are\nC. Something you have\nD. Something you set",
+                        "solution": "12. A. PINs and passwords are both examples of something you know. Something you set is not a type of factor. Biometric factors are an example of something you are, and a physical USB token would be a common example of something you have."
+                    }
+                ]
+            },
+            {
+                "category": "Access Control Models",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "9. Theresa wants to implement an access control scheme that sets permissions based on what the individual's job requires. Which of the following schemes is most suited to this type of implementation?\nA. ABAC\nB. DAC\nC. RBAC\nD. MAC",
+                        "solution": "9. C. Role-based access control (RBAC) sets permissions based on an individual's role, which is typically associated with their job. Attribute-based access control (ABAC) is typically matched to other attributes than the job role. Discretionary access control (DAC) and mandatory access control (MAC) are commonly implemented at the operating system level."
+                    }
+                ]
+            },
+            {
+                "category": "Password Management",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "11. Adam wants to increase his organization's passwords resistance to attacks in the event that the password hash database is stolen by attackers. Which of the following password security settings has the largest impact on password cracking if his organization's current passwords are 8 characters long?\nA. Password complexity\nB. Password length\nC. Password reuse limitations\nD. Preventing the use of common words in passwords",
+                        "solution": "11. B. Password length has the largest impact on preventing password cracking. When paired with a strong password hash algorithm and proper use of technology like salting, long passwords are much harder to crack. Complexity is the next most important option, as preventing simple repeated characters and similar problematic passwords helps reduce the probability of easily cracked passwords being used. Reuse limitations and preventing common words are less useful."
+                    }
+                ]
+            },
+            {
+                "category": "Linux Security",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "8. What purpose would Linux file permissions set to rw-r--r-- serve?\nA. To allow the owner to read and write the file, and for the owner's group and others to be able to read it\nB. To allow all users to read and write the file, and for the group and owner to be able to read it\nC. To allow system administrators to read and write the file, and for users and all others to be able to read it\nD. To prevent reading and writing for all users, and to prevent reading by groups and a specific user",
+                        "solution": "8. A. Linux file permissions are read left to right, with the first three characters indicating read, write, and execute permissions (rwx) for the owner of the file, the second three apply to the group, and the last three to all other users. Any indicated with a - are not allowed for that set."
+                    }
+                ]
+            },
+            {
+                "category": "General Security Practices",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "13. Marie is implementing a PAM solution and wants to ensure that root passwords are available in the event of an outage. Which PAM-related tool is most likely to be useful in this situation?\nA. Ephemeral accounts\nB. Just-in-time permissions\nC. Password vaulting\nD. Token-based authentication",
+                        "solution": "13. C. Password vaulting, which stores passwords for use with proper authentication and rights, is the most appropriate solution for Marie's needs. Ephemeral accounts and just-in-time permissions are typically used under normal circumstances to provide least privilege access as needed. Token-based authentication is not specifically a PAM solution."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "18. Nina has recently left her organization. What should the organization do with her account?\nA. Transfer it to her replacement.\nB. Reprovision it for another user.\nC. Deprovision her account.\nD. Change the password and preserve the account.",
+                        "solution": "18. C. Without other factors that would require the account to be retained, deprovisioning accounts that belonged to users who have left the organization is a best practice. Transferring accounts or reprovisioning them may expose data to new users or provide them with rights that they should not have."
+                    }
+                ]
+            }
+        ],
+        "double": [
+            {
+                "category": "Identity and Access Management (IAM)",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "16. Kyle has been asked to provide his government-issued ID as part of the creation of his user account. What process should he assume it is being used for?\nA. Biometric enrollment\nB. Just-in-time permission creation\nC. Identity proofing\nD. Federation",
+                        "solution": "16. C. Kyle can assume that his government-issued ID is being used as part of an identity proofing process to validate that he is who he claims to be. Biometric enrollment typically requires interaction with an enrollment process to scan or capture biometric information. Just-in-time permission creation is done when access is requested and does not require government ID, and federation connects identity providers with service providers, which is not described here."
+                    }
+                ]
+            },
+            {
+                "category": "Authentication and Authorization",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "15. Lisa sets up an account on a website that allows her to log in with Google. When she logs in, Google provides an access token to the website that confirms that she is who she says she is but doesn't provide the site with her password. Which of the following technologies has she used?\nA. LDAP\nB. OAuth\nC. MITRE\nD. RADIUS",
+                        "solution": "15. B. OAuth is an authentication protocol that allows services to receive authentication tokens from an identity provider without needing the user's password. LDAP is a directory service and is often used as part of SSO processes. MITRE is a nonprofit organization, and RADIUS is an authentication technology."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "6. Geeta has been issued a USB security key as part of her organization's multifactor implementation. What type of implementation is this?\nA. A hard token\nB. A biometric token\nC. A soft token\nD. An attestation token",
+                        "solution": "6. A. A USB security key is an example of a hard, or physical, token. An application is an example of a soft token. A biometric factor might be a fingerprint or faceprint. Attestation is a formal verification that something is true. Attestation tokens were made up for this question."
+                    },
+                    {
+                        "value": 1200,
+                        "clue": "2. Which of the following technologies is the least effective means of preventing shared accounts?\nA. Password complexity requirements\nB. Requiring biometric authentication\nC. Requiring one-time passwords via a token\nD. Requiring a one-time password via an application",
+                        "solution": "2. A. Password complexity requirements do not prevent sharing of complex passwords, making it the least effective option from the list. Biometric authentication measures will require the enrolled user to be there, although in some cases such as fingerprint systems, multiple users could each enroll a valid fingerprint for a single account. Both types of one-time passwords could be shared but make it harder and less convenient to share accounts."
+                    }
+                ]
+            },
+            {
+                "category": "Access Control Models",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "14. Jill sets her files on a Windows file share to allow Fred to access the files. What type of access control system is she using?\nA. Mandatory access control\nB. Rule-based access control\nC. Attribute-based access control\nD. Discretionary access control",
+                        "solution": "14. D. Jill is able to make decisions about the rights she grants on her files, meaning this is a discretionary access control system. A mandatory access control system relies on labels to set access control rules. Rule-based access control systems rely on rules to define access, and attribute-based access control systems grant access based on attributes like job roles or locations."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "20. What type of access control scheme best describes the Linux filesystem?\nA. MAC\nB. RBAC\nC. DAC\nD. ABAC",
+                        "solution": "20. C. Linux users can change who can read, write, or execute files and directories they own, which is discretionary access control (DAC). Mandatory access control (MAC) would enforce settings set by the systems administrator without users having the rights to make their own decisions. While role-based access control is involved, DAC best describes the access control scheme. ABAC is not a default method for setting rights for the Linux filesystem."
+                    }
+                ]
+            },
+            {
+                "category": "Password Management",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "4. Amitoj wants to ensure that her organization's password policy does not allow users to reset their password multiple times until they can reuse their current password. What setting is used to prevent this?\nA. Complexity\nB. Length\nC. Expiration\nD. Age",
+                        "solution": "4. D. Password age is set to prevent users from resetting their password enough times to bypass reuse settings. Complexity, length, and expiration do not influence this."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "3. What major difference is likely to exist between on-premises identity services and those used in a cloud-hosted environment?\nA. Account policy control will be set to the cloud provider's standards.\nB. The cloud service will provide account and identity management services.\nC. Multifactor authentication will not be supported by the cloud vendor.\nD. None of the above.",
+                        "solution": "3. B. Most cloud services provide identity and authorization tools for their services. Most, although not all, allow customers to set some or even many of the account policies they will use, and most major vendors support some form of multifactor capability."
+                    }
+                ]
+            },
+            {
+                "category": "Linux Security",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "10. Which of the following biometric technologies is most broadly deployed due to its ease of use and acceptance from end users?\nA. Voice print recognition\nB. Gait recognition\nC. Retina scanners\nD. Fingerprint scanner",
+                        "solution": "10. D. Fingerprint scanners are found on many mobile devices and laptops, making them one of the most broadly deployed biometric technologies. Facial recognition is also broadly deployed, but it is not mentioned in this question or offered as an option."
+                    }
+                ]
+            },
+            {
+                "category": "General Security Practices",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "17. What key concept below best describes only providing the permissions necessary to perform a role?\nA. Least privilege\nB. Best practice\nC. Ephemeral accounts\nD. Mandatory access control",
+                        "solution": "17. A. The principle of least privilege means that users should only be given the permissions necessary to perform their role. Best practice is a general term describing commonly recommended and accepted industry practices. Temporal accounts are ephemeral, or short-lived accounts. Mandatory access control is an access control scheme."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "19. A person's name, age, location, or job title are all examples of what?\nA. Biometric factors\nB. Identity factors\nC. Attributes\nD. Account permissions",
+                        "solution": "19. C. A person's name, age, location, job title, and even things like their height or their hair color are all attributes that may be associated with a person's identity. None of these describe biometric factors used for authentication, and identity factors are something you are, something you have, or somewhere you are. Account permissions determine what you can do, not attributes like these."
+                    }
+                ]
+            }
+        ],
+        "final_jeopardy": {
+            "category": "Final Jeopardy",
+            "clue": "12. A PIN is an example of what type of factor?\nA. Something you know\nB. Something you are\nC. Something you have\nD. Something you set",
+            "solution": "12. A. PINs and passwords are both examples of something you know. Something you set is not a type of factor. Biometric factors are an example of something you are, and a physical USB token would be a common example of something you have."
+        }
+    },
+    "Chapter 9 - Resilience and Physical Security": {
         "single": [
             {
                 "category": "Category 1",
@@ -2287,7 +3086,168 @@ const gameData = {
             "solution": "20. C. Geographic dispersion helps ensure that a single natural or human-made disaster does not disable multiple facilities. This distance is not required by law; latency increases with distance; and though there may be tax reasons in some cases, this is not a typical concern for a security professional."
         }
     },
-    "Chapter 10": {
+    "Chapter 9 - Resilience and Physical Security - Categorized": {
+        "single": [
+            {
+                "category": "Cloud Scaling and Load Management",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "1. Naomi wants to handle increasing load by scaling cloud-hosted resources as needed while having the change remain transparent to users. She also wants to allow for upgrades and system replacements transparently. What solution should she select?\nA. Load balancing\nB. Clustering\nC. Geographic diversity\nD. A hot site",
+                        "solution": "1. A. Naomi should select a load balancing solution. Load balancers allow multiple systems or services to appear like a single resource and can take systems out of the load-balanced pool to allow for upgrades or changes in resources required."
+                    }
+                ]
+            },
+            {
+                "category": "Virtualization and Data Backup",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "5. Felix wants to clone a virtual machine. What should he do to capture a live machine, including the machine state?\nA. A full backup\nB. A snapshot\nC. A differential backup\nD. Live boot media",
+                        "solution": "5. B. Virtual machine snapshots capture the machine state at a point in time and will allow Felix to clone the system."
+                    }
+                ]
+            },
+            {
+                "category": "Disaster Recovery and Business Continuity",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "9. Fred wants to be able to recover his database transactions at any point in time if a physical disaster occurs involving his datacenter. His organization uses daily backups. What additional solution should he select to support this need?\nA. Onsite journaling\nB. Onsite snapshots\nC. Offsite journaling\nD. Offsite snapshots",
+                        "solution": "9. C. Offsite journaling will allow transactions to be recorded and to remain available if a significant event occurred that involved his datacenter."
+                    }
+                ]
+            },
+            {
+                "category": "Physical Security",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "13. Megan wants to deploy a sensor that is inexpensive, yet will allow her to detect humans entering and moving in a secured room. Which of the following should she select?\nA. An infrared sensor\nB. A microwave sensor\nC. An ultrasonic sensor\nD. A pressure sensor",
+                        "solution": "13. A. Infrared sensors balance lower cost with the ability to detect humans entering and moving in a space."
+                    }
+                ]
+            },
+            {
+                "category": "Cybersecurity Resilience",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "15. How does technology diversity help ensure cybersecurity resilience?\nA. It ensures that a vulnerability in a single company's product will not impact the entire infrastructure.\nB. If a single vendor goes out of business, the company does not need to replace its entire infrastructure.\nC. It means that a misconfiguration will not impact the company's entire infrastructure.\nD. All of the above.",
+                        "solution": "15. D. Technology diversity helps ensure that a single failure-due to a vendor, vulnerability, or misconfiguration-will not impact an entire organization."
+                    }
+                ]
+            },
+            {
+                "category": "Miscellaneous",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "17. Gabby wants to detect physical brute-force attempts against her organization. What solution is best suited to this?\nA. Security guards\nB. Locks\nC. Access badges\nD. An intrusion detection system (IDS)",
+                        "solution": "17. A. Security guards who can monitor for and understand the signs of a physical brute-force attempt are the most useful control listed. Locks may show signs of attempts but require careful inspection, access badges would require log review and additional information to detect brute-force attacks, and an IDS is useful for network attacks."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "3. What type of recovery site has some or most systems in place but does not have the data needed to take over operations?\nA. A hot site\nB. A warm site\nC. A cloud site\nD. A cold site",
+                        "solution": "3. B. Warm sites have systems, connectivity, and power but do not have the live or current data to immediately take over operations. A hot site can immediately take over operations, whereas a cold site has space and power, and likely connectivity, but will require that systems and data be put in place to be used. Cloud sites are not one of the three common types of recovery sites."
+                    },
+                    {
+                        "value": 600,
+                        "clue": "12. What factor is a major reason organizations do not use security guards?\nA. Reliability\nB. Training\nC. Cost\nD. Social engineering",
+                        "solution": "12. C. Security guards can be one of the costliest physical security controls over time, making the cost of guards one of the most important deciding factors guiding when and where they will be employed. Reliability, training, and the potential for social engineering are all possible issues with security guards, but none of these is the major driver in the decision process."
+                    }
+                ]
+            }
+        ],
+        "double": [
+            {
+                "category": "Virtualization and Data Backup",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "2. Rick performs a backup that captures the changes since the last full backup. What type of backup has he performed?\nA. A new full backup\nB. A snapshot\nC. An incremental backup\nD. A differential backup",
+                        "solution": "2. D. Differential backups back up the changes since the last full backup."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "11. Madhuri has deployed a replication tool that copies data over to a secondary hot site in real time. What type of replication has she deployed?\nA. Synchronous replication\nB. Journaled replication\nC. Asynchronous replication\nD. Snapshot-based replication",
+                        "solution": "11. A. Synchronous replication occurs in real time, whereas asynchronous replication occurs after the fact but more regularly than a backup."
+                    }
+                ]
+            },
+            {
+                "category": "Disaster Recovery and Business Continuity",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "4. Ben wants to test his warm site to verify that it will take over operations successfully. What type of testing is this?\nA. Parallel processing\nB. Simulation\nC. Failover\nD. A tabletop exercise",
+                        "solution": "4. C. Testing that involves an actual failover to another site or service is failover testing."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "10. Ellen is concerned about her company's resilience and wants to ensure it can handle either changing loads or support disaster recovery and business continuity efforts if a primary location or datacenter were taken offline. Which of the following should she primarily focus on during her capacity planning?\nA. People, technology, and infrastructure\nB. A generator and a UPS\nC. RAID 0, 1, 5, and 10\nD. Incremental, differential, and full backups",
+                        "solution": "10. A. Resilience requires capacity planning to ensure that capacity-including staff, technology, and infrastructure-is available when is needed."
+                    }
+                ]
+            },
+            {
+                "category": "Physical Security",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "7. Mike wants to stop vehicles from traveling toward the entrance of his building. What physical security control should he implement?\nA. An air gap\nB. A hot aisle\nC. A robotic sentry\nD. A bollard",
+                        "solution": "7. D. Bollards are physical security controls that prevent vehicles from accessing or ramming doors or other areas."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "19. What type of physical security control is shown here? Door 1 Door 2 Secure Area\nA. A Faraday cage\nB. An access control vestibule\nC. A bollard\nD. An air gap",
+                        "solution": "19. B. An access control vestibule uses a pair of doors. When an individual enters, the first door must be closed and secured before the second door can be opened."
+                    }
+                ]
+            },
+            {
+                "category": "Cybersecurity Resilience",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "18. Florian wants to test his high-availability designs but does not want to interrupt his organization's normal work. Which of the following is the least disruptive testing scenario?\nA. A failover exercise\nB. A tabletop exercise\nC. A partial failover exercise\nD. A simulation",
+                        "solution": "18. B. A tabletop exercise is the least disruptive form of exercise."
+                    }
+                ]
+            },
+            {
+                "category": "Miscellaneous",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "14. Kathleen wants to discourage potential attackers from entering the facility she is responsible for. Which of the following is not a common control used for this type of preventive defense?\nA. Fences\nB. Lighting\nC. Platform diversity\nD. Video surveillance",
+                        "solution": "14. C. Fences, lighting, and video surveillance can all help discourage potential malicious actors from entering an area, although a determined adversary will ignore or bypass all three. Platform diversity can help make it harder for attackers to succeed, but this is primarily a resilience tactic, and remains more costly to maintain and implement."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "8. Alecia wants to ensure that her backups cannot be accessed by third parties while stored in an offsite storage location. What should she do to secure her backups?\nA. Hash the backup data.\nB. Avoid the use of offsite storage locations.\nC. Employ security guards.\nD. Encrypt the backup data.",
+                        "solution": "8. D. Encryption is commonly used to ensure that backup media or data that is exposed is not accessible to third parties. This does mean that Alecia must carefully secure the encryption keys for the backup. Hashing that data would not keep it secure, and if only hashes were stored the data would be unrecoverable. Security guards are expensive and not a complete solution if data is inadvertently exposed, and offsite, secure storage locations are a useful and common solution for organizations that want to have remote backups."
+                    },
+                    {
+                        "value": 1200,
+                        "clue": "6. Sally is working to restore her organization's operations after a disaster took her datacenter offline. What critical document should she refer to as she restarts systems?\nA. The restoration order documentation\nB. The TOTP documentation\nC. The HOTP documentation\nD. The last-known good configuration documentation",
+                        "solution": "6. A. A documented restoration order helps ensure that systems and services that have dependencies start in the right order and that high-priority or mission-critical services are restored first. TOTP and HOTP are types of one-time password technology, and last-known good configurations are often preserved with a snapshot or other technology that can allow a system to return to a known good status after an issue such as a bad patch or configuration change."
+                    },
+                    {
+                        "value": 1600,
+                        "clue": "16. Scott sends his backups to a company that keeps them in a secure vault. What type of backup solution has he implemented?\nA. Nearline\nB. Safe\nC. Onsite\nD. Offsite",
+                        "solution": "16. D. Scott has implemented an offsite backup scheme. His backups will take longer to retrieve because they are at a remote facility and will have to be sent back to him, but they are likely to survive any disaster that occurs in his facility or datacenter. Onsite backups are kept immediately accessible, whereas nearline backups can be retrieved somewhat more slowly than online backups but faster than offline backups. 'Safe backups' is not an industry term."
+                    }
+                ]
+            }
+        ],
+        "final_jeopardy": {
+            "category": "Final Jeopardy",
+            "clue": "20. Gurvinder identifies a third-party datacenter provider over 90 miles away to run his redundant datacenter operations. Why has he placed the datacenter that far away?\nA. Because it is required by law\nB. Network traffic latency concerns\nC. Geographic dispersion\nD. Geographic tax reasons",
+            "solution": "20. C. Geographic dispersion helps ensure that a single natural or human-made disaster does not disable multiple facilities."
+        }
+    },
+    "Chapter 10 - Cloud and Virtualization Security": {
         "single": [
             {
                 "category": "Category 1",
@@ -2413,7 +3373,163 @@ const gameData = {
             "solution": "20. A. This is an example of public cloud computing because Tony is using a public cloud pro-vider, Microsoft Azure. The fact that Tony is limiting access to virtual machines to his own organization is not relevant because the determining factor for the cloud model is whether the underlying infrastructure is shared, not whether virtualized resources are shared."
         }
     },
-    "Chapter 11": {
+    "Chapter 10 - Cloud and Virtualization Security - Categorized": {
+        "single": [
+            {
+                "category": "Scaling and Computing Models",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "1. Kevin discovered that his web server was being overwhelmed by traffic, causing a CPU bottleneck. Using the interface offered by his cloud service provider, he added another CPU to the server. What term best describes Kevin's action?\nA. Elasticity\nB. Horizontal scaling\nC. Vertical scaling\nD. High availability",
+                        "solution": "1. C. This is an example of adding additional capacity to an existing server, which is also known as vertical scaling. Kevin could also have used horizontal scaling by adding additional web servers. Elasticity involves the ability to both add and remove capacity on demand, and though it does describe this scenario, it's not as good a description as vertical scaling. There is no mention of increasing the server's availability."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "5. Wanda is responsible for a series of seismic sensors placed at remote locations. These sensors have low-bandwidth connections, and she would like to place computing power on the sensors to allow them to preprocess data before it is sent back to the cloud. What term best describes this approach?\nA. Edge computing\nB. Client-server computing\nC. Fog computing\nD. Thin client computing",
+                        "solution": "5. A. This approach may be described as client-server computing, but that is a general term that describes many different operating environments. The better term to use here is edge com-puting, which involves placing compute power at the client to allow it to perform preprocessing before sending data back to the cloud. Fog computing is a related concept that uses loT gateway devices that are located in close physical proximity to the sensors."
+                    }
+                ]
+            },
+            {
+                "category": "Security and Policy",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "13. Brian would like to limit the ability of users inside his organization to provision expensive cloud server instances without permission. What type of control would best help him achieve this goal?\nA. Resource policy\nB. Security group\nC. Multifactor authentication\nD. Secure web gateway",
+                        "solution": "13. A. Cloud providers offer resource policies that customers may use to limit the actions that users of their accounts may take. Implementing resource policies is a good security practice to limit the damage caused by an accidental command, a compromised account, or a malicious insider."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "17. Kira would like to implement a security control that can implement access restrictions across all of the SanS solutions used by her organization. What control would best meet her needs?\nA. Security group\nB. Resource policy\nC. CASB\nD. SWG",
+                        "solution": "17. C. Cloud access security brokers (CASBs) are designed specifically for this situation: enforcing security controls across cloud providers. A secure web gateway (SWG) may be able to achieve Kira's goal, but it would be more difficult to do so. Security groups and resource policies are controls used in laaS environments."
+                    }
+                ]
+            },
+            {
+                "category": "Technologies and Architectures",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "10. Which one of the following is not an example of infrastructure as code?\nA. Defining infrastructure in JSON\nB. Writing code to interact with a cloud provider's APl\nC. Using a cloud provider's web interface to provision resources\nD. Defining infrastructure in YAML",
+                        "solution": "10. C. Infrastructure as code (laC) is any approach that automates the provisioning, management, and deprovisioning of cloud resources. Defining resources through JSON or YAML is laC, as is writing code that interacts with an API. Provisioning resources through a web interface is manual, not automated, and therefore does not qualify as IaC."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "14. Ursula would like to link the networks in her on-premises datacenter with cloud VPCs in a secure manner. What technology would help her best achieve this goal?\nA. Transit gateway\nB. HSM\nC. VPC endpoint\nD. SWG",
+                        "solution": "14. A. Cloud providers offer VPC endpoints that allow connections of VPCs to each other using the cloud provider's secure network. Cloud transit gateways extend this model even further, allowing the direct interconnection of cloud VPCs with on-premises VLANs for hybrid cloud operations."
+                    }
+                ]
+            },
+            {
+                "category": "Legal and Regulatory Compliance",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "18. Howard is assessing the legal risks to his organization based on its handling of PII. The organization is based in the United States, handles the data of customers located in Europe, and stores information in Japanese datacenters. What law would be most important to Howard during his assessment?\nA. Japanese law\nB. European Union law\nC. U.S. law\nD. All should have equal weight.",
+                        "solution": "18. D. The principle of data sovereignty states that data is subject to the legal restrictions of any jurisdiction where it is collected, stored, or processed. In this case, Howard needs to assess the laws of all three jurisdictions."
+                    }
+                ]
+            },
+            {
+                "category": "Tools and Reference Frameworks",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "8. Which cloud computing deployment model requires the use of a unifying technology platform to tie together components from different providers?\nA. Public cloud\nB. Private cloud\nC. Community cloud\nD. Hybrid cloud",
+                        "solution": "8. D. Hybrid cloud environments blend elements of public, private, and/or community cloud solutions. A hybrid cloud requires the use of technology that unifies the different cloud offerings into a single, coherent platform."
+                    }
+                ]
+            }
+        ],
+        "double": [
+            {
+                "category": "Scaling and Computing Models",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "7. Helen designed a new payroll system that she offers to her customers. She hosts the payroll system in AWS and her customers access it through the web. What tier of cloud computing best describes Helen's service?\nA. Paas\nB. SaaS\nC. FaaS\nD. TaaS",
+                        "solution": "7. B. Helen is using laaS services to create her payroll product. She is then offering that payroll service to her customers as a SaaS solution."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "9. Which one of the following would not commonly be available as an laaS service offering?\nA. CRM\nB. Storage\nC. Networking\nD. Computing",
+                        "solution": "9. A. Customer relationship management (CRM) packages offered in the cloud would be classified as software-as-a-service (SaaS), since they are not infrastructure components. Storage, networking, and computing resources are all common laaS offerings."
+                    }
+                ]
+            },
+            {
+                "category": "Security and Policy",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "3. In what cloud security model does the cloud service provider bear the most responsibility for implementing security controls?\nA. laaS\nB. Faas\nC. Paas\nD. SaaS",
+                        "solution": "3. D. The cloud service provider bears the most responsibility for implementing security controls in an SaaS environment and the least responsibility in an laaS environment. This is due to the division of responsibilities under the cloud computing shared responsibility model."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "11. Brian is selecting a CASB for his organization, and he would like to use an approach that interacts with the cloud provider directly. Which CASB approach is most appropriate for his needs?\nA. Inline CASB\nB. Outsider CASB\nC. Comprehensive CASB\nD. API-based CASB",
+                        "solution": "11. D. API-based CASB solutions interact directly with the cloud provider through the provider's API. Inline CASB solutions intercept requests between the user and the provider. Outsider and comprehensive are not categories of CASB solutions."
+                    },
+                    {
+                        "value": 1200,
+                        "clue": "16. Ryan is selecting a new security control to meet his organization's objectives. He would like to use it in their multicloud environment and would like to minimize the administrative work required from his fellow technologists. What approach would best meet his needs?\nA. Third-party control\nB. Internally developed control\nC. Cloud-native control\nD. Any of the above",
+                        "solution": "16. A. Controls offered by cloud service providers have the advantage of direct integration with the provider's offerings, often making them cost-effective and user-friendly. Third-party solutions are often more costly, but they bring the advantage of integrating with a variety of cloud providers, facilitating the management of multicloud environments."
+                    }
+                ]
+            },
+            {
+                "category": "Technologies and Architectures",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "2. Fran's organization uses a Type I hypervisor to implement an laaS offering that it sells to customers. Which one of the following security controls is least applicable to this environment?\nA. Customers must maintain security patches on guest operating systems.\nB. The provider must maintain security patches on the hypervisor.\nC. The provider must maintain security patches on the host operating system.\nD. Customers must manage security groups to mediate network access to guest operating systems.",
+                        "solution": "2. C. Type I hypervisors, also known as bare-metal hypervisors, run directly on top of the physical hardware and, therefore, do not require a host operating system."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "6. Which one of the following statements about cloud computing is incorrect?\nA. Cloud computing offers ubiquitous, convenient access.\nB. Cloud computing customers store data on hardware that is shared with other customers\nC. Cloud computing customers provision resources through the service provider's sales team.\nD. Cloud computing resources are accessed over a network.",
+                        "solution": "6. C. One of the key characteristics of cloud computing is that customers can access resources on-demand with minimal service provider interaction. Cloud customers do not need to contact a sales representative each time they wish to provision a resource but can normally do so on a self-service basis."
+                    },
+                    {
+                        "value": 1600,
+                        "clue": "15. What component of a virtualization platform is primarily responsible for preventing VM escape attacks?\nA. Administrator\nB. Guest operating system\nC. Host operating system\nD. Hypervisor",
+                        "solution": "15. D. Virtual machine (VM) escape vulnerabilities are the most serious issue that can exist in a virtualized environment, particularly when a virtual host runs systems of differing security levels. In an escape attack, the attacker has access to a single virtual host and then manages to leverage that access to intrude upon the resources assigned to a different virtual machine. The hypervisor is supposed to prevent this type of access by restricting a virtual machine's access to only those resources assigned to that machine."
+                    }
+                ]
+            },
+            {
+                "category": "Legal and Regulatory Compliance",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "12. In which af the following cloud categories are customers typically charged based on the number of virtual server instances dedicated to their use?\nA. laaS only\nB. SaaS only\nC. laaS and PaaS\nD. InaS, SaaS, and Paas",
+                        "solution": "12. C. Customers are typically charged for server instances in both laaS environments, where they directly provision those instances, and PaaS environments, where they request the number of servers needed to support their applications. In an SaaS environment, the customer typically has no knowledge of the number of server instances supporting their use."
+                    }
+                ]
+            },
+            {
+                "category": "Tools and Reference Frameworks",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "20. Tony purchases virtual machines from Microsoft Azure exclusively for use by his organization. What model of cloud computing is this?\nA. Public cloud\nB. Private cloud\nC. Hybrid cloud\nD. Community cloud",
+                        "solution": "20. A. This is an example of public cloud computing because Tony is using a public cloud pro-vider, Microsoft Azure. The fact that Tony is limiting access to virtual machines to his own organization is not relevant because the determining factor for the cloud model is whether the underlying infrastructure is shared, not whether virtualized resources are shared."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "19. Brenda's company provides a managed incident response service to its customers. What term best describes this type of service offering?\nA. MSP\nB. PaaS\nC. SaaS\nD. MSSP",
+                        "solution": "19. D. Brenda's company is offering a technology service to customers on a managed basis, making it a managed service provider (MSP). However, this service is a security service, so the term managed security service provider (MSSP) is a better description of the situation."
+                    }
+                ]
+            }
+        ],
+        "final_jeopardy": {
+            "category": "Final Jeopardy",
+            "clue": "4. Greg would like to find a reference document that describes how to map cloud security controls to different regulatory standards. What document would best assist with this task?\nA. CSA CCM\nB. NIST SP 500-292\nC. ISO 27001\nD. PCI DSS",
+            "solution": "4. A. The Cloud Security Alliance (CSA) Cloud Controls Matrix (CCM) is a reference document designed to help organizations understand the appropriate use of cloud security controls and map those controls to various regulatory standards. NIST SP 500-292 is a reference model for cloud computing and operates at a high level. ISO 27001 is a general standard for cybersecurity, and PCI DSS is a regulatory requirement for organizations involved in processing credit card transactions."
+        }
+    },
+    "Chapter 11 - Endpoint Security": {
         "single": [
             {
                 "category": "Category 1",
@@ -2539,7 +3655,173 @@ const gameData = {
             "solution": "20. A. A degausser is a quick and effective way to erase a tape before it is reused. Wiping a tape by writing 1s, Os, or a pattern of 1s and Os to it will typically be a slow operation and is not a common method of destroying data on a tape. Incinerating the tape won't allow it to be reused!"
         }
     },
-    "Chapter 12": {
+    "Chapter 11 - Endpoint Security - Categorized": {
+        "single": [
+            {
+                "category": "Lifecycle Management",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "1. Lin's hardware manufacturer has stopped selling the model of device that Lin's organization uses and has also stopped providing security or other updates. What phase of the hardware life cycle is the device in?\nA. End-of-life\nB. Legacy\nC. End-of-sales\nD. Senescence",
+                        "solution": "1. B. Legacy hardware is unsupported and no longer sold. End-of-life typically means that the device is no longer being made but is likely to still have support for a period of time. End-of-sales means the device is no longer being sold, but again, may have support for some time. Senescence is not a term typically used in hardware life cycles."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "13. Brian has deployed a system that monitors sensors and uses that data to manage the power distribution for the power company that he works for. Which of the following terms is commonly used to describe this type of control and monitoring solution?\nA. SCADA\nB. SIM\nC. HVAC\nD. AVAD",
+                        "solution": "13. A. SCADA (supervisory control and data acquisition) is a system architecture that combines data acquisition and control devices with communications methods and interfaces to oversee complex industrial and manufacturing processes, just like those used in utilities. A SIM (subscriber identity module) is the small card used to identify cell phones; HVAC stands for heating, ventilation, and air-conditioning; and AVAD was made up for this question."
+                    }
+                ]
+            },
+            {
+                "category": "Security Tools",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "5. What is the key difference between EDR and DR solutions?\nA. The variety of malware it can detect\nB. The number of threat feeds that are used\nC. The breadth of the technology stack that is covered\nD. The volume of logs that can be processed",
+                        "solution": "5. C. XDR is similar to EDR but has a broader perspective covering not only endpoints but also cloud services, security platforms, and other components. Thus, the breadth of coverage of the technology stack is broader for XDR solutions."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "9. Charlene wants to prevent attacks against her system that leverage flaws in the services that it provides while still keeping the services accessible. What hardening technique should she use?\nA. A host-based firewall\nB. A host-based IPS\nC. Encryption\nD. An EDR",
+                        "solution": "9. B. A host-based intrusion prevention system (HIPS) can detect and prevent attacks against services while allowing the service to be accessible. A firewall can only block based on port, protocol, and IP; encryption won't prevent this; and an EDR is primarily targeted at malicious software and activity, not at network-based attacks on services."
+                    }
+                ]
+            },
+            {
+                "category": "Data Protection",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "3. Frank's organization is preparing to deploy a data loss prevention (DLP) system. What key process should they undertake before they deploy it?\nA. Define data life cycles for all nonsensitive data.\nB. Encrypt all sensitive data.\nC. Implement and use a data classification scheme.\nD. Tag all data by creator or owner.",
+                        "solution": "3. C. Protecting data using a DLP requires data classification so that the DLP knows which data should be protected and what policies to apply to it. Defining data life cycles can help prevent data from being kept longer than it should be and improves data security by limiting the data that needs to be secured, but it isn't necessary as part of a DLP deployment. Encrypting all sensitive data may mean the DLP cannot recognize it and may not be appropriate for how it is used. Tagging all data with a creator or owner can be useful but is not required for a DLP rollout—instead, knowing the classification of the data is more important."
+                    }
+                ]
+            },
+            {
+                "category": "Networking and Protocol Hardening",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "2. Naomi has discovered the following TCP ports open on a system she wants to harden. Which ports are used for unsecure services and thus should be disabled to allow their secure equivalents to continue to be used?\nA. 21, 22, and 80\nB. 21 and 80\nC. 21, 23, and 80\nD. 22 and 443",
+                        "solution": "2. C. The services listed are: • 21—FTP • 22—SSH 23—Telnet • 80—HTTP •443—HTTPS. Of these services, SSH (Port 22) and HTTPS (port 443) are secure options for remote shell access and HTTP. Although secure mode FTP (FTP/S) may run on TCP 21, there is not enough information to know for sure, and HTTPS can be used for secure file transfer if necessary. Thus, Naomi's best option is to disable all three likely unsecure protocols: FTP (port 21), Telnet (port 23), and HTTP (port 80)."
+                    }
+                ]
+            },
+            {
+                "category": "System Configuration and Management",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "6. Michelle wants to prevent unauthorized applications from being installed on a Windows system. What type of tool can she use to stop applications from being installed?\nA. Antivirus\nB. A GPO\nC. An EDR\nD. A HIPS",
+                        "solution": "6. B. A Windows Group Policy Object (GPO) can be used to control whether users are able to install software. Antivirus will not stop this, nor will EDR or a HIPS."
+                    }
+                ]
+            },
+            {
+                "category": "Miscellaneous Security Topics",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "12. What is the primary reason to remove unnecessary software during hardening efforts?\nA. To reduce the attack footprint of the device\nB. To reduce the number of patches that are installed\nC. To reduce the number of firewall rules required for the device\nD. To support incident response (IR) activities",
+                        "solution": "12. A. Removing unnecessary software helps to reduce the attack surface of the devices. Not all software runs a service or opens a network port, but installed software provides additional opportunities for attackers to find vulnerabilities. That means that reducing firewall rules is not a primary purpose. While removing it may reduce the number of patches required by a device, that is not the primary driver. Finally, while incident response efforts may point to a need for further hardening to prevent future incidents, removing unnecessary software is not a typical step in support of IR activities."
+                    }
+                ]
+            }
+        ],
+        "double": [
+            {
+                "category": "Lifecycle Management",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "14. The organization that Lynn works for wants to deploy an embedded system that needs to process data as it comes in to the device without processing delays or other interruptions. What type of solution does Lynn's company need to deploy?\nA. An MFP\nB. A HIPS\nC. An SoC\nD. An RTOS",
+                        "solution": "14. D. A real-time operating system (RTOS) is an OS that is designed to handle data as it is fed to the operating system, rather than delaying handling it as other processes and programs are run. Real-time operating systems are used when processes or procedures are sensitive to delays that might occur if responses do not happen immediately. An MFP is a multifunction printer, a HIPS is a host intrusion prevention system, and an SoC is a system on a chip—which is hardware, which might run an RTOS, but the option does not mention what type of"
+                    },
+                    {
+                        "value": 800,
+                        "clue": "7. Fred has deployed an IoT device that collects data about heating and cooling for his building. The device vendor does not issue security updates for its web interface, and Fred cannot replace it immediately. What action should Fred take to reduce the security risks?\nA. Place the device behind a network firewall.\nB. Disable its web interface.\nC. Place it in a VLAN.\nD. Use a host-based intrusion detection system.",
+                        "solution": "7. C. Placing the IoT device in a VLAN isolates it from other parts of the network and reduces potential attack vectors. Disabling the web interface might limit functionality, and a host-based IDS would not be feasible for many IoT devices."
+                    }
+                ]
+            },
+            {
+                "category": "Security Tools",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "17. Olivia wants to install a host-based security package that can detect attacks against the system coming from the network, but she does not want to take the risk of blocking the attacks since she fears that she might inadvertently block legitimate traffic. What type of tool could she install that will meet this requirement?\nA. A host firewall\nB. A host-based intrusion detection system\nC. A host-based intrusion prevention system\nD. A data loss prevention tool",
+                        "solution": "17. B. Olivia should install a host-based intrusion detection system (HIDS). An HIDS can detect and report on potential attacks but does not have the ability to stop them. A host-based intrusion prevention system (HIPS) can be configured to report only on attacks, but it does have the built-in ability to be set up to block them. Firewalls can block known ports, proto-cols, or applications, but they do not detect attacks-although advanced modern firewalls blur the line between firewalls and other defensive tools. Finally, a data loss prevention (DLP) tool focuses on preventing data exposures, not on stopping network attacks."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "11. Charlene wants to deploy a tool to monitor suspicious activities on her endpoints and provide a centralized repository for analysis. Which tool best fits her needs?\nA. HIPS\nB. EDR\nC. SIEM\nD. Antivirus",
+                        "solution": "11. B. Endpoint Detection and Response (EDR) is designed to monitor endpoint activities, detect anomalies, and provide centralized analysis capabilities."
+                    }
+                ]
+            },
+            {
+                "category": "Data Protection",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "16. Jim configures a Windows machine with the built-in BitLocker full-disk encryption tool that uses a TPM chip. When is the machine least vulnerable to having data stolen from it?\nA. When the machine is off\nB. When the machine is booted and logged in but is locked\nC. When the machine is booted and logged in but is unlocked\nD. When the machine is booted and logged in but is asleep",
+                        "solution": "16. A. Jim knows that once a BitLocker-enabled machine is booted, the drive is unlocked and could be accessed. He would be least worried if the machine were off and was stolen, or if the drive itself were stolen from the machine, since the data would not be accessible in either of those cases."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "20. Elaine wants to securely erase the contents of a tape used for backups in her organization's tape library. What is the fastest secure erase method available to her that will allow the tape to be reused?\nA. Using a degausser\nB. Wiping the tape by writing a random pattern of 1s and 0s to it\nC. Incinerating the tape\nD. Wiping the tape by writing all 1s or all Os to it",
+                        "solution": "20. A. A degausser is a quick and effective way to erase a tape before it is reused. Wiping a tape by writing 1s, Os, or a pattern of 1s and Os to it will typically be a slow operation and is not a common method of destroying data on a tape. Incinerating the tape won't allow it to be reused!"
+                    }
+                ]
+            },
+            {
+                "category": "Networking and Protocol Hardening",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "8. Fred has recently purchased a network router and is preparing to deploy it. Which of the following is a common step in deploying new routers?\nA. Disabling unwanted services\nB. Removing unnecessary software\nC. Installing antivirus\nD. Changing default passwords",
+                        "solution": "8. D. Network devices as well as many other devices like printers come with default passwords set. Fred should change the default password as part of the process of setting up his new router."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "10. Allan is preparing to harden his organization's network switches. Which of the following is not a common hardening technique for network devices?\nA. Removing unnecessary software\nB. Installing patches\nC. Administrative VLANs\nD. Changing default passwords",
+                        "solution": "10. A. Unlike computers and mobile devices, switches and other network devices typically do not have additional software that can be removed. Installing patches, placing administrative interfaces on protected VLANs, and changing default passwords are all common hardening techniques."
+                    }
+                ]
+            },
+            {
+                "category": "System Configuration and Management",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "18. Anita wants to enforce security settings across her organization's Windows Active Directory domain. What tool can she use to do this?\nA. EDR\nB. Group Policy\nC. XDR\nD. SELinux",
+                        "solution": "18. B. Group Policy deployed via Active Directory will allow Anita to set security settings across her domain-managed systems. EDR and DR are useful for detecting and responding to malware and malicious actors but not for deploying security configurations. SELinux is a Linux kernel-based security module that provides additional security capabilities and options on top of existing Linux distributions."
+                    }
+                ]
+            },
+            {
+                "category": "Miscellaneous Security Topics",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "19. Chris wants systems that connect to his network to report their boot processes to a server where they can be validated before being permitted to join the network. What technology should he use to do this on the workstations?\nA. UEFI/Trusted boot\nB. BIOS/Trusted boot\nC. UEFI/Measured boot\nD. BIOS/Measured boot",
+                        "solution": "19. C. Chris knows that BIOS-based systems do not support either of these modes, and that trusted boot validates every component before loading it, whereas measured boot logs the boot process and sends it to a server that can validate it before permitting the system to connect to the network or perform other actions."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "15. Which of the following is not a common constraint of an embedded system?\nA. Compute\nB. Cost\nC. Network\nD. Authentication",
+                        "solution": "15. B. Embedded systems are available at many price points. Understanding constraints that limited resources create for embedded systems helps security professionals identify appropriate security controls and options."
+                    }
+                ]
+            }
+        ],
+        "final_jeopardy": {
+            "category": "Final Jeopardy",
+            "clue": "4. Oliver wants to store and manage secrets in his cloud service provider's environment. What type of solution should he look for as part of their offerings?\nA. A TPM\nB. A secure enclave\nC. A KMS\nD. A Titan M",
+            "solution": "4. C. Oliver should look for a key management system, or KMS, which will allow him to securely create, store, and manage keys in a cloud environment. TPMs, secure enclaves, and Google's Titan M are all local hardware solutions."
+        }
+    },
+    "Chapter 12 - Network Security": {
         "single": [
             {
                 "category": "Category 1",
@@ -2665,7 +3947,168 @@ const gameData = {
             "solution": "20. C. Out-of-band management places the administrative interface of a switch, router, or other device on a separate network or requires direct connectivity to the device to access and manage it. This ensures that an attacker who has access to the network cannot make changes to the network devices. NAC and port security help protect the network itself, whereas trunking is used to combine multiple interfaces, VLANs, or ports together."
         }
     },
-    "Chapter 13": {
+    "Chapter 12 - Network Security - Categorized": {
+        "single": [
+            {
+                "category": "Protocols and Secure Communication",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "3. Valerie wants to replace the telnet access that she found still in use in her organization. Which protocol should she use to replace it, and what port will it run on?\nA. SFTP, port 21\nB. SSH, port 22\nC. HTTPS, port 443\nD. RDP, port 3389",
+                        "solution": "3. B. Telnet provides remote command-line access but is not secure. SSH is the most common alternative to telnet, and it operates on port 22."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "9. What protocol is used to securely wrap many otherwise insecure protocols?\nA. ISAKMP\nB. SSL\nC. IKE\nD. TLS",
+                        "solution": "9. D. Transport Layer Security (TLS) is commonly used to wrap (protect) otherwise insecure protocols."
+                    }
+                ]
+            },
+            {
+                "category": "Network Access Control (NAC) and Authentication",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "11. What component of a zero-trust architecture forwards requests from subjects and acts on whether subjects are allowed to access resources?\nA. Policy administrators\nB. Policy enforcement points\nC. Policy engines\nD. Policy gateways",
+                        "solution": "11. B. Policy enforcement points communicate with policy administrators to forward requests from subjects and to receive instructions."
+                    }
+                ]
+            },
+            {
+                "category": "Security Mechanisms and Tools",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "2. Ben wants to observe malicious behavior targeted at multiple systems on a network. He sets up a variety of systems and instruments to allow him to capture copies of attack tools and to document all the attacks that are conducted. What has he set up?\nA. A honeypot\nB. A beartrap\nC. A honeynet\nD. A tarpit",
+                        "solution": "2. C. A honeynet is a group of systems that intentionally exposes vulnerabilities so defenders can observe attacker behaviors."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "6. Kathleen wants to deploy a firewall that can handle large amounts of network traffic while performing advanced firewalling tasks. What type of device should she select?\nA. A NGFW\nB. A WAF\nC. A UTM\nD. A SD-FW",
+                        "solution": "6. A. A next-generation firewall (NGFW) is designed for high speeds and throughput while performing advanced tasks."
+                    }
+                ]
+            },
+            {
+                "category": "Threat Detection and Mitigation",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "1. A system that Tony manages sends an SNMP trap. What type of information should Tony expect to receive?\nA. Notification of a vulnerability\nB. Notification of a patch being installed\nC. Notification of an issue\nD. Notification of user being created",
+                        "solution": "1. C. SNMP traps typically provide information about issues such as links going down or authentication failures."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "7. Mark wants to prevent DNS poisoning attacks. What technology should he implement to counter them most effectively?\nA. DNSSEC\nB. SDNS\nC. SASE\nD. SD-WAN",
+                        "solution": "7. A. DNSSEC validates the origin of DNS information and ensures DNS responses have not been modified."
+                    }
+                ]
+            },
+            {
+                "category": "Isolation and Physical Security",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "13. Gary wants to prevent his organization's most sensitive data from being accessed by network-based attackers at any cost. What solution should he implement to ensure this?\nA. An air gap\nB. Firewall rules\nC. An IPS\nD. IPSec",
+                        "solution": "13. A. Physical isolation like an air gap is used when manual file transfer is an acceptable trade-off for added security."
+                    }
+                ]
+            },
+            {
+                "category": "Network Design and Load Balancing",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "5. Chuck wants to provide access to a protected network from a less trusted network. What type of solution is commonly implemented to provide a secure, monitored access method?\nA. A proxy server\nB. A jump server\nC. A VLAN\nD. An air gap",
+                        "solution": "5. B. Jump servers are used to provide secure, monitored access to a protected network."
+                    }
+                ]
+            }
+        ],
+        "double": [
+            {
+                "category": "Protocols and Secure Communication",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "12. Gary wants to use secure protocols for email access for his end users. Which of the following groups of protocols should he implement to accomplish this task?\nA. DKIM, DMARC, HTTPS\nB. SPF, POPS, IMAPS /\nC. POPS, IMAPS, HTTPS\nD. DMARC, DKIM, SPF",
+                        "solution": "12. C. End users may use secure POP (POPS), secure IMAP (IMAPS), and secure HTTP (HTTPS) to retrieve email."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "19. What technique is used to ensure that DNSSEC-protected DNS information is trustworthy?\nA. It is digitally signed.\nB. It is sent via TLS.\nC. It is encrypted using AES256.\nD. It is sent via an IPSec VPN.",
+                        "solution": "19. A. DNSSEC relies on digital signatures to ensure DNS information has not been modified and is coming from a trusted server."
+                    }
+                ]
+            },
+            {
+                "category": "Network Access Control (NAC) and Authentication",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "15. What type of NAC will provide Isaac with the greatest amount of information about the systems that are connecting while also giving him the most amount of control of systems and their potential impact on other systems that are connected to the network?\nA. Agent-based, preadmission NAC\nB. Agentless, postadmission NAC\nC. Agent-based NAC, postadmission NAC\nD. Agentless, postadmission NAC",
+                        "solution": "15. A. Agent-based, preadmission NAC provides the greatest control and information about connected systems."
+                    }
+                ]
+            },
+            {
+                "category": "Security Mechanisms and Tools",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "8. Casey wants to replace her organization's MPLS-based external connectivity using commodity technologies. What technology should she select to help her manage this?\nA. IPSec VPN\nB. SASE\nC. SD-WAN\nD. TLS VPN",
+                        "solution": "8. C. SD-WAN (software-defined wide area network) is commonly used to replace MPLS networks."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "16. Danielle's organization has implemented a tool that combines SD-WAN, a CASB, and Zero Trust, among other security functions, to provide security regardless of where her organization's devices are. What type of solution has her organization implemented?\nA. A UTM\nB. An NGFW\nC. IPSec\nD. SASE",
+                        "solution": "16. D. SASE (Secure Access Service Edge) combines network security and device security by leveraging SD-WAN with other tools."
+                    }
+                ]
+            },
+            {
+                "category": "Threat Detection and Mitigation",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "4. Jill wants to use DNS filtering to prevent users in her organization from visiting potentially malicious sites. What type of service should she use to obtain this information?\nA. An OSINT service\nB. A STP feed\nC. An ACL monitoring service\nD. A reputation service",
+                        "solution": "4. D. DNS reputation services can provide Jill with an automated feed of malicious sites for DNS filtering."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "18. Elle has scanned her organization from an external IP address and has identified all of the services that are visible from the public Internet. What does this enable her to describe?\nA. If the organization is a fail-open organization\nB. Her organization's OSINT report\nC. Her organization's attack surface\nD. If the organization is a fail-closed organization",
+                        "solution": "18. C. Understanding what services your organization offers to the outside world is an important step in describing the organization's attack surface."
+                    }
+                ]
+            },
+            {
+                "category": "Isolation and Physical Security",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "20. Fred wants to ensure that the administrative interfaces for the switches and routers are protected so that they cannot be accessed by attackers. Which of the following solutions should he recommend as part of his organization's network design?\nA. NAC\nB. Trunking\nC. Out-of-band management\nD. Port security",
+                        "solution": "20. C. Out-of-band management ensures that attackers with access to the network cannot make changes to the network devices."
+                    }
+                ]
+            },
+            {
+                "category": "Network Design and Load Balancing",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "14. Madhuri is designing a load-balancing configuration for her company and wants to keep a single node from being overloaded. What type of design will meet this need?\nA. A daisy chain\nB. Active/active\nC. Duck-duck-goose\nD. Active/passive",
+                        "solution": "14. B. Active/active designs spread traffic among active nodes, ensuring no single node is overwhelmed."
+                    }
+                ]
+            }
+        ],
+        "final_jeopardy": {
+            "category": "Final Jeopardy",
+            "clue": "17. Wayne is concerned that an on-path attack has been used against computers he is responsible for. What artifact is he most likely to find associated with this attack?\nA. A compromised router\nB. A browser plug-in\nC. A compromised server\nD. A modified hosts file",
+            "solution": "17. B. Browser on-path attacks use malicious browser plug-ins or proxies to modify traffic at the browser level."
+        }
+    },
+    "Chapter 13 - Wireless and Mobile Security": {
         "single": [
             {
                 "category": "Category 1",
@@ -2791,7 +4234,183 @@ const gameData = {
             "solution": "20. C. Bluesnarfing is the theft of information from a Bluetooth enabled device. If Octavia left Bluetooth on and had not properly secured her device, then an attacker may have been able to access her contact list and download its contents. A bluejacking attack occurs when unwanted messages are sent to a device via Bluetooth. Evil twins are malicious access points configured to appear to be legitimate access points, and an evil maid attack is an in-person attack where an attacker takes advantage of physical access to hardware to acquire information or to insert malicious software on a device."
         }
     },
-    "Chapter 14": {
+    "Chapter 13 - Wireless and Mobile Security - Categorized": {
+        "single": [
+            {
+                "category": "Mobile Device Hardening and Security Guidelines",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "1. Alyssa wants to harden iOS devices her organization uses. What set of guidelines can she follow to align to common industry security practices?\nA. OWASP\nB. CIS benchmarks\nC. NIST 800-103\nD. NIST 800-111",
+                        "solution": "1. B. The Center for Internet Security (CIS) provides hardening guidelines known as CIS benchmarks that Alyssa can use as a guide to secure her organization's iOS devices."
+                    }
+                ]
+            },
+            {
+                "category": "Geolocation, Geofencing, and Location-Based Controls",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "5. Chris wants to use geolocation technology to find where phones issued by his organization are located. Which of the following is not commonly used as part of geolocation techniques?\nA. Bluetooth\nB. GPS\nC. NFC\nD. Wi-Fi",
+                        "solution": "5. C. Nearfield communication (NFC) is not typically used for geolocation because of its extremely short range."
+                    }
+                ]
+            },
+            {
+                "category": "Mobile Application Management",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "9. A member of Jake's team tells him that he sideloaded applications on his Android-based company-owned phone. What has occurred?\nA. Malware was installed on the phone.\nB. The phone was rooted to allow administrative access.\nC. Applications were installed by copying them instead of via an app store.\nD. The organization's MDM was disabled to avoid its management controls.",
+                        "solution": "9. C. Sideloading is the process of copying files between two devices like a phone and a laptop, desktop, or storage device."
+                    }
+                ]
+            },
+            {
+                "category": "Wireless Network Security",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "17. Amanda wants to create a view of her buildings that shows Wi-Fi signal strength and coverage. What is this type of view called?\nA. A channel overlay\nB. A PSK\nC. A heatmap\nD. A SSID chart",
+                        "solution": "17. C. Amanda wants to create a heatmap, which shows the signal strength and coverage for each access point in a facility."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "4. Ivan is running an enterprise wireless network and his heatmap shows that two access points are likely conflicting with each other. What will the enterprise access controller most likely do to handle this conflict?\nA. Increase the broadcast power of one of the access points.\nB. Change the SSID for one of the access points.\nC. Disable one of the access points.\nD. Decrease the broadcast power of the access points.",
+                        "solution": "4. D. When access points conflict, enterprise wireless network management tools will typically decrease the power for both access points until the issue is resolved."
+                    }
+                ]
+            },
+            {
+                "category": "Authentication and Access Control",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "14. What are the two most commonly deployed biometric authentication solutions for mobile devices?\nA. Voice recognition and face recognition\nB. Fingerprint recognition and gait recognition\nC. Face recognition and fingerprint recognition\nD. Voice recognition and fingerprint recognition",
+                        "solution": "14. C. Current mobile device implementations have focused heavily on facial recognition and fingerprint recognition."
+                    }
+                ]
+            },
+            {
+                "category": "Wireless Threats and Mitigation",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "20. Octavia discovers that the contact list from her phone has been acquired via a wireless attack. Which of the following is the most likely culprit?\nA. Bluejacking\nB. An evil maid\nC. Bluesnarfing\nD. An evil twin",
+                        "solution": "20. C. Bluesnarfing is the theft of information from a Bluetooth enabled device."
+                    }
+                ]
+            },
+            {
+                "category": "Mobile Device Deployment Models",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "19. Gurvinder wants to select a mobile device deployment method that provides employees with devices that they can use as though they're personally owned to maximize flexibility and ease of use. Which deployment model should he select?\nA. CYOD\nB. COPE\nC. BYOD\nD. MOTD",
+                        "solution": "19. B. Gurvinder's requirements fit the COPE (corporate-owned, personally enabled) mobile device deployment model."
+                    }
+                ]
+            }
+        ],
+        "double": [
+            {
+                "category": "Mobile Device Hardening and Security Guidelines",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "13. Susan wants to ensure that the threat of a lost phone creating a data breach is minimized. What two technologies should she implement to do this?\nA. Wi-Fi and NFC\nB. Remote wipe and FDE\nC. Containerization and NFC\nD. Geofencing and remote wipe",
+                        "solution": "13. B. Susan's best options are to use a combination of full-device encryption (FDE) and remote wipe."
+                    }
+                ]
+            },
+            {
+                "category": "Geolocation, Geofencing, and Location-Based Controls",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "3. Michelle has deployed iPads to her staff who work her company's factory floor. She wants to ensure that the devices work only in the factory and that if they are taken home they cannot access business data or services. What type of solution is best suited to her needs?\nA. Context-aware authentication\nB. Geofencing\nC. Geolocation\nD. Unified endpoint management (UEM)",
+                        "solution": "3. B. Geofencing will allow Michelle to determine what locations the device should work in."
+                    }
+                ]
+            },
+            {
+                "category": "Mobile Application Management",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "15. Alaina wants to modify operating system settings and features on her iOS device and to install applications that are not permitted or available via the Apple App Store. What would she need to do to accomplish this?\nA. Deploy an MDM tool to the phone.\nB. Jailbreak the phone.\nC. Keymod the phone.\nD. Install a third-party operating system.",
+                        "solution": "15. B. Jailbreaking will allow Alaina to obtain administrator access to the underlying phone operating system."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "8. Theresa has implemented a technology that keeps data for personal use separate from data for her company on mobile devices used by members of her staff. What is this concept called?\nA. Storage segmentation\nB. Multifactor storage\nC. Full-device encryption\nD. Geofencing",
+                        "solution": "8. A. Storage segmentation is the concept of splitting storage between functions or usage to ensure that information that fits a specific context is not shared."
+                    }
+                ]
+            },
+            {
+                "category": "Wireless Network Security",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "7. Isabelle needs to select the EAP protocol that she will use with her wireless network. She wants to use a secure protocol that does not require client devices to have a certificate, but she does want to require mutual authentication. Which EAP protocol should she use?\nA. EAP-FAST\nB. EAP-TTLS\nC. PEAP\nD. EAP-TLS",
+                        "solution": "7. C. Isabelle should select PEAP, which doesn't require client certificates but does provide TLS support."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "6. Daniel knows that WPA3 has added a method to ensure that brute-force attacks against weak preshared keys are less likely to succeed. What is this technology called?\nA. SAE\nB. CCMP\nC. PSK\nD. WPS",
+                        "solution": "6. A. Simultaneous Authentication of Equals (SAE) is used to establish a secure peering environment and to protect session traffic."
+                    }
+                ]
+            },
+            {
+                "category": "Authentication and Access Control",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "16. Jerome wants to allow guests to use his organization's wireless network, but he does not want to provide a preshared key. What solution can he deploy to gather information such as email addresses or other contact information before allowing users to access his open network?\nA. WPS capture mode\nB. Kerberos\nC. WPA2\nD. A captive portal",
+                        "solution": "16. D. Jerome should deploy a captive portal that requires users to provide information before being moved to a network segment that allows Internet access."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "2. Fred's company issues devices in a BYOD model. That means that Fred wants to ensure that corporate data and applications are kept separate from personal applications on the devices. What technology is best suited to meet this need?\nA. Biometrics\nB. Full-device encryption\nC. Context-aware authentication\nD. Containerization",
+                        "solution": "2. D. Using a containerization system can allow Fred's users to run corporate applications and to use corporate data in a secure environment."
+                    }
+                ]
+            },
+            {
+                "category": "Wireless Threats and Mitigation",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "18. Megan wants to create a system to prevent even misplaced phones from being accessed. Which technology is the least effective?\nA. PINs\nB. Device encryption\nC. Remote wipe\nD. Application management",
+                        "solution": "18. D. Managing applications won't help protect a misplaced phone from being accessed."
+                    }
+                ]
+            },
+            {
+                "category": "Mobile Device Deployment Models",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "12. Bart wants to use a cellular hotspot to provide Internet connectivity via Wi-Fi. What type of network has he set up for his laptop and phone to connect to?\nA. Ad-hoc\nB. NFC\nC. Point-to-point\nD. RFID",
+                        "solution": "12. A. This is an ad-hoc network set up to allow devices to connect to the access point provided by the cellular modem."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "10. Madhuri disables SMS, MMS, and RCS on phones in her organization. What has she prevented from being sent?\nA. Phone calls and texts\nB. Text messages and multimedia messages\nC. Text messages and firmware updates\nD. Phone calls and multimedia messages",
+                        "solution": "10. B. SMS (Short Message Service) is used to send text messages, and MMS and RCS provide additional multimedia features."
+                    }
+                ]
+            }
+        ],
+        "final_jeopardy": {
+            "category": "Final Jeopardy",
+            "clue": "11. What is the most frequent concern that leads to GPS tagging being disabled by some companies via an MDM tool?\nA. Chain of custody\nB. The ability to support geofencing\nC. Privacy\nD. Context-aware authentication",
+            "solution": "11. C. Geotagging places a location stamp in documents and pictures that can include position, time, and date. This can be a serious privacy issue."
+        }
+    },
+    "Chapter 14 - Monitoring and Incident Response": {
         "single": [
             {
                 "category": "Category 1",
@@ -2917,7 +4536,168 @@ const gameData = {
             "solution": "20. C. Vulnerability scans are the best way to find new services that are offered by systems. In fact, many vulnerability scanners will flag new services when they appear, allowing administrators to quickly notice unexpected new services. Registry information is not regularly dumped or collected in most organizations. Firewall logs and flow logs could show information about the services being used by systems whose traffic passes through them, but this is a less useful and accurate way of identifying new services and would work only if those services were also being used."
         }
     },
-    "Chapter 15": {
+    "Chapter 14 - Monitoring and Incident Response - Categorized": {
+        "single": [
+            {
+                "category": "Incident Response Processes",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "1. The following figure shows the Security+ incident response cycle. What item is missing? Recovery > Eradication > Incident Response Process > Detection > Containment > Analysis\nA. Planning\nB. Reporting\nC. Monitoring\nD. Preparation",
+                        "solution": "1. D. The first item in the incident response cycle used by the Security+ exam is preparation."
+                    }
+                ]
+            },
+            {
+                "category": "Tools and Techniques",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "3. Susan wants to create a dashboard that shows her aggregated log events related to logins from different geographic regions. Her goal is to identify impossible travel scenarios. Which of the following solutions should she select to accomplish that goal?\nA. IPS\nB. OS logs\nC. SIEM\nD. Vulnerability scan data",
+                        "solution": "3. C. A SIEM with correlation rules for geographic IP information as well as user IDs and authentication events will accomplish Susan's goals. An IPS may detect attacks, but it isn't well suited to detecting impossible travel. OS logs would need to be aggregated, and vulnerability scan data won't show this at all."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "11. Lan has been receiving hundreds of false positive alerts from his SIEM every night when scheduled jobs run across his datacenter. What should he adjust on his SIEM to reduce the false positive rate?\nA. Trend analysis\nB. Sensitivity\nC. Correlation rules\nD. Dashboard configuration",
+                        "solution": "11. B. lan's first step should be changing the sensitivity for his alerts. Adjusting the alerts to ignore safe or expected events can help reduce false positives. Correlation rules may then need to be adjusted if they are matching unrelated items. Dashboards are used to visualize data, not for alerting, and trend analysis is used to feed dashboards and reports."
+                    }
+                ]
+            },
+            {
+                "category": "Incident Containment and Isolation",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "9. Alyssa has identified malware on a system. She removes the system from the network to ensure that it cannot impact other systems. What technique has she used to deal with this system?\nA. Quarantine\nB. Segmentation\nC. Converted it to agentless\nD. Deny listing",
+                        "solution": "9. A. Alyssa's has quarantined the machine, ensuring it cannot reach other systems or impact the rest of her organization. Segmentation would involve putting the system in protected network zone. Agentless tools are used to send data without a separate program or agent deployed to allow that. Deny lists are used to prevent specific programs or files from being used or deployed to systems."
+                    }
+                ]
+            },
+            {
+                "category": "Threat Detection and Mitigation",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "13. Dana is reviewing her system's application logs and notices that a full backup of the application was done at 10 a.m. She knows that the job that runs the backup process is set to run overnight. What indicator should she flag this as?\nA. Unexpected logs\nB. Resource consumption\nC. Resource inaccessibility\nD. Out-of-cycle logging",
+                        "solution": "13. D. This is an example of out-of-cycle logging, or logging that occurs at a different time than expected. This may be because an attacker is using the backup tool to acquire data. Unexpected logs are not an indicator found on the Security+ exam outline. There is no indication of resource consumption or inaccessibility in the question."
+                    }
+                ]
+            },
+            {
+                "category": "Miscellaneous",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "2. Michael analyzes network traffic, including packet content, as part of his incident response process. What tool should he use?\nA. Syslog\nB. NetFlow\nC. Packet capture\nD. A SIEM",
+                        "solution": "2. C. Packet capture will allow Michael to see all the content of packets that are captured to analyze them. NetFlow simply shows source, destination, protocol, and traffic volume. Syslog and a SIEM don't capture packet content, and instead focus on logs and events."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "12. Which team member acts as a primary conduit to senior management on an IR team?\nA. Communications and public relations\nB. Information security\nC. Management\nD. Technical expert",
+                        "solution": "12. C. Members of management or organizational leadership act as a primary conduit to senior leadership for most incident response teams. They also ensure that difficult or urgent decisions can be made without needing escalated authority. Communications and PR staff focus on internal and external communications but are typically not the direct conduit to leadership. Technical and information security experts do most of the incident response work itself."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "16. Chris has turned on logon auditing for a Windows system. Which log will show them?\nA. The Windows Application log\nB. The Windows Security log\nC. The Windows System log\nD. All of the above",
+                        "solution": "16. B. The Windows Security log records logon events when logon auditing is enabled. The Application and System logs do not contain these events."
+                    }
+                ]
+            }
+        ],
+        "double": [
+            {
+                "category": "Incident Response Processes",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "17. Jayne wants to determine why a ransomware attack was successful against her organization. She plans to conduct a root cause analysis. Which of the following is not a typical root cause analysis method?\nA. Root/branch review\nB. Five whys\nC. Event analysis\nD. Diagramming",
+                        "solution": "17. A. Five whys, event analysis, and diagramming are all common methods of performing root cause analysis. Root/branch review is not a typical process for this."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "19. What phase in the incident response process leverages indicators of compromise and log analysis as part of a review of events?\nA. Preparation\nB. Containment\nC. Eradication\nD. Identification",
+                        "solution": "19. D. The Analysis phase focuses on using various techniques to analyze events to identify potential incidents. Preparation focuses on building tools, processes, and procedures to respond to incidents. Eradication involves the removal of artifacts related to the incident, and containment limits the scope and impact of the incident."
+                    }
+                ]
+            },
+            {
+                "category": "Tools and Techniques",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "15. Megan wants to ensure that logging is properly configured for her organization's Windows workstations. What could she use to ensure that logging best practices are configured?\nA. SIEM\nB. Benchmarks\nC. Syslog\nD. Agents",
+                        "solution": "15. B. Benchmarks often include logging settings and configurations. SIEM is used to gather and analyze logs. Syslog is a standard for logging and sending logs. Agents are used to send logs for systems that don't have a logging capability."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "5. What is the primary concern with Flow in a large, busy network?\nA. It may allow buffer overflow attacks against the collector host.\nB. Flow is not designed for large or complex networks.\nC. Flow puts extreme load on the flow collector host.\nD. Flow samples only network traffic, meaning that some detail will be lost.",
+                        "solution": "5. D. The primary concern for analysts who deploy Flow is often that it samples only data, meaning some accuracy and nuance can be lost in the collection of flow data. Sampling, as well as the implementation methods for Flow, means that it scales well to handle complex and busy networks. Although vulnerabilities may exist in slow collectors, a buffer overflow is not a primary concern for them."
+                    }
+                ]
+            },
+            {
+                "category": "Incident Containment and Isolation",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "6. Mark unplugs the network connection from a system that is part of an incident and places tape over its Ethernet jack with a sign that says, 'Do not reconnect without approval from IR team.' How is this method best described?\nA. Containment\nB. Isolation\nC. Segmentation\nD. Zoning",
+                        "solution": "6. B. Mark has isolated the system by removing it from the network and ensuring that it cannot communicate with other systems. Containment would limit the impact of the incident and might leave the system connected but with restricted or protected access. Segmentation moves systems or groups of systems into zones that have similar purposes, data classification, or other restrictions on them."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "18. Hitesh wants to keep a system online but limit the impact of the malware that was found on it while an investigation occurs. What method from the following list should he use?\nA. Containment\nB. Isolation\nC. Segmentation\nD. Black holing",
+                        "solution": "18. A. Containment activities focus on preventing further malicious actions or attacks. In this case, Hitesh might opt to prevent the malware from spreading but leave the system online due to a critical need or a desire to preserve memory and other artifacts for investigation. Isolation walls a system or systems off from the rest of the world, whereas segmentation is with different security levels and purposes, frequently used before incidents occur to create zones or segments of a network or system."
+                    }
+                ]
+            },
+            {
+                "category": "Threat Detection and Mitigation",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "10. Kristen discovers missing logs as part of her threat hunting activities. What has most likely happened?\nA. The logs hit the end of their life cycle and were rotated.\nB. The system is a newly deployed system.\nC. An attacker wiped the logs to hide evidence.\nD. An attacker encrypted the logs as part of their process.",
+                        "solution": "10. C. Missing logs are often associated with an attacker attempting to hide evidence of their actions. Log rotation will typically remove the oldest log items and replace them with new log items rather than wiping a log, or will archive the old log file and create a new one. A newly deployed system typically has at least some logs from booting and running. Encrypting logs would leave a file in place even if it couldn't be read."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "4. Selah wants to ensure that users in her organization can only install applications that are evaluated and approved by the organization's security team. What should she use?\nA. A SIEM\nB. An application deny list\nC. An application allow list\nD. sFlow",
+                        "solution": "4. C. Application allow lists are used to ensure that only allowed applications are installable on systems. A deny list specifically identifies programs that aren't allowed. A SIEM doesn't provide application management capabilities, and Flow is a flow tool like NetFlow."
+                    }
+                ]
+            },
+            {
+                "category": "Miscellaneous",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "14. Jim wants to view log entries that describe actions taken by applications on a Red Hat Linux system. Which of the following tools can he use on the system to view those logs?\nA. logger\nB. syslog-ng\nC. journalctl\nD. tail",
+                        "solution": "14. C. Red Hat Enterprise uses journalctl to view journal logs that contain application information. Jim should use journalctl to review the logs for the information he needs. The tool also provides functionality that replicates what head and tail can do for logs. Syslog-ng is a logging infrastructure, and though logs may be sent via syslog-ng, it is not mentioned here. logger is a logging utility used to make entries in the system log."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "8. Madhuri wants to check a PNG-formatted photo for GPS coordinates. Where can she find that information if it exists in the photo?\nA. In the location. txt file appended to the PNG\nB. On the original camera\nC. In the photo's metadata\nD. In the photo as a steganographically embedded data field",
+                        "solution": "8. C. If the photo includes GPS data, it will be included in the photo's metadata. Madhuri can use a tool like ExifTool to review the metadata for useful information. None of the other options are places where data is stored for a PNG image as a normal practice."
+                    },
+                    {
+                        "value": 1200,
+                        "clue": "10. Kristen discovers missing logs as part of her threat hunting activities. What has most likely happened?\nA. The logs hit the end of their life cycle and were rotated.\nB. The system is a newly deployed system.\nC. An attacker wiped the logs to hide evidence.\nD. An attacker encrypted the logs as part of their process.",
+                        "solution": "10. C. Missing logs are often associated with an attacker attempting to hide evidence of their actions. Log rotation will typically remove the oldest log items and replace them with new log items rather than wiping a log, or will archive the old log file and create a new one. A newly deployed system typically has at least some logs from booting and running. Encrypting logs would leave a file in place even if it couldn't be read."
+                    },
+                    {
+                        "value": 1600,
+                        "clue": "20. Henry wants to check to see if services were installed by an attacker. What commonly gathered organizational data can he use to see if a new service appeared on systems?\nA. Registry dumps from systems throughout his organization\nB. Firewall logs\nC. Vulnerability scans\nD. Flow logs",
+                        "solution": "20. C. Vulnerability scans are the best way to find new services that are offered by systems. In fact, many vulnerability scanners will flag new services when they appear, allowing administrators to quickly notice unexpected new services. Registry information is not regularly dumped or collected in most organizations. Firewall logs and flow logs could show information about the services being used by systems whose traffic passes through them, but this is a less useful and accurate way of identifying new services and would work only if those services were also being used."
+                    }
+                ]
+            }
+        ],
+        "final_jeopardy": {
+            "category": "Final Jeopardy",
+            "clue": "7. The company that Ben works for wants to test its incident response plan. Ben gathers the incident response team in a room and walks through a scenario to validate the organization's processes and procedures. What type of event has Ben hosted?\nA. A checklist exercise\nB. A simulation\nC. A tabletop exercise\nD. A fail-over exercise",
+            "solution": "7. C. Ben's organization is conducting a tabletop exercise. Tabletop exercises are conducted with more flexibility-team members are given a scenario and asked how they would respond and what they would do to accomplish tasks they believe would be relevant. Checklist exercises are not a specific type of exercise. A simulation exercise attempts to more fully re-create an actual incident to test responses. Fail-over exercises are conducted by actually failing a datacenter over to a hot location."
+        }
+    },
+    "Chapter 15 - Digital Forensics": {
         "single": [
             {
                 "category": "Category 1",
@@ -3043,7 +4823,148 @@ const gameData = {
             "solution": "20. A. Although both a checksum and a hash can be used to validate message integrity, a hash has fewer collisions than a checksum and will also provide a unique fingerprint for a file. Checksums are primarily used as a quick means of checking that that integrity is maintained, whereas hashes are used for many other purposes such as secure password validation without retaining the original password. A checksum would not be useful for proving a forensic image was identical, but it could be used to ensure that your work had not changed the contents of the drive."
         }
     },
-    "Chapter 16": {
+    "Chapter 15 - Digital Forensics - Categorized": {
+        "single": [
+            {
+                "category": "Forensic Acquisition and Tools",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "1. Felix wants to make an exact copy of a drive using a Linux command-line tool as part of a forensic acquisition process. What command should he use?\nA. df\nB. cp\nC. dd\nD. ln",
+                        "solution": "1. C. dd is a copying and conversion command for Linux and can be used to create a forensic image that can be validated using an MDsum or SHA1 hash. The other commands are df for disk usage, cp for copying files, and ln to link files."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "5. Charles wants to obtain a forensic copy of a running virtual machine. What technique should he use to capture the image?\nA. Run dd from within the running machine.\nB. Use FT Imager from the virtual machine host.\nC. Use the VM host to create a snapshot.\nD. Use WinHex to create a copy from within the running machine.",
+                        "solution": "5. C. Creating a snapshot will provide a complete copy of the system, including memory state that can then be analyzed for forensic purposes."
+                    },
+                    {
+                        "value": 600,
+                        "clue": "6. Melissa wants to capture network traffic for forensic purposes. What tool should she use to capture it?\nA. A forensic suite\nB. Wireshark\nC. dd\nD. WinHex",
+                        "solution": "6. B. Even though Wireshark is not a dedicated network forensic tool, since network traffic is ephemeral, capturing it with a packet sniffer like Wireshark is Melissa's best option."
+                    }
+                ]
+            },
+            {
+                "category": "Chain of Custody and Legal Considerations",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "3. Gabby is preparing chain-of-custody documentation and identifies a gap in hand-off documentation for an original source forensic drive. What issue should she expect to encounter due to this gap?\nA. The evidence may not be admissible in court.\nB. The forensic activities may need to be repeated.\nC. The staff involved may have to re-create the missed log.\nD. The chain of custody may need to be edited to note the problem.",
+                        "solution": "3. A. If forensic evidence was not properly handled, it may not be admissible in court."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "7. Frank is concerned about the admissibility of his forensic data. Which of the following is not an element he should be concerned about?\nA. Whether the forensic source data has remained unaltered\nB. Whether the practices and procedures would survive review by experts\nC. Whether the evidence is relevant to the case\nD. Whether the forensic information includes a time stamp",
+                        "solution": "7. D. Forensic information does not have to include a time stamp to be admissible."
+                    }
+                ]
+            },
+            {
+                "category": "Incident and Evidence Handling",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "14. Alex has been handed a flash media device that was quick-formatted and has been asked to recover the data. What data will remain on the drive?\nA. No data will remain on the drive.\nB. Files will remain but file indexes will not.\nC. File indexes will remain, but the files will be gone.\nD. Files and file indexes will remain on the drive.",
+                        "solution": "14. B. Quick-formatting a drive removes the file indexes but leaves the file content on the drive."
+                    }
+                ]
+            },
+            {
+                "category": "Investigation Analysis",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "9. Isaac is performing a forensic analysis on two systems that were compromised in the same event in the same facility. As he performs his analysis, he notices that the event appears to have happened almost exactly one hour earlier on one system than the other. What is the most likely issue he has encountered?\nA. The attacker took an hour to get to the second system.\nB. One system is set to an incorrect time zone.\nC. The attacker changed the system clock to throw off forensic practitioners.\nD. The forensic tool is reading the time stamps incorrectly.",
+                        "solution": "9. B. The most common cause of an hour of difference between two systems in an environment is an incorrectly set time zone."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "2. Greg is preparing a forensic report and needs to describe the tools that were used. What should he report about the tools in addition to their names?\nA. The type of system the tools were installed or run on\nB. The training level or certifications of the team that uses the tools\nC. Any known limitations or issues with the tools\nD. The patch level or installed version of the tools",
+                        "solution": "2. C. If there are known limitations or issues with the tools used, this should be included in the report."
+                    }
+                ]
+            }
+        ],
+        "double": [
+            {
+                "category": "Forensic Acquisition and Tools",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "11. Michael wants to acquire the firmware from a running device for analysis. What method is most likely to succeed?\nA. Use forensic memory acquisition techniques.\nB. Use disk forensic acquisition techniques.\nC. Remove the firmware chip from the system.\nD. Shut down the system and boot to the firmware to copy it to a removable device.",
+                        "solution": "11. A. Firmware can be challenging to access, but memory forensic techniques and direct hardware interface access are viable means in some cases."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "13. Maria has acquired a disk image from a hard drive using dd, and she wants to ensure that her process is forensically sound. What should her next step be after completing the copy?\nA. Securely wipe the source drive.\nB. Compare the hashes of the source and target drive.\nC. Securely wipe the target drive.\nD. Update her chain-of-custody document.",
+                        "solution": "13. B. Once a copy is made, hashes for the original and target drive should be compared to ensure that the copy was successful."
+                    },
+                    {
+                        "value": 1200,
+                        "clue": "4. Mike's organization has recently moved to a SaaS cloud service and needs to collect forensic data from the cloud service. What process can Mike use to gather the information he needs?\nA. Install forensic imaging software on the cloud service's servers.\nB. Identify the log information available and request any other desired information from the cloud service provider.\nC. Engage law enforcement to acquire the forensic data.\nD. Request the forensic information from third-party auditors.",
+                        "solution": "4. B. Mike's best option is to identify the log information available from the provider and to request any additional information, knowing that he may not receive more detail unless there is contractual language that specifies it."
+                    }
+                ]
+            },
+            {
+                "category": "Chain of Custody and Legal Considerations",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "10. What legal concept determines the law enforcement agency or agencies that will be involved in a case based on location?\nA. Nexus\nB. Nonrepudiation\nC. Jurisdiction\nD. Admissibility",
+                        "solution": "10. C. Jurisdiction is the legal authority over an area or individuals based on laws that create the jurisdiction."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "16. Alaina wants to maintain chain-of-custody documentation and has created a form. Which of the following is not a common element on a chain-of-custody form?\nA. Item identifier number\nB. Signature of the person transferring the item\nC. Signature of the person receiving the item\nD. Method of transport",
+                        "solution": "16. D. Chain of custody does not typically include how the items were transported."
+                    },
+                    {
+                        "value": 1200,
+                        "clue": "18. Theresa's organization has received a legal hold notice for their files and documents. Which of the following is not an action she needs to take?\nA. Ensure that changes to existing documents related to the case are tracked and that originals can be provided.\nB. Preserve all existing documents relevant to the case.\nC. Delete all sensitive documents related to the case.\nD. Prevent backups that contain files related to the case from being overwritten on their normal schedule.",
+                        "solution": "18. C. Removing information relevant to a legal hold is exactly what the hold is intended to prevent. Theresa's organization could be in serious legal trouble if they were to intentionally purge or change related information."
+                    }
+                ]
+            },
+            {
+                "category": "Incident and Evidence Handling",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "19. Gurvinder wants to follow the order of volatility to guide his forensic data acquisition. Which of the following is the least volatile?\nA. RAM\nB. Data on the hard drive\nC. Backups\nD. Remote logs",
+                        "solution": "19. C. Backups are the least volatile of these options according to the order of volatility."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "15. Naomi is preparing to migrate her organization to a cloud service and wants to ensure that she has the appropriate contractual language in place. Which of the following is not a common item she should include?\nA. Right-to-audit clauses\nB. Right to forensic examination\nC. Choice of jurisdiction\nD. Data breach notification timeframe",
+                        "solution": "15. B. Contracts commonly include right-to-audit clauses, choice of jurisdiction, and data breach notification time frames, but a right to forensically examine a vendor's systems or devices is rarely included."
+                    }
+                ]
+            },
+            {
+                "category": "Investigation Analysis",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "12. Charles needs to know about actions an individual performed on a PC. What is the best starting point to help him identify those actions?\nA. Review the system log.\nB. Review the event log.\nC. Interview the individual.\nD. Analyze the system's keystroke log.",
+                        "solution": "12. C. Interviewing the individual involved is the best starting point when a person performed actions that need to be reviewed. Logs can provide clues but should be secondary to human insight."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "8. What is the document that tracks the custody or control of a piece of evidence called?\nA. Evidence log\nB. Audit log\nC. Event report\nD. Chain of custody",
+                        "solution": "8. D. Chain-of-custody documentation tracks evidence throughout its life cycle, with information about who has custody or control and when transfers happened."
+                    }
+                ]
+            }
+        ],
+        "final_jeopardy": {
+            "category": "Final Jeopardy",
+            "clue": "17. Henry is following the EDRM model and is preparing to review data. What two key tasks occur during this stage?\nA. Validating that time stamps match between systems and that data is properly hashed to confirm that original data is sent\nB. Validating that the legal hold request is valid and that all documented items are included\nC. Validating that the desired data is included and that information that should not be shared is not included\nD. Validating that chain of custody is ensured and that malicious files are not included",
+            "solution": "17. C. It is important to ensure that data prepared for e-discovery only contains what it is supposed to, and that information that should not be shared is not included."
+        }
+    },
+    "Chapter 16 - Security Governance and Compliance": {
         "single": [
             {
                 "category": "Category 1",
@@ -3169,7 +5090,163 @@ const gameData = {
             "solution": "20. C. Requests for an exception to a security policy would not normally include a proposed revision to the policy. Exceptions are documented variances from the policy because of specific technical and/or business requirements. They do not alter the original policy, which remains in force for systems not covered by the exception."
         }
     },
-    "Chapter 17": {
+    "Chapter 16 - Security Governance and Compliance - Categorized": {
+        "single": [
+            {
+                "category": "Governance Documents",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "1. Joe is authoring a document to suggest one way to encrypt laptops. What is it?\nA. Policy\nB. Guideline\nC. Procedure\nD. Standard",
+                        "solution": "1. B. The key phrase 'one way' indicates Joe is authoring a guideline."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "18. Allan is listing acceptable mechanisms for secure remote access. What type of document?\nA. Policy\nB. Standard\nC. Guideline\nD. Procedure",
+                        "solution": "18. B. Standards describe specific security controls, which Allan is listing."
+                    }
+                ]
+            },
+            {
+                "category": "Compliance and Legal Frameworks",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "5. What ISO standard provides guidance on privacy controls?\nA. 27002\nB. 27001\nC. 27701\nD. 31000",
+                        "solution": "5. C. ISO 27701 provides guidance on privacy controls."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "3. What law governs EU residents' personal information?\nA. HIPAA\nB. FERPA\nC. GDPR\nD. PCI DSS",
+                        "solution": "3. C. GDPR governs personal data of EU residents."
+                    }
+                ]
+            },
+            {
+                "category": "Security Awareness and Training",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "17. Difference between security training and awareness?\nA. Training is structured learning; awareness uses reminders.\nB. Training rewards employees; awareness punishes them.\nC. No difference; terms are interchangeable.\nD. Training is for the security team only.",
+                        "solution": "17. A. Training is structured; awareness uses informal reminders."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "11. Alice runs a phishing simulation. What’s the purpose?\nA. Penalize employees.\nB. Reward employees.\nC. Test recognition and improve awareness.\nD. Report gullible departments.",
+                        "solution": "11. C. It evaluates and improves employees' ability to recognize phishing emails."
+                    }
+                ]
+            },
+            {
+                "category": "Risk Management and Organizational Security",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "15. Colin wants to detect fraud that bypasses other controls. Which control?\nA. Separation of duties\nB. Least privilege\nC. Dual control\nD. Mandatory vacations",
+                        "solution": "15. D. Mandatory vacations help detect fraud in employees' absence."
+                    }
+                ]
+            },
+            {
+                "category": "Vendor and Organizational Collaboration",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "7. Greg wants an umbrella agreement for security terms. What’s it called?\nA. BPR\nB. MOU\nC. MSA\nD. SLA",
+                        "solution": "7. C. An MSA (Master Service Agreement) provides security terms for vendors."
+                    }
+                ]
+            }
+        ],
+        "double": [
+            {
+                "category": "Governance Documents",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "10. Which one would not be found in an information security policy?\nA. Statement of the importance of cybersecurity\nB. Requirement to use AES-256 encryption\nC. Delegation of authority\nD. Designation of responsible executive",
+                        "solution": "10. B. AES-256 encryption is technical guidance, found in a standard, not a policy."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "16. Which security policy framework component is optional?\nA. Policy\nB. Standard\nC. Procedure\nD. Guideline",
+                        "solution": "16. D. Guidelines are the only optional component."
+                    },
+                    {
+                        "value": 1200,
+                        "clue": "6. Which document must be approved by the CEO or equivalent?\nA. Standard\nB. Procedure\nC. Guideline\nD. Policy",
+                        "solution": "6. D. Policies require CEO or equivalent approval."
+                    }
+                ]
+            },
+            {
+                "category": "Compliance and Legal Frameworks",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "13. Which compliance obligation applies to handling credit card information?\nA. FERPA\nB. SOX\nC. HIPAA\nD. PCI DSS",
+                        "solution": "13. D. PCI DSS governs credit card information handling."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "2. Which PCI DSS statement is false about compensating controls?\nA. Controls used for one requirement may be used for another.\nB. Controls must meet the intent of the original requirement.\nC. Controls must meet the rigor of the original requirement.\nD. Compensating controls must provide a similar level of defense.",
+                        "solution": "2. A. PCI DSS bans reusing controls across requirements."
+                    },
+                    {
+                        "value": 1200,
+                        "clue": "20. What is NOT normally included in a request for a policy exception?\nA. Description of a compensating control\nB. Description of the risks\nC. Proposed revision to the policy\nD. Business justification",
+                        "solution": "20. C. Policy exceptions do not propose revisions to the policy."
+                    }
+                ]
+            },
+            {
+                "category": "Security Awareness and Training",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "14. Mike’s role in enhancing security culture?\nA. Delegate to HR.\nB. Establish, promote, and maintain programs.\nC. Create awareness posters.\nD. Conduct all training sessions.",
+                        "solution": "14. B. Mike's role is to establish and maintain comprehensive programs."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "12. What policy guides inappropriate resource use (e.g., side business)?\nA. NDA\nB. AUP\nC. Data ownership\nD. Data classification",
+                        "solution": "12. B. The Acceptable Use Policy (AUP) guides allowable use of resources."
+                    }
+                ]
+            },
+            {
+                "category": "Risk Management and Organizational Security",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "4. Which is NOT a NIST Cybersecurity Framework function?\nA. Identify\nB. Contain\nC. Respond\nD. Recover",
+                        "solution": "4. B. The five functions are identify, protect, detect, respond, and recover."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "19. Common uses of NIST Cybersecurity Framework exclude:\nA. Describing current posture\nB. Describing future posture\nC. Communicating risk\nD. Creating specific technology requirements",
+                        "solution": "19. D. NIST CSF does not create specific technology requirements."
+                    }
+                ]
+            },
+            {
+                "category": "Vendor and Organizational Collaboration",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "9. What do organizations use for scheduling changes?\nA. Impact analysis\nB. Backout plans\nC. Maintenance windows\nD. Version control",
+                        "solution": "9. C. Maintenance windows schedule system changes."
+                    }
+                ]
+            }
+        ],
+        "final_jeopardy": {
+            "category": "Final Jeopardy",
+            "clue": "8. Which organization produces independent security benchmarks?\nA. Microsoft\nB. Center for Internet Security\nC. Cloud Security Alliance\nD. Cisco",
+            "solution": "8. B. The Center for Internet Security (CIS) produces independent security benchmarks."
+        }
+    },
+    "Chapter 17 - Risk Management and Privacy": {
         "single": [
             {
                 "category": "Category 1",
@@ -3295,7 +5372,173 @@ const gameData = {
             "solution": "20. D. The residual risk is the risk that remains after an organization implements controls designed to mitigate, avoid, and/or transfer the inherent risk."
         }
     },
-    "Chapter 1 Test General Security Concepts": {
+    "Chapter 17 - Risk Management and Privacy - Categorized": {
+        "single": [
+            {
+                "category": "Risk Management Strategies",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "1. Jen identified a missing patch on a Windows server that might allow an attacker to gain remote control of the system. After consulting with her manager, she applied the patch. From a risk management perspective, what has she done?\nA. Removed the threat\nB. Reduced the threat\nC. Removed the vulnerability\nD. Reduced the vulnerability",
+                        "solution": "1. C. By applying the patch, Jen has removed the vulnerability from her server. This also has the effect of eliminating this particular risk."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "9. Business leaders are considering dropping the customer activities that collect and store sensitive personal information. What risk management strategy would this approach use?\nA. Risk acceptance\nB. Risk avoidance\nC. Risk mitigation\nD. Risk transference",
+                        "solution": "9. B. Changing business processes or activities to eliminate a risk is an example of risk avoidance."
+                    }
+                ]
+            },
+            {
+                "category": "Risk Analysis Metrics",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "5. What is the single loss expectancy (SLE)?\nA. $5,000\nB. $100,000\nC. $500,000\nD. $600,000",
+                        "solution": "5. C. We compute the single loss expectancy (SLE) by multiplying the asset value (AV) ($500,000) and the exposure factor (EF) (100%) to get an SLE of $500,000."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "7. What is the annualized loss expectancy (ALE)?\nA. $5,000\nB. $25,000\nC. $100,000\nD. $500,000",
+                        "solution": "7. B. We compute the annualized loss expectancy (ALE) by multiplying the SLE ($500,000) and the ARO (0.05) to get an ALE of $25,000."
+                    }
+                ]
+            },
+            {
+                "category": "Privacy Roles and Responsibilities",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "13. Helen's organization maintains medical records on behalf of its customers, who are individual physicians. What term best describes the role of Helen's organization?\nA. Data processor\nB. Data controller\nC. Data owner\nD. Data steward",
+                        "solution": "13. A. In this case, the physicians maintain the data ownership role. They have chosen to outsource data processing to Helen's organization, making that organization a data processor."
+                    }
+                ]
+            },
+            {
+                "category": "Security and Classification",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "15. Tina works for a hospital system and manages the system's patient records. What category of personal information best describes the information that is likely to be found in those records?\nA. PCI\nB. PHI\nC. PFI\nD. PII",
+                        "solution": "15. B. This is a tricky question, as it is possible that all of these categories of information may be found in patient records. However, they are most likely to contain protected health information (PHI)."
+                    }
+                ]
+            },
+            {
+                "category": "Risk and Incident Management",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "2. You notice a high number of SQL injection attacks against a web application run by your organization, so you install a web application firewall to block many of these attacks before they reach the server. How have you altered the severity of this risk?\nA. Reduced the magnitude\nB. Eliminated the vulnerability\nC. Reduced the probability\nD. Eliminated the threat",
+                        "solution": "2. C. Installing a web application firewall reduces the probability that an attack will reach the web server."
+                    }
+                ]
+            },
+            {
+                "category": "Ethical and Legal Principles",
+                "clues": [
+                    {
+                        "value": 200,
+                        "clue": "16. Asa believes that her organization is taking data collected from customers for technical support and using it for marketing without their permission. What principle is most likely being violated?\nA. Data minimization\nB. Data retention\nC. Purpose limitation\nD. Data sovereignty",
+                        "solution": "16. C. Organizations should only use data for the purposes disclosed during the collection of that data. That violates the principle of purpose limitation."
+                    }
+                ]
+            }
+        ],
+        "double": [
+            {
+                "category": "Risk Management Strategies",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "11. Grace's risk managers found that the insurance policy was too expensive and opted not to purchase it. They are taking no additional action. What risk management strategy is being used in this situation?\nA. Risk acceptance\nB. Risk avoidance\nC. Risk mitigation\nD. Risk transference",
+                        "solution": "11. A. When an organization decides to take no further action to address remaining risk, they are choosing a strategy of risk acceptance."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "10. Grace's company decided to install the web application firewall and continue doing business. They are still worried about other risks to the information that were not addressed by the firewall and are considering purchasing an insurance policy to cover those risks. What strategy does this use?\nA. Risk acceptance\nB. Risk avoidance\nC. Risk mitigation\nD. Risk transference",
+                        "solution": "10. D. Insurance policies use a risk transference strategy by shifting some or all of the financial risk from the organization to an insurance company."
+                    }
+                ]
+            },
+            {
+                "category": "Risk Analysis Metrics",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "6. What is the annualized rate of occurrence (ARO)?\nA. 0.05\nB. 0.20\nC. 2.00\nD. 5.00",
+                        "solution": "6. A. Aziz's threat intelligence research determined that the threat has a 5 percent likelihood of occurrence each year. This is an ARO of 0.05."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "3. What is the asset value (AV)?\nA. $5,000\nB. $100,000\nC. $500,000\nD. $600,000",
+                        "solution": "3. C. The asset at risk in this case is the customer database. Losing control of the database would result in a $500,000 fine, so the asset value (AV) is $500,000."
+                    },
+                    {
+                        "value": 1200,
+                        "clue": "4. What is the exposure factor (EF)?\nA. 5%\nB. 20%\nC. 50%\nD. 100%",
+                        "solution": "4. D. The attack would result in the total loss of customer data stored in the database, making the exposure factor (EF) 100 percent."
+                    }
+                ]
+            },
+            {
+                "category": "Privacy Roles and Responsibilities",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "19. What term is given to an individual or organization who determines the reasons for processing personal information?\nA. Data steward\nB. Data controller\nC. Data processor\nD. Data custodian",
+                        "solution": "19. B. Data controllers are the entities who determine the reasons for processing personal information and direct the methods of processing that data."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "12. Under the European Union's GDPR, what term is assigned to the individual who leads an organization's privacy efforts?\nA. Data protection officer\nB. Data controller\nC. Data steward\nD. Data processor",
+                        "solution": "12. A. Under the GDPR, the data protection officer (DPO) is an individual assigned direct responsibility for carrying out an organization's privacy program."
+                    }
+                ]
+            },
+            {
+                "category": "Security and Classification",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "17. Which one of the following U.S. government classification levels requires the highest degree of security control?\nA. Secret\nB. Confidential\nC. Top Secret\nD. Unclassified",
+                        "solution": "17. C. Top Secret is the highest level of classification under the U.S. system and, therefore, requires the highest level of security control."
+                    }
+                ]
+            },
+            {
+                "category": "Risk and Incident Management",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "8. Grace's first idea is to add a web application firewall to protect her organization against SQL injection attacks. What risk management strategy does this approach adopt?\nA. Risk acceptance\nB. Risk avoidance\nC. Risk mitigation\nD. Risk transference",
+                        "solution": "8. C. Installing new controls or upgrading existing controls is an effort to reduce the probability or magnitude of a risk."
+                    },
+                    {
+                        "value": 800,
+                        "clue": "14. Gene recently conducted an assessment and determined that his organization can be without its main transaction database for a maximum of two hours before unacceptable damage occurs to the business. What metric has Gene identified?\nA. MTBF\nB. MTTR\nC. RTO\nD. RPO",
+                        "solution": "14. C. The Recovery Time Objective (RTO) is the amount of time that the organization can tolerate a system being down before it is repaired."
+                    }
+                ]
+            },
+            {
+                "category": "Ethical and Legal Principles",
+                "clues": [
+                    {
+                        "value": 400,
+                        "clue": "20. Brian recently conducted a risk mitigation exercise and has determined the level of risk that remains after implementing a series of controls. What term best describes this risk?\nA. Inherent risk\nB. Control risk\nC. Risk appetite\nD. Residual risk",
+                        "solution": "20. D. The residual risk is the risk that remains after an organization implements controls designed to mitigate, avoid, and/or transfer the inherent risk."
+                    }
+                ]
+            }
+        ],
+        "final_jeopardy": {
+            "category": "Final Jeopardy",
+            "clue": "18. Which type of analysis uses numeric data in the analysis, resulting in assessments that allow the very straightforward prioritization of risk?\nA. Qualitative\nB. One-time\nC. Recurring\nD. Quantitative",
+            "solution": "18. D. Quantitative risk analysis uses numeric data in the analysis, resulting in assessments that allow the straightforward prioritization of risks."
+        }
+    },
+    "Chapter 1 Test - General Security Concepts": {
         "single": [
             {
                 "category": "Category 1",
@@ -4131,7 +6374,7 @@ const gameData = {
             "solution": "150. D. Authentication requires that users provide (claim) an identity and then provide one or more authentication factors like a password, biometric factor, or multifactor code. Autho- rization relies on matching users and roles to allow users to perform tasks once they are authenticated. Biometric enrollments and identity proofing may be desirable but are not necessarily required for any given authentication system."
         }
     },
-    "Chapter 2 Test Threats Vulnerabilities Mitigations": {
+    "Chapter 2 Test - Threats Vulnerabilities Mitigations": {
         "single": [
             {
                 "category": "Category 1",
@@ -5162,7 +7405,7 @@ const gameData = {
             "solution": "187. D. Locking the resource until the action is completed is a common method of preventing TOC/TOU issues. Deleting the resource after each use doesn't allow resources to be per-sistent, preventing applications from using them on an ongoing basis. Running a single instance of the process will heavily limit the ability for Annie's business to scale the service. Making multiple copies doesn't allow for a shared resource."
         }
     },
-    "Chapter 3 Test Security Architecture": {
+    "Chapter 3 Test - Security Architecture": {
         "single": [
             {
                 "category": "Category 1",
