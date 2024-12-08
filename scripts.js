@@ -1396,16 +1396,11 @@ const gameData = {
                 "clues": [
                     {
                         "value": 200,
-                        "clue": "1. Ryan wants to prevent logic bombs created by insider threats from impacting his organization. What technique will most effectively limit the likelihood of logic bombs being put in place?\nA. Deploying antivirus software\nB. Using a code review process\nC. Deploying endpoint detection and response (EDR) software\nD. Disabling autorun for USB drives",
-                        "solution": "1. B. Logic bombs are embedded in code, so Ryan's organization would get the most benefit from a code review process for any code that goes into production."
-                    },
-                    {
-                        "value": 400,
                         "clue": "5. Mike discovers that attackers have left software that allows them to have remote access to systems on a computer in his company's network. How should he describe or classify this malware?\nA. A worm\nB. Crypto malware\nC. A trojan\nD. A backdoor",
                         "solution": "5. D. Remote access to a system is typically provided by a backdoor. Backdoors may also appear in firmware or even in hardware."
                     },
                     {
-                        "value": 600,
+                        "value": 400,
                         "clue": "10. A system in Elaine's company has suddenly displayed a message demanding payment in Bitcoin and claiming that the data from the system has been encrypted. What type of malware has Elaine likely encountered?\nA. Worms\nB. A virus\nC. Ransomware\nD. Rootkit",
                         "solution": "10. C. Ransomware demands payment to be made while typically using encryption to make data inaccessible."
                     }
@@ -1453,6 +1448,11 @@ const gameData = {
                         "value": 200,
                         "clue": "15. Ben wants to analyze Python code that he believes may be malicious code written by an employee of his organization. What can he do to determine if the code is malicious?\nA. Run a decompiler against it to allow him to read the code\nB. Open the file using a text editor to review the code\nC. Test the code using an antivirus tool\nD. Submit the Python code to a malware testing website",
                         "solution": "15. B. Python is an interpreted rather than a compiled language, so Ben doesn't need to use a decompiler."
+                    },
+                    {
+                        "value": 400,
+                        "clue": "9. Nancy is concerned that there is a software keylogger on the system she's investigating. What best describes data that may have been stolen?\nA. All files on the system\nB. All keyboard input\nC. All files the user accessed while the keylogger was active\nD. Keyboard and other input from the user",
+                        "solution": "9. D. While keyloggers often focus on keyboard input, other types of input may also be cap-tured, meaning Nancy should worry about any user input that occurred while the keylogger was installed. Keyloggers typically do not target files on systems, although if Nancy finds a keylogger, she may want to check for other malware packages with additional capabilities."
                     }
                 ]
             },
