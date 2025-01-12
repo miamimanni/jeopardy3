@@ -2198,7 +2198,7 @@ const gameData = {
                     },
                     {
                         "value": 2000,
-                        "clue": "18. Joe's adventures in web server log analysis are not yet complete. As he continues to review the logs, he finds the request: www.mycompany.com/ ///etc/passwd What type of attack was most likely attempted?\nA. SQL injection\nB. Session hijacking\nC. Directory traversal\nD. File upload",
+                        "clue": "18. Joe's adventures in web server log analysis are not yet complete. As he continues to review the logs, he finds the request: www.mycompany.com/../..//etc/passwd What type of attack was most likely attempted?\nA. SQL injection\nB. Session hijacking\nC. Directory traversal\nD. File upload",
                         "solution": "18. C. In this case, the .. operators are the telltale giveaway that the attacker was attempting to conduct a directory traversal attack. This particular attack sought to break out of the web server's root directory and access the / etc/passwd file on the server."
                     }
                 ]
